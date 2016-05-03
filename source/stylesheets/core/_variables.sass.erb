@@ -14,3 +14,22 @@ $stratum-top:     10000
 <% data.design_tokens.color.colors.each do |swatch| %>
 $<%= swatch.name %>: #<%= swatch.hex %>
 <% end %>
+
+// Border
+$b-border-radius: 3px !default
+
+// Sizing
+$b-space:     20px !default
+$b-space-xs:  $b-space * 0.25 !default
+$b-space-s:   $b-space * 0.5 !default
+$b-space-l:   $b-space * 2 !default
+$b-space-xl:  $b-space * 4 !default
+
+// Typography
+$b-font-family:         sans-serif !default
+$b-font-family-heading: sans-serif !default
+$b-font-family-body:    sans-serif !default
+$b-font-family-bold:    sans-serif !default
+$b-font-size:           rem(16) !default
+$b-line-height:         1.5 !default
+$b-line-height-heading: 1.2

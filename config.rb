@@ -1,3 +1,7 @@
+require 'slim'
+
+set :slim, :layout_engine => :slim
+
 ###
 # Page options, layouts, aliases and proxies
 ###

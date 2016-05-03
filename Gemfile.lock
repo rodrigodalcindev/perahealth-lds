@@ -44,6 +44,7 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.6.0)
     ffi (1.9.10)
+    git-version-bump (0.15.1)
     haml (4.0.7)
       tilt
     hike (1.2.3)
@@ -108,6 +109,9 @@ GEM
     padrino-support (0.12.5)
       activesupport (>= 3.1)
     rack (1.6.4)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
@@ -152,6 +156,7 @@ DEPENDENCIES
   middleman (~> 3.4.1)
   middleman-livereload
   neat
+  rack-contrib
   slim
   tzinfo-data
   wdm (~> 0.1.0)

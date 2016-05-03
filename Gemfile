@@ -20,4 +20,3 @@ gem 'jquery-middleman'
 # Bourbon suite
 gem 'bourbon'
 gem 'neat'
-gem 'bitters'

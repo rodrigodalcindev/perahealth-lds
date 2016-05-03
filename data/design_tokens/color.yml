@@ -2,4 +2,18 @@ colors:
   - name: black
     hex:  "000"
   - name: white
-    hex:  "fff"
+    hex:  "FFF"
+  - name: asphalt
+    hex:  "3F4959"
+  - name: powder
+    hex:  "F2F7FB"
+  - name: ink
+    hex:  "12306B"
+  - name: marine
+    hex:  "193E99"
+  - name: iris
+    hex:  "33B0FF"
+  - name: spring
+    hex:  "15E6C3"
+  - name: azalea
+    hex:  "E013E6"

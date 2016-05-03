@@ -1,1 +1,14 @@
-h1 Color
+---
+body_class: "is-color"
+---
+
+h1 Color Swatches
+
+ul
+  - data.design_tokens.color.colors.each do |swatch|
+    li
+      .b-swatch class="b-swatch--#{swatch.name}"
+        span
+          = swatch.name
+          br
+          = "#" + swatch.hex

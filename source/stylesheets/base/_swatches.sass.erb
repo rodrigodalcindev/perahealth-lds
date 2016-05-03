@@ -1,5 +1,11 @@
 // Color Swatches
+.b-swatch
+  height: 100px
+  margin: 5px
+  width: 150px
+
 <% data.design_tokens.color.colors.each do |swatch| %>
 .b-swatch--<%= swatch.name %>
   background: $<%= swatch.name %>
+  color: color-contrast($<%= swatch.name %>)
 <% end %>

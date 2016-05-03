@@ -9,3 +9,8 @@ $stratum-high:      500
 $stratum-higher:   1000
 $stratum-highest:  5000
 $stratum-top:     10000
+
+// Color Palette
+<% data.design_tokens.color.colors.each do |swatch| %>
+$<%= swatch.name %>: #<%= swatch.hex %>
+<% end %>

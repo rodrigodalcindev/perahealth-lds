@@ -1,0 +1,5 @@
+// Color Swatches
+<% data.design_tokens.color.colors.each do |swatch| %>
+.b-swatch--<%= swatch.name %>
+  background: $<%= swatch.name %>
+<% end %>

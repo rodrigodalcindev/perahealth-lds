@@ -34,6 +34,8 @@ end
 #   end
 # end
 
+set :fonts_dir, "fonts"
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build

@@ -1,6 +1,9 @@
 *
   box-sizing: border-box
 
+*:not(pre)>code
+  @include code
+
 img,
 figure
   margin: 0
@@ -9,6 +12,10 @@ figure
 ul, ol,
 dl dt
   margin: 0
+
+ul, ol
+  list-style: none
+  padding: 0
 
 a
   cursor: pointer
@@ -20,6 +27,7 @@ a
 
 .l-navigation
   background: $asphalt
+  color: $white
   width: rem(200)
 
   figure
@@ -27,6 +35,25 @@ a
 
     img
       height: 45px
+
+  a, a:hover
+    color: $white
+    text-decoration: none
+    text-transform: capitalize
+
+  ul li
+    @include transition(background .15s ease)
+    background: transparent
+    border-top: 1px solid rgba($powder, .35)
+
+    &:first-child
+      border: none
+
+    &:hover
+      background: lighten($asphalt, 10%)
+
+    a
+      display: block
 
 .l-main
   background: $powder

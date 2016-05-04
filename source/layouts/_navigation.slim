@@ -1,8 +1,10 @@
 nav.l-navigation.pof
   figure.pas.tac
-    = image_tag "veri-logo.png"
+    = link_to '/' do
+      = image_tag "veri-logo.png"
+    figcaption.tfbl.mtxs Living Style Guide
 
   ul
     - data.design_tokens.each do |token|
       li
-        = link_to token[0], "/#{token[0]}.html"
+        = link_to token[0], "/#{token[0]}.html", class: "plm prm pts pbs"

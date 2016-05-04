@@ -12,3 +12,13 @@
     $dark-text-brightness: brightness($dark)
 
     @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark)
+
+// Code Highlighting
+@mixin code
+  background: rgba($white,.1)
+  border: 1px solid rgba($asphalt,.25)
+  border-radius: $b-border-radius
+  font-size: 13px
+  font-size: 0.92857rem
+  font-weight: normal
+  padding: 0.1em 0.3em

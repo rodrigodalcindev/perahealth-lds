@@ -11,6 +11,11 @@ gulp.task('theo', function() {
     .pipe(theo.plugins.transform('web'))
     .pipe(theo.plugins.format('sass'))
     .pipe(gulp.dest('dist'));
+
+  gulp.src('data/design_tokens/*.yml')
+    .pipe(theo.plugins.transform('ios'))
+    .pipe(theo.plugins.format('ios.json'))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['theo']);

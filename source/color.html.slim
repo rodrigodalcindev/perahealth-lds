@@ -12,3 +12,10 @@ ul
           = "#" + swatch.hex
       code
         = "$" + swatch.name
+
+= code('sass') do
+  |
+    @include colorSum($violet)
+    border-radius: 5px
+    letter-spacing: rem(16)
+    z-index: $stratum-top

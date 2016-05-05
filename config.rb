@@ -1,3 +1,7 @@
+require 'middleman-syntax'
+
+activate :syntax, :line_numbers => true
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -34,6 +38,7 @@ end
 #   end
 # end
 
+set :markdown_engine, :kramdown
 set :fonts_dir, "fonts"
 
 # Build-specific configuration

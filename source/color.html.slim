@@ -5,10 +5,10 @@ body_class: "is-color"
 h1 Color Swatches
 
 ul
-  - data.design_tokens.color.colors.each do |swatch|
+  - data.design_tokens.color.props.each do |prop|
     li.dib.tac.mbm
-      .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{swatch.name}"
+      .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop[1].name}"
         span
-          = "#" + swatch.hex
+          = "#" + prop[1].value
       code
-        = "$" + swatch.name
+        = "$" + prop[1].name

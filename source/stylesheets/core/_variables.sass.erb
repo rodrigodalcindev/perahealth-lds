@@ -11,8 +11,8 @@ $stratum-highest:  5000
 $stratum-top:     10000
 
 // Color Palette
-<% data.design_tokens.color.colors.each do |swatch| %>
-$<%= swatch.name %>: #<%= swatch.hex %>
+<% data.design_tokens.color.props.each do |prop| %>
+$<%= prop[1].name %>: <%= prop[1].value %>
 <% end %>
 
 // Border

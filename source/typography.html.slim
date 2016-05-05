@@ -1,0 +1,15 @@
+---
+body_class: "is-typography"
+---
+
+h1.mbl Typography
+
+h2 Headings
+
+ul
+  - data.design_tokens.typography.props.each_with_index do |prop, index|
+    - next unless prop[1].category == "heading"
+    li.mbm
+      code.dib.vam
+        = "h#{index + 1}"
+      span.dib.mlm.vam class="h#{index + 1}" This app is veri. cool

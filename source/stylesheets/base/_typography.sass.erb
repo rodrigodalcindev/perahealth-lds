@@ -24,3 +24,11 @@ h1, h2, h3, h4, h5, h6, p
 
 p
   font-family: $b-font-family-body
+
+// Headings
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "heading" %>
+h<%= index + 1 %>, .h<%= index + 1 %>
+  font-family: $b-font-family-bold
+  font-size: $<%= prop[1].name %>
+<% end %>

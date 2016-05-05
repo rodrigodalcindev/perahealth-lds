@@ -33,3 +33,9 @@ $b-font-family-bold:    'Freight Sans Bold', sans-serif !default
 $b-font-size:           rem(16) !default
 $b-line-height:         1.5 !default
 $b-line-height-heading: 1.2
+
+/// Headings
+<% data.design_tokens.typography.props.each do |prop| %>
+<% next unless prop[1].category == "heading" %>
+$<%= prop[1].name %>: <%= prop[1].value %>px
+<% end %>

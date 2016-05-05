@@ -1,0 +1,32 @@
+---
+  props:
+    h1:
+      name:     "heading1"
+      value:    36
+      type:     "number"
+      category: "heading"
+    h2:
+      name:     "heading2"
+      value:    30
+      type:     "number"
+      category: "heading"
+    h3:
+      name:     "heading3"
+      value:    24
+      type:     "number"
+      category: "heading"
+    h4:
+      name:     "heading4"
+      value:    20
+      type:     "number"
+      category: "heading"
+    h5:
+      name:     "heading5"
+      value:    16
+      type:     "number"
+      category: "heading"
+    h6:
+      name:     "heading6"
+      value:    14
+      type:     "number"
+      category: "heading"

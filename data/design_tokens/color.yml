@@ -1,19 +1,47 @@
-colors:
-  - name: black
-    hex:  "000"
-  - name: white
-    hex:  "FFF"
-  - name: asphalt
-    hex:  "3F4959"
-  - name: powder
-    hex:  "F2F7FB"
-  - name: ink
-    hex:  "12306B"
-  - name: marine
-    hex:  "193E99"
-  - name: iris
-    hex:  "33B0FF"
-  - name: spring
-    hex:  "15E6C3"
-  - name: azalea
-    hex:  "E013E6"
+---
+  props:
+    black:
+      name:     "black"
+      value:    "#000"
+      type:     "color"
+      category: "background"
+    white:
+      name:     "white"
+      value:    "#FFF"
+      type:     "color"
+      category: "background"
+    asphalt:
+      name:     "asphalt"
+      value:    "#3F4959"
+      type:     "color"
+      category: "background"
+    powder:
+      name:     "powder"
+      value:    "#F2F7FB"
+      type:     "color"
+      category: "background"
+    ink:
+      name:     "ink"
+      value:    "#12306B"
+      type:     "color"
+      category: "background"
+    marine:
+      name:     "marine"
+      value:    "#193E99"
+      type:     "color"
+      category: "background"
+    iris:
+      name:     "iris"
+      value:    "#33B0FF"
+      type:     "color"
+      category: "background"
+    spring:
+      name:     "spring"
+      value:    "#15E6C3"
+      type:     "color"
+      category: "background"
+    azalea:
+      name:     "azalea"
+      value:    "#E013E6"
+      type:     "color"
+      category: "background"

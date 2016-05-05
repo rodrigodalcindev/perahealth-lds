@@ -1,7 +1,11 @@
 // Color Swatches
 .b-swatch
+  @include display(flex)
+  @include align-items(center)
+  @include justify-content(center)
+  border: 1px solid rgba($asphalt,.15)
+  border-radius: $b-border-radius
   height: 100px
-  margin: 5px
   width: 150px
 
 <% data.design_tokens.color.colors.each do |swatch| %>

@@ -1,13 +1,60 @@
 *
   box-sizing: border-box
 
+*:not(pre)>code
+  @include code
+
 img,
 figure
   margin: 0
   max-width: 100%
 
+ul, ol,
 dl dt
   margin: 0
 
+ul, ol
+  list-style: none
+  padding: 0
+
 a
   cursor: pointer
+
+.l-navigation,
+.l-main
+  min-height: 100vh
+
+
+.l-navigation
+  background: $asphalt
+  color: $white
+  width: rem(200)
+
+  figure
+    background: $azalea
+
+    img
+      height: 45px
+
+  a, a:hover
+    color: $white
+    text-decoration: none
+    text-transform: capitalize
+
+  ul li
+    @include transition(background .15s ease)
+    background: transparent
+    border-top: 1px solid rgba($powder, .35)
+
+    &:first-child
+      border: none
+
+    &:hover
+      background: lighten($asphalt, 10%)
+
+    a
+      display: block
+
+.l-main
+  background: $powder
+  margin-left: rem(200)

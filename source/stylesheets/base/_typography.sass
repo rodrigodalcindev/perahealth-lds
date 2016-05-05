@@ -1,0 +1,26 @@
+// Font Face
+@font-face
+  font-family: 'Freight Sans Medium'
+  src: asset-url('FreightSans-Medium.ttf',font)
+
+@font-face
+  font-family: 'Freight Sans Book'
+  src: asset-url('FreightSans-Book.ttf',font)
+
+@font-face
+  font-family: 'Freight Sans Bold'
+  src: asset-url('FreightSans-Bold.ttf',font)
+
+body
+  +font-feature-settings("kern", "liga", "pnum")
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-family: $b-font-family
+  font-size: $b-font-size
+  line-height: $b-line-height
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+p
+  font-family: $b-font-family-body

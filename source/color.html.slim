@@ -6,9 +6,9 @@ h1 Color Swatches
 
 ul
   - data.design_tokens.color.colors.each do |swatch|
-    li
-      .b-swatch class="b-swatch--#{swatch.name}"
+    li.dib.tac.mbm
+      .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{swatch.name}"
         span
-          = swatch.name
-          br
           = "#" + swatch.hex
+      code
+        = "$" + swatch.name

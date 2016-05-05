@@ -13,6 +13,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '~> 3.4.1'
 gem 'middleman-livereload'
+gem 'middleman-syntax'
 
 gem 'slim'
 gem 'jquery-middleman'

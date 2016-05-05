@@ -8,8 +8,8 @@
   height: 100px
   width: 150px
 
-<% data.design_tokens.color.colors.each do |swatch| %>
-.b-swatch--<%= swatch.name %>
-  background: $<%= swatch.name %>
-  color: color-contrast($<%= swatch.name %>)
+<% data.design_tokens.color.props.each do |prop| %>
+.b-swatch--<%= prop[1].name %>
+  background: $<%= prop[1].name %>
+  color: color-contrast($<%= prop[1].name %>)
 <% end %>

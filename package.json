@@ -1,0 +1,27 @@
+{
+  "name": "Veri LDS",
+  "version": "1.0.0",
+  "description": "A living design system and style guide repository for the Veri app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DynamoMTL/veri-lds"
+  },
+  "keywords": [
+    "veri",
+    "style",
+    "properties",
+    "css",
+    "sass",
+    "iOS"
+  ],
+  "author": "Dynamo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DynamoMTL/veri-lds/issues"
+  },
+  "homepage": "https://veri-lds.herokuapp.com",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "theo": "2.1.0"
+  }
+}

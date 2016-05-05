@@ -30,3 +30,18 @@
       value:    14
       type:     "number"
       category: "heading"
+    font_family_medium:
+      name:     "font-family-medium"
+      value:    "FreightSans-Medium"
+      type:     "string"
+      category: "font-family"
+    font_family_book:
+      name:     "font-family-book"
+      value:    "FreightSans-Book"
+      type:     "string"
+      category: "font-family"
+    font_family_bold:
+      name:     "font-family-bold"
+      value:    "FreightSans-Bold"
+      type:     "string"
+      category: "font-family"

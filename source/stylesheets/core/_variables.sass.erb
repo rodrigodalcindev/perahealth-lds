@@ -26,10 +26,12 @@ $b-space-l:   $b-space * 2 !default
 $b-space-xl:  $b-space * 4 !default
 
 // Typography
-$b-font-family:         'Freight Sans Medium', sans-serif !default
-$b-font-family-heading: 'Freight Sans Bold', sans-serif !default
-$b-font-family-body:    'Freight Sans Book', sans-serif !default
-$b-font-family-bold:    'Freight Sans Bold', sans-serif !default
+/// Font Face
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "font-family" %>
+$b-<%= prop[1].name %>: <%= prop[1].value %>, sans-serif !default
+<% end %>
+
 $b-font-size:           rem(16) !default
 $b-line-height:         1.5 !default
 $b-line-height-heading: 1.2

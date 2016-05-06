@@ -38,10 +38,16 @@ $b-<%= prop[1].name %>: <%= prop[1].value %>, sans-serif !default
 $b-<%= prop[1].name %>: rem(<%= prop[1].value %>)
 <% end %>
 
-/// Line-Height
+/// Line Height
 <% data.design_tokens.typography.props.each_with_index do |prop, index| %>
 <% next unless prop[1].category == "line-height" %>
 $b-<%= prop[1].name %>: <%= prop[1].value %>
+<% end %>
+
+/// Letter Spacing
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "letter-spacing" %>
+$b-<%= prop[1].name %>: rem(<%= prop[1].value %>)
 <% end %>
 
 /// Headings

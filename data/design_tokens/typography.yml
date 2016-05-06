@@ -32,7 +32,7 @@
       category: "heading"
     font_size_small:
       name:     "font-size-small"
-      value:    14
+      value:    13
       type:     "number"
       category: "font-size"
     font_size_medium:
@@ -60,6 +60,16 @@
       value:    1.2
       type:     "number"
       category: "line-height"
+    letter_spacing_button:
+      name:     "letter-spacing-button"
+      value:    1.89
+      type:     "number"
+      category: "letter-spacing"
+    letter_spacing_label:
+      name:     "letter-spacing-label"
+      value:    1.08
+      type:     "number"
+      category: "letter-spacing"
     font_family_medium:
       name:     "font-family-medium"
       value:    "FreightSans-Medium"

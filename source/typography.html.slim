@@ -76,4 +76,21 @@ section.mtl
             br
             | No worries. We'll help you out.
         code
-            = "$#{prop[1].name}"
+          = "$#{prop[1].name}"
+
+section.mtl
+  h2.mbm Letter Spacing
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "letter-spacing"
+      li.mbm
+        p
+          - if prop[1].name.end_with? 'button'
+            span.tfbl.ttu class="b-#{prop[1].name}"
+             | Start Using Veri
+          - elsif prop[1].name.end_with? 'label'
+            small.tfbl class="b-#{prop[1].name}"
+             | Email Address
+        code
+          = "$#{prop[1].name}"

@@ -20,6 +20,9 @@ h1, h2, h3, h4, h5, h6, p
 p
   font-family: $b-font-family-medium
 
+small
+  font-size: $b-font-size-small
+
 // Headings
 <% data.design_tokens.typography.props.each_with_index do |prop, index| %>
 <% next unless prop[1].category == "heading" %>
@@ -34,4 +37,11 @@ h<%= index + 1 %>, .h<%= index + 1 %>
 <% next unless prop[1].category == "font-size" %>
 .b-<%= prop[1].name %>
   font-size: $b-<%= prop[1].name %>
+<% end %>
+
+// Letter Spacing
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "letter-spacing" %>
+.b-<%= prop[1].name %>
+  letter-spacing: $b-<%= prop[1].name %>
 <% end %>

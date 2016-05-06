@@ -22,3 +22,6 @@
 
 # Ignore dist directory
 /dist
+
+.ruby-version
+npm-debug.log

@@ -24,8 +24,6 @@ section.mtl
       li.mbm
         h4
           = prop[1].value
-        code
-          = "$" + prop[1].name
         - if prop[1].name.end_with? 'medium'
           p.tfm
             span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
@@ -46,3 +44,18 @@ section.mtl
             span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db 0 1 2 3 4 5 6 7 8 9
+        code
+          = "$" + prop[1].name
+
+
+section.mtl
+  h2 Type Sizes
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "font-size"
+      li.mbm
+        p class="b-#{prop[1].name}"
+          = "The quick, brown fox (#{prop[1].value}px)"
+        code
+          = "$#{prop[1].name}"

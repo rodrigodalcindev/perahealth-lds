@@ -32,7 +32,12 @@ $b-space-xl:  $b-space * 4 !default
 $b-<%= prop[1].name %>: <%= prop[1].value %>, sans-serif !default
 <% end %>
 
-$b-font-size:           rem(16) !default
+/// Type Sizing
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "font-size" %>
+$b-<%= prop[1].name %>: rem(<%= prop[1].value %>)
+<% end %>
+
 $b-line-height:         1.5 !default
 $b-line-height-heading: 1.2
 

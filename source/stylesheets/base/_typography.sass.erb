@@ -11,7 +11,7 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   font-family: $b-font-family-medium
-  font-size: $b-font-size
+  font-size: $b-font-size-medium
   line-height: $b-line-height
 
 h1, h2, h3, h4, h5, h6, p
@@ -26,4 +26,11 @@ p
 h<%= index + 1 %>, .h<%= index + 1 %>
   font-family: $b-font-family-bold
   font-size: $<%= prop[1].name %>
+<% end %>
+
+// Type Sizing
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "font-size" %>
+.b-<%= prop[1].name %>
+  font-size: $b-<%= prop[1].name %>
 <% end %>

@@ -30,6 +30,26 @@
       value:    14
       type:     "number"
       category: "heading"
+    font_size_small:
+      name:     "font-size-small"
+      value:    14
+      type:     "number"
+      category: "font-size"
+    font_size_medium:
+      name:     "font-size-medium"
+      value:    16
+      type:     "number"
+      category: "font-size"
+    font_size_large:
+      name:     "font-size-large"
+      value:    20
+      type:     "number"
+      category: "font-size"
+    font_size_extra_large:
+      name:     "font-size-x-large"
+      value:    24
+      type:     "number"
+      category: "font-size"
     font_family_medium:
       name:     "font-family-medium"
       value:    "FreightSans-Medium"

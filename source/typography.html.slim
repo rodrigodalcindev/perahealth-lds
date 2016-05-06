@@ -71,10 +71,10 @@ section.mtl
       li.mbm
         p
           - if prop[1].name.end_with? 'button'
-            span.tfbl.ttu class="b-#{prop[1].name}"
+            span.b-font-family-bold.ttu class="b-#{prop[1].name}"
              | Start Using Veri
           - elsif prop[1].name.end_with? 'label'
-            small.tfbl class="b-#{prop[1].name}"
+            small.b-font-family-bold class="b-#{prop[1].name}"
              | Email Address
         code
           = "$#{prop[1].name}"

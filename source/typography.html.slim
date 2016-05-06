@@ -2,14 +2,42 @@
 body_class: "is-typography"
 ---
 
-h1.mbl Typography
+h1 Typography
 
-h2 Headings
+section.mtl
+  h2 Headings
 
-ul
-  - data.design_tokens.typography.props.each_with_index do |prop, index|
-    - next unless prop[1].category == "heading"
-    li.mbm
-      code.dib.vam
-        = "h#{index + 1}"
-      span.dib.mlm.vam class="h#{index + 1}" This app is veri. cool
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "heading"
+      li.mbm
+        code.dib.vam
+          = "h#{index + 1}"
+        span.dib.mlm.vam class="h#{index + 1}" This app is veri. cool
+
+section.mtl
+  h2 Font Families
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "font-family"
+      li.mbm
+        h4
+          = prop[1].value
+        code
+          = "$" + prop[1].name
+        - if prop[1].name.include? 'medium'
+          p.tfm
+            span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db 0 1 2 3 4 5 6 7 8 9
+        - elsif prop[1].name.include? 'book'
+          p.tfbk
+            span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db 0 1 2 3 4 5 6 7 8 9
+        - elsif prop[1].name.include? 'bold'
+          p.tfbl
+            span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db 0 1 2 3 4 5 6 7 8 9

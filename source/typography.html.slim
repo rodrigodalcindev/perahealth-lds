@@ -1,0 +1,93 @@
+---
+body_class: "is-typography"
+---
+
+h1 Typography
+
+section.mtl
+  h2.mbm Headings
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "heading"
+      li.mbm
+        code.dib.vam
+          = "h#{index + 1}"
+        span.dib.mlm.vam class="h#{index + 1}" This app is veri. cool
+
+section.mtl
+  h2.mbm Font Families
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "font-family"
+      li.mbm
+        h4.mbxs
+          = prop[1].value
+        p class="b-#{prop[1].name}"
+          span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+          span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+          span.db 0 1 2 3 4 5 6 7 8 9
+        code
+          = "$" + prop[1].name
+
+
+section.mtl
+  h2.mbm Type Sizes
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "font-size"
+      li.mbm
+        p class="b-#{prop[1].name}"
+          = "The quick, brown fox (#{prop[1].value}px)"
+        code
+          = "$#{prop[1].name}"
+
+section.mtl
+  h2.mbm Line Height
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "line-height"
+      li.mbm
+        - if prop[1].name.include? 'default'
+          p.tfbk
+            | Vine video phenomenon who became the first Viner to accumulate one billion loops. By September 2015, she had reached over 7 billion loops. In several of her Vines, she is seen hurting herselfv"accidentally" or falling into water. # 97 Most Popular Person on Vine.
+        - elsif prop[1].name.include? 'heading'
+          h3
+            | Forgot your password?
+            br
+            | No worries. We'll help you out.
+        code
+          = "$#{prop[1].name}"
+
+section.mtl
+  h2.mbm Letter Spacing
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "letter-spacing"
+      li.mbm
+        p
+          - if prop[1].name.end_with? 'button'
+            span.b-font-family-bold.ttu class="b-#{prop[1].name}"
+             | Start Using Veri
+          - elsif prop[1].name.end_with? 'label'
+            small.b-font-family-bold class="b-#{prop[1].name}"
+             | Email Address
+        code
+          = "$#{prop[1].name}"
+
+section.mtl
+  h2.mbm Default Styles (Web)
+
+  p.mbxs
+    | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
+
+    = code('sass') do
+      |
+        body
+          font-family: $font-family-medium
+          font-size: $font-size-medium
+          line-height: $line-height-default

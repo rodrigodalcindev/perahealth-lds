@@ -48,6 +48,6 @@ A build task has already been setup so the static files are generated upon deplo
 In order to deploy, please make sure you've been granted access to the Heroku app first and then:
 
 1. `heroku git:remote -a veri-lds`
-2. git push heroku master
+2. `git push heroku master`
 
 The URL for the Heroku instance is https://veri-lds.herokuapp.com/

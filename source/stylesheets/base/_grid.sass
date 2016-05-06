@@ -1,0 +1,17 @@
+// Neat Grid System
+.g-container
+  @include outer-container
+  @include padding(null $b-space null $b-space)
+
+.g-row
+  @include row
+
+@for $i from 1 through 12
+  .g-col-#{$i}
+    @include span-columns($i)
+
+  .g-col-shift-#{$i}
+    @include shift($i)
+
+  .g-col-omega-#{$i}
+    @include omega(#{$i}n)

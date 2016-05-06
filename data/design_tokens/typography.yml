@@ -1,0 +1,92 @@
+---
+  props:
+    h1:
+      name:     "heading1"
+      value:    36
+      type:     "number"
+      category: "heading"
+    h2:
+      name:     "heading2"
+      value:    30
+      type:     "number"
+      category: "heading"
+    h3:
+      name:     "heading3"
+      value:    24
+      type:     "number"
+      category: "heading"
+    h4:
+      name:     "heading4"
+      value:    20
+      type:     "number"
+      category: "heading"
+    h5:
+      name:     "heading5"
+      value:    16
+      type:     "number"
+      category: "heading"
+    h6:
+      name:     "heading6"
+      value:    14
+      type:     "number"
+      category: "heading"
+    font_size_small:
+      name:     "font-size-small"
+      value:    13
+      type:     "number"
+      category: "font-size"
+    font_size_medium:
+      name:     "font-size-medium"
+      value:    16
+      type:     "number"
+      category: "font-size"
+    font_size_large:
+      name:     "font-size-large"
+      value:    20
+      type:     "number"
+      category: "font-size"
+    font_size_extra_large:
+      name:     "font-size-x-large"
+      value:    24
+      type:     "number"
+      category: "font-size"
+    line_height_default:
+      name:     "line-height-default"
+      value:    1.5
+      type:     "number"
+      category: "line-height"
+    line_height_heading:
+      name:     "line-height-heading"
+      value:    1.2
+      type:     "number"
+      category: "line-height"
+    letter_spacing_button:
+      name:     "letter-spacing-button"
+      value:    1.89
+      type:     "number"
+      category: "letter-spacing"
+    letter_spacing_label:
+      name:     "letter-spacing-label"
+      value:    1.08
+      type:     "number"
+      category: "letter-spacing"
+    font_family_medium:
+      name:     "font-family-medium"
+      value:    "FreightSans-Medium"
+      type:     "string"
+      category: "font-family"
+    font_family_book:
+      name:     "font-family-book"
+      value:    "FreightSans-Book"
+      type:     "string"
+      category: "font-family"
+    font_family_bold:
+      name:     "font-family-bold"
+      value:    "FreightSans-Bold"
+      type:     "string"
+      category: "font-family"
+    font_family_bold_italic:
+      name:     "font-family-bold-italic"
+      value:    "FreightSans-BoldItalic"
+      type:     "string"
+      category: "font-family"

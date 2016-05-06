@@ -1,0 +1,13 @@
+---
+body_class: "is-spacing"
+---
+
+h1 Spacing and Sizing
+
+ul
+  - data.design_tokens.spacing.props.each do |prop|
+    li.tac.mbm class="b-swatch--#{prop[1].name}"
+      span
+        = prop[1].name
+      code.mls
+        = prop[1].name

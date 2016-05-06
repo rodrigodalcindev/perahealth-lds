@@ -1,0 +1,27 @@
+---
+  props:
+    space-xs:
+      name: "b-space-xs"
+      value: "5"
+      type: "size"
+      category: "space"
+    space-s:
+      name: "b-space-s"
+      value: "10"
+      type: "size"
+      category: "space"
+    space:
+      name: "b-space"
+      value: "20"
+      type: "size"
+      category: "space"
+    space-l:
+      name: "b-space-l"
+      value: "40"
+      type: "size"
+      category: "space"
+    space-xl:
+      name: "b-space-xl"
+      value: "80"
+      type: "size"
+      category: "space"

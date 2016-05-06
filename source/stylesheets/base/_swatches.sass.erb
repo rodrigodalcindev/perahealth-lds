@@ -13,3 +13,10 @@
   background: $<%= prop[1].name %>
   color: color-contrast($<%= prop[1].name %>)
 <% end %>
+
+// Spacing Swatches
+<% data.design_tokens.spacing.props.each do |prop|%>
+.b-swatch--<%= prop[1].name%>
+  background: $iris
+  padding: $<%= prop[1].name %>
+<% end %>

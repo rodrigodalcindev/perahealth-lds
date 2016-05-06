@@ -26,7 +26,7 @@ $b-space-l:   $b-space * 2 !default
 $b-space-xl:  $b-space * 4 !default
 
 // Typography
-/// Font Face
+/// Font Families
 <% data.design_tokens.typography.props.each_with_index do |prop, index| %>
 <% next unless prop[1].category == "font-family" %>
 $b-<%= prop[1].name %>: <%= prop[1].value %>, sans-serif !default

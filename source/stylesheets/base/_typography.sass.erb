@@ -23,6 +23,13 @@ p
 small
   font-size: $b-font-size-small
 
+// Font Families
+<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
+<% next unless prop[1].category == "font-family" %>
+.b-<%= prop[1].name %>
+  font-family: $b-<%= prop[1].name %>
+<% end %>
+
 // Headings
 <% data.design_tokens.typography.props.each_with_index do |prop, index| %>
 <% next unless prop[1].category == "heading" %>

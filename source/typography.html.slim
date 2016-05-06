@@ -26,18 +26,23 @@ section.mtl
           = prop[1].value
         code
           = "$" + prop[1].name
-        - if prop[1].name.include? 'medium'
+        - if prop[1].name.end_with? 'medium'
           p.tfm
             span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db 0 1 2 3 4 5 6 7 8 9
-        - elsif prop[1].name.include? 'book'
+        - elsif prop[1].name.end_with? 'book'
           p.tfbk
             span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db 0 1 2 3 4 5 6 7 8 9
-        - elsif prop[1].name.include? 'bold'
+        - elsif prop[1].name.end_with? 'bold'
           p.tfbl
+            span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
+            span.db 0 1 2 3 4 5 6 7 8 9
+        - elsif prop[1].name.end_with? 'bold-italic'
+          p.tfblit
             span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
             span.db 0 1 2 3 4 5 6 7 8 9

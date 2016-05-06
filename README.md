@@ -5,7 +5,7 @@ It uses [Middleman](https://middlemanapp.com) as a framework for easy tapping of
 
 ### Setup
 - - -
-1. `git clone git@github.com:DynamoMTL/veri-lds.git`
+1. `git clone https://github.com/DynamoMTL/veri-lds.git`
 2. `bundle install`
 3. `npm rm --global gulp`
 4. `npm install`

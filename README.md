@@ -46,6 +46,7 @@ Design tokens are parsed via a Gulp-based task that uses Saleforce's [Theo](http
 A build task has already been setup so the static files are generated upon deployment on Heroku, therefore there is no need to run a build locally before deploying.
 
 In order to deploy, please make sure you've been granted access to the Heroku app first and then:
+
 1. `heroku git:remote -a veri-lds`
 2. git push heroku master
 

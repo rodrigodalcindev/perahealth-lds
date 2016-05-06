@@ -5,7 +5,7 @@ body_class: "is-typography"
 h1 Typography
 
 section.mtl
-  h2 Headings
+  h2.mbm Headings
 
   ul
     - data.design_tokens.typography.props.each_with_index do |prop, index|
@@ -16,13 +16,13 @@ section.mtl
         span.dib.mlm.vam class="h#{index + 1}" This app is veri. cool
 
 section.mtl
-  h2 Font Families
+  h2.mbm Font Families
 
   ul
     - data.design_tokens.typography.props.each_with_index do |prop, index|
       - next unless prop[1].category == "font-family"
       li.mbm
-        h4
+        h4.mbxs
           = prop[1].value
         - if prop[1].name.end_with? 'medium'
           p.tfm
@@ -49,7 +49,7 @@ section.mtl
 
 
 section.mtl
-  h2 Type Sizes
+  h2.mbm Type Sizes
 
   ul
     - data.design_tokens.typography.props.each_with_index do |prop, index|
@@ -59,3 +59,21 @@ section.mtl
           = "The quick, brown fox (#{prop[1].value}px)"
         code
           = "$#{prop[1].name}"
+
+section.mtl
+  h2.mbm Line Height
+
+  ul
+    - data.design_tokens.typography.props.each_with_index do |prop, index|
+      - next unless prop[1].category == "line-height"
+      li.mbm
+        - if prop[1].name.include? 'default'
+          p.tfbk
+            | Vine video phenomenon who became the first Viner to accumulate one billion loops. By September 2015, she had reached over 7 billion loops. In several of her Vines, she is seen hurting herselfv"accidentally" or falling into water. # 97 Most Popular Person on Vine.
+        - elsif prop[1].name.include? 'heading'
+          h3
+            | Forgot your password?
+            br
+            | No worries. We'll help you out.
+        code
+            = "$#{prop[1].name}"

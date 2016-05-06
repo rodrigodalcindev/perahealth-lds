@@ -12,7 +12,7 @@ body
   -moz-osx-font-smoothing: grayscale
   font-family: $b-font-family-medium
   font-size: $b-font-size-medium
-  line-height: $b-line-height
+  line-height: $b-line-height-default
 
 h1, h2, h3, h4, h5, h6, p
   margin: 0
@@ -26,6 +26,7 @@ p
 h<%= index + 1 %>, .h<%= index + 1 %>
   font-family: $b-font-family-bold
   font-size: $<%= prop[1].name %>
+  line-height: $b-line-height-heading
 <% end %>
 
 // Type Sizing

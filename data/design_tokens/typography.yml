@@ -50,6 +50,16 @@
       value:    24
       type:     "number"
       category: "font-size"
+    line_height_default:
+      name:     "line-height-default"
+      value:    1.5
+      type:     "number"
+      category: "line-height"
+    line_height_heading:
+      name:     "line-height-heading"
+      value:    1.2
+      type:     "number"
+      category: "line-height"
     font_family_medium:
       name:     "font-family-medium"
       value:    "FreightSans-Medium"

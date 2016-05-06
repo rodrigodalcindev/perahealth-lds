@@ -45,3 +45,8 @@
       value:    "FreightSans-Bold"
       type:     "string"
       category: "font-family"
+    font_family_bold_italic:
+      name:     "font-family-bold-italic"
+      value:    "FreightSans-BoldItalic"
+      type:     "string"
+      category: "font-family"

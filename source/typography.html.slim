@@ -5,6 +5,19 @@ body_class: "is-typography"
 h1 Typography
 
 section.mtl
+  h2.mbm Default Styles (Web)
+
+  p.mbxs
+    | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
+
+    = code('sass') do
+      |
+        body
+          font-family: $font-family-medium
+          font-size: $font-size-medium
+          line-height: $line-height-default
+
+section.mtl
   h2.mbm Headings
 
   ul

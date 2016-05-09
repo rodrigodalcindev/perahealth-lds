@@ -11,8 +11,8 @@ $stratum-highest:  5000
 $stratum-top:     10000
 
 // Color Palette
-<% data.design_tokens.color.props.each do |prop| %>
-$<%= prop[1].name %>: <%= prop[1].value %>
+<% design_token("color").each do |prop| %>
+$<%= prop.name %>: <%= prop.value %>
 <% end %>
 
 // Border
@@ -27,31 +27,26 @@ $b-space-xl:  $b-space * 4 !default
 
 // Typography
 /// Font Families
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "font-family" %>
-$b-<%= prop[1].name %>: <%= prop[1].value %>, sans-serif !default
+<% design_token("typography", category: "font-family").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>, sans-serif !default
 <% end %>
 
 /// Type Sizing
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "font-size" %>
-$b-<%= prop[1].name %>: rem(<%= prop[1].value %>)
+<% design_token("typography", category: "font-size").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
 /// Line Height
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "line-height" %>
-$b-<%= prop[1].name %>: <%= prop[1].value %>
+<% design_token("typography", category: "line-height").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
 <% end %>
 
 /// Letter Spacing
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "letter-spacing" %>
-$b-<%= prop[1].name %>: rem(<%= prop[1].value %>)
+<% design_token("typography", category: "letter-spacing").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
 /// Headings
-<% data.design_tokens.typography.props.each do |prop| %>
-<% next unless prop[1].category == "heading" %>
-$<%= prop[1].name %>: <%= prop[1].value %>px
+<% design_token("typography", category: "heading").each do |prop| %>
+$<%= prop.name %>: <%= prop.value %>px
 <% end %>

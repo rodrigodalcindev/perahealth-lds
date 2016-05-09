@@ -1,9 +1,8 @@
 // Font Face
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "font-family" %>
+<% design_token("typography", category: "font-family").each do |prop| %>
 @font-face
-  font-family: '<%= prop[1].value %>'
-  src: asset-url('<%= prop[1].value %>.ttf',font)
+  font-family: '<%= prop.value %>'
+  src: asset-url('<%= prop.value %>.ttf',font)
 <% end %>
 
 body
@@ -21,31 +20,27 @@ small
   font-size: $b-font-size-small
 
 // Font Families
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "font-family" %>
-.b-<%= prop[1].name %>
-  font-family: $b-<%= prop[1].name %>
+<% design_token("typography", category: "font-family").each do |prop| %>
+.b-<%= prop.name %>
+  font-family: $b-<%= prop.name %>
 <% end %>
 
 // Headings
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "heading" %>
+<% design_token("typography", category: "heading").each_with_index do |prop, index| %>
 h<%= index + 1 %>, .h<%= index + 1 %>
   font-family: $b-font-family-bold
-  font-size: $<%= prop[1].name %>
+  font-size: $<%= prop.name %>
   line-height: $b-line-height-heading
 <% end %>
 
 // Type Sizing
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "font-size" %>
-.b-<%= prop[1].name %>
-  font-size: $b-<%= prop[1].name %>
+<% design_token("typography", category: "font-size").each do |prop| %>
+.b-<%= prop.name %>
+  font-size: $b-<%= prop.name %>
 <% end %>
 
 // Letter Spacing
-<% data.design_tokens.typography.props.each_with_index do |prop, index| %>
-<% next unless prop[1].category == "letter-spacing" %>
-.b-<%= prop[1].name %>
-  letter-spacing: $b-<%= prop[1].name %>
+<% design_token("typography", category: "letter-spacing").each do |prop| %>
+.b-<%= prop.name %>
+  letter-spacing: $b-<%= prop.name %>
 <% end %>

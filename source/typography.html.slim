@@ -8,8 +8,7 @@ section.mtl
   h2.mbm Headings
 
   ul
-    - data.design_tokens.typography.props.each_with_index do |prop, index|
-      - next unless prop[1].category == "heading"
+    - design_token("typography", category: "heading").each_with_index do |prop, index|
       li.mbm
         code.dib.vam
           = "h#{index + 1}"
@@ -19,67 +18,63 @@ section.mtl
   h2.mbm Font Families
 
   ul
-    - data.design_tokens.typography.props.each_with_index do |prop, index|
-      - next unless prop[1].category == "font-family"
+    - design_token("typography", category: "font-family").each do |prop|
       li.mbm
         h4.mbxs
-          = prop[1].value
-        p class="b-#{prop[1].name}"
+          = prop.value
+        p class="b-#{prop.name}"
           span.ttu.db a b c d e f g h i j k l m n o p q r s t u v w x y z
           span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
           span.db 0 1 2 3 4 5 6 7 8 9
         code
-          = "$" + prop[1].name
+          = "$" + prop.name
 
 
 section.mtl
   h2.mbm Type Sizes
 
   ul
-    - data.design_tokens.typography.props.each_with_index do |prop, index|
-      - next unless prop[1].category == "font-size"
+    - design_token("typography", category: "font-size").each do |prop|
       li.mbm
-        p class="b-#{prop[1].name}"
-          = "The quick, brown fox (#{prop[1].value}px)"
+        p class="b-#{prop.name}"
+          = "The quick, brown fox (#{prop.value}px)"
         code
-          = "$#{prop[1].name}"
+          = "$#{prop.name}"
 
 section.mtl
   h2.mbm Line Height
 
   ul
-    - data.design_tokens.typography.props.each_with_index do |prop, index|
-      - next unless prop[1].category == "line-height"
+    - design_token("typography", category: "line-height").each do |prop|
       li.mbm
-        - if prop[1].name.include? 'default'
+        - if prop.name.include? 'default'
           .g-row
             .g-col-5
               p.tfbk
                 | Vine video phenomenon who became the first Viner to accumulate one billion loops. By September 2015, she had reached over 7 billion loops. In several of her Vines, she is seen hurting herselfv"accidentally" or falling into water. # 97 Most Popular Person on Vine.
-        - elsif prop[1].name.include? 'heading'
+        - elsif prop.name.include? 'heading'
           h3
             | Forgot your password?
             br
             | No worries. We'll help you out.
         code
-          = "$#{prop[1].name}"
+          = "$#{prop.name}"
 
 section.mtl
   h2.mbm Letter Spacing
 
   ul
-    - data.design_tokens.typography.props.each_with_index do |prop, index|
-      - next unless prop[1].category == "letter-spacing"
+    - design_token("typography", category: "letter-spacing").each do |prop|
       li.mbm
         p
-          - if prop[1].name.end_with? 'button'
-            span.b-font-family-bold.ttu class="b-#{prop[1].name}"
+          - if prop.name.end_with? 'button'
+            span.b-font-family-bold.ttu class="b-#{prop.name}"
              | Start Using Veri
-          - elsif prop[1].name.end_with? 'label'
-            small.b-font-family-bold class="b-#{prop[1].name}"
+          - elsif prop.name.end_with? 'label'
+            small.b-font-family-bold class="b-#{prop.name}"
              | Email Address
         code
-          = "$#{prop[1].name}"
+          = "$#{prop.name}"
 
 section.mtl
   h2.mbm Default Styles (Web)

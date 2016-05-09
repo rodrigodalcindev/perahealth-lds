@@ -4,7 +4,4 @@ nav.l-navigation.pof
       = image_tag "veri-logo.png"
     figcaption.tfbl.mtxs Living Design System
 
-  ul
-    - data.design_tokens.each do |token|
-      li
-        = link_to token[0], "/#{token[0]}.html", class: "plm prm pts pbs"
+  = token_navigation

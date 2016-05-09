@@ -8,10 +8,10 @@ section.mtl
   h2.mbm Main Colors
 
   ul
-    - data.design_tokens.color.props.each do |prop|
+    - design_token("color").each do |prop|
       li.dib.tac.mbm
-        .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop[1].name}"
+        .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop.name}"
           span
-            = "#" + prop[1].value
+            = prop.value
         code
-          = "$" + prop[1].name
+          = "$" + prop.name

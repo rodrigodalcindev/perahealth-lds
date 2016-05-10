@@ -4,9 +4,14 @@
   color: lighten($black, 60%)
   font-family: $b-font-family-book
   font-size: $b-font-size-large
+  line-height: $b-line-height-text-input
   margin-top: 2px
-  min-width: rem(300)
-  padding: 0 rem($b-text-input-horizontal-padding)
+  min-width: rem($b-text-input-min-width)
+  padding: rem($b-text-input-vertical-padding) rem($b-text-input-horizontal-padding)
+
+  &:focus
+    color: $marine
+    outline: none
 
 // One-line text inputs
 input[type=text],
@@ -16,10 +21,6 @@ input[type=tel],
 input[type=search],
 input[type=password]
   @include transition(padding .25s ease)
-  padding-bottom: rem($b-text-input-vertical-padding)
-  padding-top: rem($b-text-input-vertical-padding)
-  line-height: $b-line-height-text-input
-
   @include placeholder
     @include transition(opacity .25s ease)
     line-height: initial
@@ -32,23 +33,18 @@ input[type=password]
     @include placeholder
       opacity: 0
 
-  &:focus
-    color: $marine
-    outline: none
+// Adjacent input label
+label
+  @include transition(top .25s ease, opacity .25s ease)
+  color: lighten($black, 90%)
+  left: rem(20)
+  opacity: 0
+  top: rem(15)
 
-// Input groups
-.b-input
-  label
-    @include transition(top .25s ease, opacity .25s ease)
-    color: lighten($black, 90%)
-    left: rem(20)
-    opacity: 0
-    top: rem(15)
+input:focus + label,
+input.is-dirty + label
+  opacity: 1
+  top: rem(10)
 
-  input:focus + label,
-  input.is-dirty + label
-    opacity: 1
-    top: rem(10)
-
-  input:focus + label
-    color: $marine
+input:focus + label
+  color: $marine

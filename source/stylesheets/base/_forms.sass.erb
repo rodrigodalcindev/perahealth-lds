@@ -24,25 +24,31 @@ input[type=password]
     @include transition(opacity .25s ease)
     line-height: initial
 
-  &:focus
-    color: $marine
-    outline: none
+  &:focus,
+  &.is-dirty
     padding-bottom: rem($b-text-input-focus-bottom-padding)
     padding-top: rem($b-text-input-focus-top-padding)
 
     @include placeholder
       opacity: 0
 
+  &:focus
+    color: $marine
+    outline: none
+
 // Input groups
 .b-input
   label
     @include transition(top .25s ease, opacity .25s ease)
-    color: lighten($black, 60%)
+    color: lighten($black, 90%)
     left: rem(20)
     opacity: 0
     top: rem(15)
 
-  input:focus + label
-    color: $marine
+  input:focus + label,
+  input.is-dirty + label
     opacity: 1
     top: rem(10)
+
+  input:focus + label
+    color: $marine

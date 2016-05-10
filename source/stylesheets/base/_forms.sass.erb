@@ -1,0 +1,48 @@
+#{$all-text-inputs}
+  background: $white
+  border: none
+  color: lighten($black, 60%)
+  font-family: $b-font-family-book
+  font-size: $b-font-size-large
+  margin-top: 2px
+  min-width: rem(300)
+  padding: 0 rem($b-text-input-horizontal-padding)
+
+// One-line text inputs
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=password]
+  @include transition(padding .25s ease)
+  padding-bottom: rem($b-text-input-vertical-padding)
+  padding-top: rem($b-text-input-vertical-padding)
+  line-height: $b-line-height-text-input
+
+  @include placeholder
+    @include transition(opacity .25s ease)
+    line-height: initial
+
+  &:focus
+    color: $marine
+    outline: none
+    padding-bottom: rem($b-text-input-focus-bottom-padding)
+    padding-top: rem($b-text-input-focus-top-padding)
+
+    @include placeholder
+      opacity: 0
+
+// Input groups
+.b-input
+  label
+    @include transition(top .25s ease, opacity .25s ease)
+    color: lighten($black, 60%)
+    left: rem(20)
+    opacity: 0
+    top: rem(15)
+
+  input:focus + label
+    color: $marine
+    opacity: 1
+    top: rem(10)

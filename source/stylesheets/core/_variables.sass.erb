@@ -51,8 +51,13 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 $<%= prop.name %>: <%= prop.value %>px
 <% end %>
 
-/// Forms
-// One-line input padding
+// Forms
+/// One-line input padding
 <% design_token("forms", category: "padding").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>
+
+/// Input width
+<% design_token("forms", category: "width").each do |prop| %>
 $b-<%= prop.name %>: <%= prop.value %>
 <% end %>

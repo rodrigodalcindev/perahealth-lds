@@ -1,0 +1,28 @@
+---
+  props:
+    text_input_horizontal_padding:
+      name:     "text-input-horizontal-padding"
+      value:    20
+      type:     "number"
+      category: "padding"
+    text_input_vertical_padding:
+      name:     "text-input-vertical-padding"
+      value:    25
+      type:     "number"
+      category: "padding"
+    text_input_focus_top_padding:
+      name:     "text-input-focus-top-padding"
+      value:    35
+      type:     "number"
+      category: "padding"
+    text_input_focus_bottom_padding:
+      name:     "text-input-focus-bottom-padding"
+      value:    15
+      type:     "number"
+      category: "padding"
+    text_input_min_width:
+      name:     "text-input-min-width"
+      value:    300
+      type:     "number"
+      category: "width"
+

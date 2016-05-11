@@ -25,8 +25,10 @@ section.mtl
 
   h4.mtl Default Styles (Web)
 
-  p.mts.mbxs
-    | Form fields are styled over a pre-defined set of global rules affecting all text inputs, including text areas:
+  .g-row
+    .g-col-7
+      p.mts.mbxs
+        | Form fields are styled over a pre-defined set of global rules affecting all text inputs, including text areas:
 
   = code('sass') do
     |
@@ -42,46 +44,52 @@ section.mtl
         min-width: rem($text-input-min-width)
         padding: rem($text-input-vertical-padding) rem($text-input-horizontal-padding)
 
-  p.mts.mbxs
-    | The UI/UX dynamics between the input's placeholder and its label are based on the <code>:focus</code> pseudo-class paired up with toggling of a state-based class (<code>.is-dirty</code>) applied to the input element via javascript if presence of text is detected.
+  .g-row
+    .g-col-7
+      p.mts.mbxs
+        | The UI/UX dynamics between the input's placeholder and its label are based on the <code>:focus</code> pseudo-class paired up with toggling of a state-based class (<code>.is-dirty</code>) applied to the input element via javascript if presence of text is detected.
 
-  = code('sass', :start_line => 12) do
+  = code('sass', :start_line => 11) do
     |
-      @include placeholder
-        @include transition(opacity .25s ease)
-        line-height: initial
-
-      &:focus,
-      &.is-dirty
-        padding-bottom: rem($b-text-input-focus-bottom-padding)
-        padding-top: rem($b-text-input-focus-top-padding)
-
+      \#{$all-text-inputs}
+        /*(...)*/
         @include placeholder
+          @include transition(opacity .25s ease)
+          line-height: initial
+
+        &:focus,
+        &.is-dirty
+          padding-bottom: rem($b-text-input-focus-bottom-padding)
+          padding-top: rem($b-text-input-focus-top-padding)
+
+          @include placeholder
+            opacity: 0
+
+        &:focus
+          color: $marine
+          outline: none
+
+        // Adjacent input label
+        + label
+          @include transition(top .25s ease, opacity .25s ease)
+          color: lighten($black, 90%)
+          left: rem(20)
           opacity: 0
-
-      &:focus
-        color: $marine
-        outline: none
-
-      // Adjacent input label
-      + label
-        @include transition(top .25s ease, opacity .25s ease)
-        color: lighten($black, 90%)
-        left: rem(20)
-        opacity: 0
-        top: rem(15)
+          top: rem(15)
 
 
-      &:focus + label,
-      &.is-dirty + label
-        opacity: 1
-        top: rem(10)
+        &:focus + label,
+        &.is-dirty + label
+          opacity: 1
+          top: rem(10)
 
-      &:focus + label
-        color: $marine
+        &:focus + label
+          color: $marine
 
-  p.mtm.mbxs
-    | As for the js-based state class toggling functionality:
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | As for the js-based state class toggling functionality:
 
   = code('coffeescript') do
     |
@@ -92,10 +100,12 @@ section.mtl
         else
           $(this).removeClass('is-dirty')
 
-  p.mtm.mbxs
-    | Both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input</code> container.
-    br
-    | Note that the order of elements is important here:
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Markup-wise, both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input</code> container.
+        br
+        | Note that the order of elements is important here:
 
   = code('slim') do
     |

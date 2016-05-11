@@ -7,21 +7,16 @@ h1 Forms
 section.mtl
   h2.mbm Text Inputs
 
-  .b-input.por
+  .b-input.is-text.por
     input id="email" type="text" placeholder="Email Address"
     label.poa for="email"
       small.b-font-family-bold.b-letter-spacing-label
         | Email Address
-  .b-input.por
+  .b-input.is-text.por
     input id="password" type="password" placeholder="Password"
     label.poa for="password"
       small.b-font-family-bold.b-letter-spacing-label
         | Password
-  .b-input.por
-    textarea id="description" placeholder="Add your description"
-    label.poa for="description"
-      small.b-font-family-bold.b-letter-spacing-label
-        | Description
 
   h4.mtl Default Styles (Web)
 
@@ -69,14 +64,17 @@ section.mtl
           color: $marine
           outline: none
 
-        // Adjacent input label
         + label
           @include transition(top .25s ease, opacity .25s ease)
+          background: $white
           color: lighten($black, 90%)
-          left: rem(20)
+          height: rem($text-input-focus-top-padding)
+          left: 0
+          line-height: $line-height-input-label
+          width: rem($text-input-min-width)
           opacity: 0
+          padding-left: rem($text-input-horizontal-padding)
           top: rem(15)
-
 
         &:focus + label,
         &.is-dirty + label
@@ -103,14 +101,34 @@ section.mtl
   .g-row
     .g-col-7
       p.mtm.mbxs
-        | Markup-wise, both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input</code> container.
-        br
-        | Note that the order of elements is important here:
+        | Markup-wise, both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input.is-text</code> container for simplified targetting with javascript. Note that the order of elements is important here:
 
   = code('slim') do
     |
-      .b-input.por
+      .b-input.is-text.por
         input id="email" type="text" placeholder="Email Address"
         label.poa for="email"
           small.b-font-family-bold.b-letter-spacing-label
             | Email Address
+
+section.mtl
+  h2.mbm Text Area
+
+  .b-input.is-text.por
+      textarea id="description" placeholder="Add your description"
+      label.poa for="description"
+        small.b-font-family-bold.b-letter-spacing-label
+          | Description
+
+  h4.mtl Overridden Styles (Web)
+
+  .g-row
+    .g-col-7
+      p.mts.mbxs
+        | Text area elements inherit from the same global styles and UI/UX dynamics affecting text inputs, with a couple of overrides:
+
+  = code('sass') do
+    |
+      textarea
+        line-height: $line-height-text-area
+        min-height: rem($text-area-min-height)

@@ -29,16 +29,25 @@
   // Adjacent input label
   + label
     @include transition(top .25s ease, opacity .25s ease)
+    background: $white
     color: lighten($black, 90%)
-    left: rem(20)
+    height: rem($b-text-input-focus-top-padding)
+    left: 0
+    line-height: $b-line-height-input-label
+    width: rem($b-text-input-min-width)
     opacity: 0
+    padding-left: rem($b-text-input-horizontal-padding)
     top: rem(15)
-
 
   &:focus + label,
   &.is-dirty + label
     opacity: 1
-    top: rem(10)
+    top: 2px
 
   &:focus + label
     color: $marine
+
+// Textarea
+textarea
+  line-height: $b-line-height-text-area
+  min-height: rem($b-text-area-min-height)

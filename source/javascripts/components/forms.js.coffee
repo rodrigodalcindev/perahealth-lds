@@ -1,15 +1,14 @@
 class APP.Forms
   constructor: ->
-    @input  = $('input')
+    @textInput  = $('.b-input.is-text').find('input,textarea')
 
   init: ->
-    if @input.length > 0
+    if @textInput.length > 0
       @watchTextInput()
 
   watchTextInput: ->
     _ = this
-    _.input.on 'blur', (e) ->
-      console.log $.trim($(this).val()).length
+    _.textInput.on 'blur', (e) ->
       if $.trim($(this).val()).length > 0
         $(this).addClass('is-dirty')
       else

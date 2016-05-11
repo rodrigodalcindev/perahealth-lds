@@ -7,8 +7,9 @@ h1 Spacing and Sizing
 section.mtl
   ul
     - design_token("spacing").each do |prop|
-      li.tac.mbm class="b-block b-block--#{prop.name}"
-        span
-          = prop.name
-        code.mls
-          = "$" + prop.name
+      li.mbm.b-block.dib class="b-block--#{prop.name}"
+        .b-block-container
+          span.mll
+            = prop.name
+          code.mls
+            = "$" + prop.name

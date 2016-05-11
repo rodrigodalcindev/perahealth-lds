@@ -1,11 +1,26 @@
 // Spacing Swatches
 
-.b-block
-  background: rgba($ink, 0.2)
-  border-radius: $b-border-radius
-
 <% design_token("spacing").each do |prop| %>
-.b-block--<%= prop.name %>
-  padding: $b-<%= prop.name %>
-<% end %>
 
+.b-block
+  background: $marine
+
+.b-block--<%= prop.name %>
+  @include display(flex)
+  @include align-items(center)
+  border-radius: $b-border-radius
+  padding-left: $b-<%= prop.name %>
+  height: 50px
+  &:before
+    background: $spring
+    content: ''
+    display: block
+    height: 50px
+    position: fixed
+    width: 100%
+    z-index: 0
+
+.b-block-container
+  z-index: 1
+
+<% end %>

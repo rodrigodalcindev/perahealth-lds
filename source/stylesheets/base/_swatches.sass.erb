@@ -18,5 +18,7 @@
 // Spacing Swatches
 <% design_token("spacing").each do |prop| %>
 .b-swatch--<%= prop.name %>
-
+  background: rgba($ink, 0.2)
+  border-radius: $b-border-radius
+  padding: $<%= prop.name %>
 <% end %>

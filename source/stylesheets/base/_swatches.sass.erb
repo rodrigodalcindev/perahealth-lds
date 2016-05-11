@@ -8,15 +8,15 @@
   height: 100px
   width: 150px
 
-<% data.design_tokens.color.props.each do |prop| %>
-.b-swatch--<%= prop[1].name %>
-  background: $<%= prop[1].name %>
-  color: color-contrast($<%= prop[1].name %>)
+<% design_token("color").each do |prop| %>
+.b-swatch--<%= prop.name %>
+  background: $<%= prop.name %>
+  color: color-contrast($<%= prop.name %>)
 <% end %>
 
+
 // Spacing Swatches
-<% data.design_tokens.spacing.props.each do |prop|%>
-.b-swatch--<%= prop[1].name%>
-  background: $iris
-  padding: $<%= prop[1].name %>
+<% design_token("spacing").each do |prop| %>
+.b-swatch--<%= prop.name %>
+
 <% end %>

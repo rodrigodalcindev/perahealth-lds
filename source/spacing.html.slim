@@ -4,10 +4,11 @@ body_class: "is-spacing"
 
 h1 Spacing and Sizing
 
-ul
-  - data.design_tokens.spacing.props.each do |prop|
-    li.tac.mbm class="b-swatch--#{prop[1].name}"
-      span
-        = prop[1].name
-      code.mls
-        = prop[1].name
+section.mtl
+  ul
+    - design_token("spacing").each do |prop|
+      li.tac.mbm class="b-swatch--#{prop.name}"
+        span
+          = prop.name
+        code.mls
+          = prop.name

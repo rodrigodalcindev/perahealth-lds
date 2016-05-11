@@ -19,11 +19,9 @@ $<%= prop.name %>: <%= prop.value %>
 $b-border-radius: 4px !default
 
 // Sizing
-$b-space:     rem(20px) !default
-$b-space-xs:  $b-space * 0.25 !default
-$b-space-s:   $b-space * 0.5 !default
-$b-space-l:   $b-space * 2 !default
-$b-space-xl:  $b-space * 4 !default
+<% design_token("spacing", category: "space").each do |prop| %>
+$b-<%= prop.name%>: <%= prop.value %>px
+<% end %>
 
 // Typography
 /// Font Families

@@ -13,6 +13,7 @@ html
     = javascript_include_tag :all
 
   body class="#{current_page.data.body_class}"
+    = partial "layouts/svg"
     = partial "layouts/navigation"
     .l-main.pll.ptl.pbl.oh
       = yield

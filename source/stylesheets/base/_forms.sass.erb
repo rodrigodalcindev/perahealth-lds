@@ -1,0 +1,80 @@
+#{$all-text-inputs}
+  @include transition(padding .25s ease)
+  background: $white
+  border: none
+  color: lighten($black, 60%)
+  font-family: $b-font-family-book
+  font-size: $b-font-size-large
+  line-height: $b-line-height-text-input
+  margin-top: 2px
+  min-width: rem($b-text-input-min-width)
+  padding: rem($b-text-input-vertical-padding) rem($b-text-input-horizontal-padding)
+
+  @include placeholder
+    @include transition(opacity .25s ease)
+    line-height: initial
+
+  &:focus,
+  &.is-dirty
+    padding-bottom: rem($b-text-input-focus-bottom-padding)
+    padding-top: rem($b-text-input-focus-top-padding)
+
+    @include placeholder
+      opacity: 0
+
+  &:focus
+    color: $marine
+    outline: none
+
+  // Adjacent input label
+  + label
+    @include transition(top .25s ease, opacity .25s ease)
+    background: $white
+    color: lighten($black, 90%)
+    height: rem($b-text-input-focus-top-padding)
+    left: 0
+    line-height: $b-line-height-input-label
+    width: rem($b-text-input-min-width)
+    opacity: 0
+    padding-left: rem($b-text-input-horizontal-padding)
+    top: rem(15)
+
+  &:focus + label,
+  &.is-dirty + label
+    opacity: 1
+    top: 2px
+
+  &:focus + label
+    color: $marine
+
+// Textarea
+textarea
+  line-height: $b-line-height-text-area
+  min-height: rem($b-text-area-min-height)
+
+// Input Wrappers
+.b-input
+  &.has-controls
+    input
+      padding-right: rem(90)
+
+      &[type="password"] ~ .b-input-control.is-masking
+        svg.is-active
+          display: none
+
+      &[type="text"] ~ .b-input-control.is-masking
+        svg.is-inactive
+          display: none
+
+// Input controls
+.b-input-control
+  @include transform(translateY(-50%))
+  cursor: pointer
+  height: rem($b-text-input-control-height)
+  right: rem($b-text-input-horizontal-padding)
+  top: 50%
+  width: rem($b-text-input-control-width)
+
+  svg
+    height: 100%
+    width: 100%

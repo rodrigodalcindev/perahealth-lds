@@ -1,0 +1,43 @@
+---
+  props:
+    text_input_horizontal_padding:
+      name:     "text-input-horizontal-padding"
+      value:    20
+      type:     "number"
+      category: "padding"
+    text_input_vertical_padding:
+      name:     "text-input-vertical-padding"
+      value:    25
+      type:     "number"
+      category: "padding"
+    text_input_focus_top_padding:
+      name:     "text-input-focus-top-padding"
+      value:    35
+      type:     "number"
+      category: "padding"
+    text_input_focus_bottom_padding:
+      name:     "text-input-focus-bottom-padding"
+      value:    15
+      type:     "number"
+      category: "padding"
+    text_input_control_width:
+      name:     "text-input-control-width"
+      value:    26
+      type:     "number"
+      category: "width"
+    text_input_control_height:
+      name:     "text-input-control-height"
+      value:    26
+      type:     "number"
+      category: "height"
+    text_input_min_width:
+      name:     "text-input-min-width"
+      value:    300
+      type:     "number"
+      category: "width"
+    text_area_min_height:
+      name:     "text-area-min-height"
+      value:    200
+      type:     "number"
+      category: "height"
+

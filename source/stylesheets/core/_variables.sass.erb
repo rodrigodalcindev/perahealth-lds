@@ -48,3 +48,19 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% design_token("typography", category: "heading").each do |prop| %>
 $<%= prop.name %>: <%= prop.value %>px
 <% end %>
+
+// Forms
+/// One-line input padding
+<% design_token("forms", category: "padding").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>
+
+/// Input width
+<% design_token("forms", category: "width").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>
+
+/// Input height
+<% design_token("forms", category: "height").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>

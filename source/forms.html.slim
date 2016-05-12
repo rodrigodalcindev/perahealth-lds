@@ -12,11 +12,6 @@ section.mtl
     label.poa for="email"
       small.b-font-family-bold.b-letter-spacing-label
         | Email Address
-  .b-input.is-text.por
-    input id="password" type="password" placeholder="Password"
-    label.poa for="password"
-      small.b-font-family-bold.b-letter-spacing-label
-        | Password
 
   h4.mtl Default Styles (Web)
 
@@ -132,3 +127,104 @@ section.mtl
       textarea
         line-height: $line-height-text-area
         min-height: rem($text-area-min-height)
+
+section.mtl
+  h2.mbm Text Input Controls
+
+  .g-row
+    .g-col-7
+      p.mbxs
+        | Text input controls are interactive elements represented by icons that allow for modifying the field's content or the way it's being displayed. For web, the iconography consists of one or more SVG elements wrapped in a <code>figure</code> element identified with a <code>.b-input-control</code> class. Notice the <code>.has-controls</code> class applied to the <code>.b-input</code> wrapper:
+
+  = code('slim') do
+    |
+      .b-input.is-text.has-controls.fl.por
+        input
+        ...
+        figure.b-input-control.poa
+          svg
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | An input with a control component inherits from the same global styles and UI/UX dynamics affecting text inputs, with a set of overriddes based on the <code>.has-controls</code>:
+
+  = code('sass') do
+    |
+      .b-input
+        &.has-controls
+          input
+            padding-right: rem(90)
+
+          .b-input-control
+            @include transform(translateY(-50%))
+            cursor: pointer
+            height: rem($b-text-input-control-height)
+            right: rem($b-text-input-horizontal-padding)
+            top: 50%
+            width: rem($b-text-input-control-width)
+
+            svg
+              height: 100%
+              width: 100%
+
+  h4.mtl.mbm Password Masking
+
+  .b-input.is-text.has-controls.fl.por
+    input id="password" type="password" placeholder="Password"
+    label.poa for="password"
+      small.b-font-family-bold.b-letter-spacing-label
+        | Password
+    figure.b-input-control.is-masking.poa
+      svg.is-active
+        use xlink:href="#eyeball-active"
+      svg.is-inactive
+        use xlink:href="#eyeball-inactive"
+
+  .clear
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | UX for password masking is achieved by toggling the input's type attribute between <code>password</code> and <code>text</code> with js.
+
+  = code('coffeescript') do
+    |
+      _.textInputControl.on 'click', (e) ->
+        if $(this).hasClass('is-masking')
+          inputType = $(this).siblings('input').attr('type')
+
+          if inputType == "password"
+            $(this).siblings('input').attr('type','text')
+          else if inputType == "text"
+            $(this).siblings('input').attr('type','password')
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Hiding / displaying of the corresponding masking iconography is done based on the input's type attribute.
+        br
+        | The <code>figure.b-input-control</code> element should be identified with a <code>.is-masking</code> class and contain one icon for each field state (masked/unsmasked).
+
+  = code('sass') do
+    |
+      .b-input
+        &.has-controls
+          input
+            &[type="password"] ~ .b-input-control.is-masking
+              svg.is-active
+                display: none
+
+            &[type="text"] ~ .b-input-control.is-masking
+              svg.is-inactive
+                display: none
+
+  br
+
+  = code('slim') do
+    |
+      figure.b-input-control.is-masking.poa
+        svg.is-active
+          use xlink:href="#eyeball-active"
+        svg.is-inactive
+          use xlink:href="#eyeball-inactive"

@@ -51,3 +51,29 @@
 textarea
   line-height: $b-line-height-text-area
   min-height: rem($b-text-area-min-height)
+
+// Input Wrappers
+.b-input
+  &.has-controls
+    input
+      padding-right: rem(90)
+
+      &[type="password"] ~ .b-input-control.is-masking
+        svg.is-active
+          display: none
+
+      &[type="text"] ~ .b-input-control.is-masking
+        svg.is-inactive
+          display: none
+
+    .b-input-control
+      @include transform(translateY(-50%))
+      cursor: pointer
+      height: rem($b-text-input-control-height)
+      right: rem($b-text-input-horizontal-padding)
+      top: 50%
+      width: rem($b-text-input-control-width)
+
+      svg
+        height: 100%
+        width: 100%

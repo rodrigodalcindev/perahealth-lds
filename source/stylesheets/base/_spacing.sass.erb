@@ -1,24 +1,25 @@
-// Spacing Swatches
+// Spacing
 
 <% design_token("spacing").each do |prop| %>
 
 .b-block
-  background: $marine
-
-.b-block--<%= prop.name %>
   @include display(flex)
   @include align-items(center)
+  background: $marine
   border-radius: $b-border-radius
-  padding-left: $b-<%= prop.name %>
   height: 50px
+  width: 100%
   &:before
     background: $spring
+    border-radius: 0 $b-border-radius $b-border-radius 0
     content: ''
-    display: block
     height: 50px
     position: fixed
     width: 100%
     z-index: 0
+
+.b-block--<%= prop.name %>
+  padding-left: $b-<%= prop.name %>
 
 .b-block-container
   z-index: 1

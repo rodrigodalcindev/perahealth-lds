@@ -87,7 +87,6 @@ section.mtl
   = code('coffeescript') do
     |
       _.input.on 'blur', (e) ->
-        console.log $.trim($(this).val()).length
         if $.trim($(this).val()).length > 0
           $(this).addClass('is-dirty')
         else

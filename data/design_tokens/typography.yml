@@ -60,6 +60,21 @@
       value:    1.2
       type:     "number"
       category: "line-height"
+    line_height_input_label:
+      name:     "line-height-input-label"
+      value:    2.75
+      type:     "number"
+      category: "line-height"
+    line_height_text_input:
+      name:     "line-height-text-input"
+      value:    0.6675
+      type:     "number"
+      category: "line-height"
+    line_height_text_area:
+      name:     "line-height-text-area"
+      value:    1.2
+      type:     "number"
+      category: "line-height"
     letter_spacing_button:
       name:     "letter-spacing-button"
       value:    1.89

@@ -49,8 +49,8 @@ section.mtl
 
         &:focus,
         &.is-dirty
-          padding-bottom: rem($b-text-input-focus-bottom-padding)
-          padding-top: rem($b-text-input-focus-top-padding)
+          padding-bottom: rem($text-input-focus-bottom-padding)
+          padding-top: rem($text-input-focus-top-padding)
 
           @include placeholder
             opacity: 0
@@ -155,17 +155,17 @@ section.mtl
           input
             padding-right: rem(90)
 
-          .b-input-control
-            @include transform(translateY(-50%))
-            cursor: pointer
-            height: rem($b-text-input-control-height)
-            right: rem($b-text-input-horizontal-padding)
-            top: 50%
-            width: rem($b-text-input-control-width)
+      .b-input-control
+        @include transform(translateY(-50%))
+        cursor: pointer
+        height: rem($text-input-control-height)
+        right: rem($text-input-horizontal-padding)
+        top: 50%
+        width: rem($text-input-control-width)
 
-            svg
-              height: 100%
-              width: 100%
+        svg
+          height: 100%
+          width: 100%
 
   h4.mtl.mbm Password Masking
 

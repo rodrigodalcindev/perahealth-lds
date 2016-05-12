@@ -2,26 +2,26 @@
   props:
     space-xs:
       name: "space-xs"
-      value: "5"
+      value: "rem(5px)"
       type: "size"
       category: "space"
     space-s:
       name: "space-s"
-      value: "10"
+      value: "rem(10px)"
       type: "size"
       category: "space"
     space:
       name: "space"
-      value: "20"
+      value: "rem(20px)"
       type: "size"
       category: "space"
     space-l:
       name: "space-l"
-      value: "40"
+      value: "rem(40px)"
       type: "size"
       category: "space"
     space-xl:
       name: "space-xl"
-      value: "80"
+      value: "rem(80px)"
       type: "size"
       category: "space"

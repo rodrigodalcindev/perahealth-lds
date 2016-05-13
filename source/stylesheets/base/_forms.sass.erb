@@ -17,7 +17,7 @@
   &:focus,
   &.is-dirty
     padding-bottom: rem($b-text-input-focus-bottom-padding)
-    padding-top: rem($b-text-input-focus-top-padding)
+    padding-top: $b-space-l - $b-space-xs
 
     @include placeholder
       opacity: 0
@@ -31,7 +31,7 @@
     @include transition(top .25s ease, opacity .25s ease)
     background: $white
     color: lighten($black, 90%)
-    height: rem($b-text-input-focus-top-padding)
+    height: $b-space-l - $b-space-xs
     left: 0
     line-height: $b-line-height-input-label
     width: rem($b-text-input-min-width)

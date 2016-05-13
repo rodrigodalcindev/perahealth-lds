@@ -50,7 +50,7 @@ section.mtl
         &:focus,
         &.is-dirty
           padding-bottom: rem($text-input-focus-bottom-padding)
-          padding-top: rem($text-input-focus-top-padding)
+          padding-top: $b-space-l - $b-space-xs
 
           @include placeholder
             opacity: 0
@@ -63,7 +63,7 @@ section.mtl
           @include transition(top .25s ease, opacity .25s ease)
           background: $white
           color: lighten($black, 90%)
-          height: rem($text-input-focus-top-padding)
+          height: $b-space-l - $b-space-xs
           left: 0
           line-height: $line-height-input-label
           width: rem($text-input-min-width)

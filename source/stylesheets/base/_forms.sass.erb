@@ -8,7 +8,7 @@
   line-height: $b-line-height-text-input
   margin-top: 2px
   min-width: rem($b-text-input-min-width)
-  padding: $b-space+$b-space-xs $b-space
+  padding: ($b-space + $b-space-xs) $b-space
 
   @include placeholder
     @include transition(opacity .25s ease)
@@ -16,8 +16,8 @@
 
   &:focus,
   &.is-dirty
-    padding-bottom: $b-space - $b-space-xs
-    padding-top: $b-space-l - $b-space-xs
+    padding-bottom: ($b-space - $b-space-xs)
+    padding-top: ($b-space-l - $b-space-xs)
 
     @include placeholder
       opacity: 0
@@ -31,7 +31,7 @@
     @include transition(top .25s ease, opacity .25s ease)
     background: $white
     color: lighten($black, 90%)
-    height: $b-space-l - $b-space-xs
+    height: ($b-space-l - $b-space-xs)
     left: 0
     line-height: $b-line-height-input-label
     width: rem($b-text-input-min-width)

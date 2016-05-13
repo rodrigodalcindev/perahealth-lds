@@ -1,6 +1,6 @@
 // Spacing
 
-.b-block
+.b-space
   background: $marine
   border-radius: $b-border-radius
   height: 50px
@@ -8,7 +8,7 @@
 
 <% design_token("spacing").each do |prop| %>
 
-.b-block-container--<%= prop.name %>
+.b-space-container--<%= prop.name %>
   @include display(flex)
   @include align-items(center)
   background: $spring
@@ -17,7 +17,7 @@
   padding-left: calc(150px - #{$b-<%= prop.name %>})
   width: 100%
 
-.b-block--<%= prop.name %>
+.b-space--<%= prop.name %>
   padding-left: $b-<%= prop.name %>
 
 <% end %>

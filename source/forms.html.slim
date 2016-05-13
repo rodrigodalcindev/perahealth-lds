@@ -32,7 +32,7 @@ section.mtl
         line-height: $line-height-text-input
         margin-top: 2px
         min-width: rem($text-input-min-width)
-        padding: rem($text-input-vertical-padding) rem($text-input-horizontal-padding)
+        padding: ($b-space + $b-space-xs) $b-space
 
   .g-row
     .g-col-7
@@ -49,8 +49,8 @@ section.mtl
 
         &:focus,
         &.is-dirty
-          padding-bottom: rem($text-input-focus-bottom-padding)
-          padding-top: rem($text-input-focus-top-padding)
+          padding-bottom: ($b-space - $b-space-xs)
+          padding-top: ($b-space-l - $b-space-xs)
 
           @include placeholder
             opacity: 0
@@ -63,12 +63,12 @@ section.mtl
           @include transition(top .25s ease, opacity .25s ease)
           background: $white
           color: lighten($black, 90%)
-          height: rem($text-input-focus-top-padding)
+          height: ($b-space-l - $b-space-xs)
           left: 0
           line-height: $line-height-input-label
           width: rem($text-input-min-width)
           opacity: 0
-          padding-left: rem($text-input-horizontal-padding)
+          padding-left: $b-space
           top: rem(15)
 
         &:focus + label,
@@ -159,7 +159,7 @@ section.mtl
         @include transform(translateY(-50%))
         cursor: pointer
         height: rem($text-input-control-height)
-        right: rem($text-input-horizontal-padding)
+        right: $b-space
         top: 50%
         width: rem($text-input-control-width)
 

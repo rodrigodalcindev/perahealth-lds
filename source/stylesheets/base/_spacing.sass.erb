@@ -1,7 +1,5 @@
 // Spacing
 
-<% design_token("spacing").each do |prop| %>
-
 .b-block
   @include display(flex)
   @include align-items(center)
@@ -18,10 +16,12 @@
     width: 100%
     z-index: 0
 
-.b-block--<%= prop.name %>
-  padding-left: $b-<%= prop.name %>
-
 .b-block-container
   z-index: 1
+
+<% design_token("spacing").each do |prop| %>
+
+.b-block--<%= prop.name %>
+  padding-left: $b-<%= prop.name %>
 
 <% end %>

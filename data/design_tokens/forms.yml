@@ -1,10 +1,5 @@
 ---
   props:
-    text_input_vertical_padding:
-      name:     "text-input-vertical-padding"
-      value:    25
-      type:     "number"
-      category: "padding"
     text_input_focus_top_padding:
       name:     "text-input-focus-top-padding"
       value:    35

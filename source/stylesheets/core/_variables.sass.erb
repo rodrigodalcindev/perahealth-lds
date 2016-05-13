@@ -20,7 +20,7 @@ $b-border-radius: 4px !default
 
 // Sizing
 <% design_token("spacing", category: "space").each do |prop| %>
-$b-<%= prop.name%>: <%= prop.value %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
 <% end %>
 
 // Typography

@@ -3,7 +3,7 @@ module DesignTokenHelpers
     content_tag :ul do
       data.design_tokens.collect do |token|
         content_tag :li do
-          link_to token[0], "/#{token[0]}.html", class: "plm prm pts pbs"
+          link_to token[0], "/#{token[0]}.html", class: "plm prm pts pbs ttc"
         end
       end.join.html_safe
     end

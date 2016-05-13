@@ -6,16 +6,16 @@
   height: 50px
   width: 100%
 
-.b-block-container
+<% design_token("spacing").each do |prop| %>
+
+.b-block-container--<%= prop.name %>
   @include display(flex)
   @include align-items(center)
   background: $spring
   border-radius: 0 $b-border-radius $b-border-radius 0
   height: 100%
+  padding-left: calc(150px - #{$b-<%= prop.name %>})
   width: 100%
-  z-index: 1
-
-<% design_token("spacing").each do |prop| %>
 
 .b-block--<%= prop.name %>
   padding-left: $b-<%= prop.name %>

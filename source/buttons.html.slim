@@ -1,0 +1,14 @@
+---
+body_class: "is-buttons"
+---
+
+h1 Buttons
+
+- design_token("buttons", category: "button-style").each_with_index do |prop, index|
+  section.mtl
+    h2.mbm.ttc
+      = prop.value
+
+    button class="is-#{prop.value}"
+      span.b-font-family-bold.b-letter-spacing-button.ttu
+        | Start using Veri

@@ -2,26 +2,26 @@
   props:
     space-xs:
       name: "space-xs"
-      value: "5"
-      type: "size"
+      value: 5
+      type: "number"
       category: "space"
     space-s:
       name: "space-s"
-      value: "10"
-      type: "size"
+      value: 10
+      type: "number"
       category: "space"
     space:
       name: "space"
-      value: "20"
-      type: "size"
+      value: 20
+      type: "number"
       category: "space"
     space-l:
       name: "space-l"
-      value: "40"
-      type: "size"
+      value: 40
+      type: "number"
       category: "space"
     space-xl:
       name: "space-xl"
-      value: "80"
-      type: "size"
+      value: 80
+      type: "number"
       category: "space"

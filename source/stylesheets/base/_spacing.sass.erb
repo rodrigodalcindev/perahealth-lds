@@ -1,22 +1,18 @@
 // Spacing
 
 .b-block
-  @include display(flex)
-  @include align-items(center)
   background: $marine
   border-radius: $b-border-radius
   height: 50px
   width: 100%
-  &:before
-    background: $spring
-    border-radius: 0 $b-border-radius $b-border-radius 0
-    content: ''
-    height: 50px
-    position: fixed
-    width: 100%
-    z-index: 0
 
 .b-block-container
+  @include display(flex)
+  @include align-items(center)
+  background: $spring
+  border-radius: 0 $b-border-radius $b-border-radius 0
+  height: 100%
+  width: 100%
   z-index: 1
 
 <% design_token("spacing").each do |prop| %>

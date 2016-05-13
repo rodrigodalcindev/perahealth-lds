@@ -32,7 +32,7 @@ section.mtl
         line-height: $line-height-text-input
         margin-top: 2px
         min-width: rem($text-input-min-width)
-        padding: rem($text-input-vertical-padding) rem($text-input-horizontal-padding)
+        padding: rem($text-input-vertical-padding) $b-space
 
   .g-row
     .g-col-7
@@ -68,7 +68,7 @@ section.mtl
           line-height: $line-height-input-label
           width: rem($text-input-min-width)
           opacity: 0
-          padding-left: rem($text-input-horizontal-padding)
+          padding-left: $b-space
           top: rem(15)
 
         &:focus + label,
@@ -159,7 +159,7 @@ section.mtl
         @include transform(translateY(-50%))
         cursor: pointer
         height: rem($text-input-control-height)
-        right: rem($text-input-horizontal-padding)
+        right: $b-space
         top: 50%
         width: rem($text-input-control-width)
 

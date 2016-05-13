@@ -8,7 +8,7 @@
   line-height: $b-line-height-text-input
   margin-top: 2px
   min-width: rem($b-text-input-min-width)
-  padding: rem($b-text-input-vertical-padding) rem($b-text-input-horizontal-padding)
+  padding: rem($b-text-input-vertical-padding) $b-space
 
   @include placeholder
     @include transition(opacity .25s ease)
@@ -36,7 +36,7 @@
     line-height: $b-line-height-input-label
     width: rem($b-text-input-min-width)
     opacity: 0
-    padding-left: rem($b-text-input-horizontal-padding)
+    padding-left: $b-space
     top: rem(15)
 
   &:focus + label,
@@ -71,7 +71,7 @@ textarea
   @include transform(translateY(-50%))
   cursor: pointer
   height: rem($b-text-input-control-height)
-  right: rem($b-text-input-horizontal-padding)
+  right: $b-space
   top: 50%
   width: rem($b-text-input-control-width)
 

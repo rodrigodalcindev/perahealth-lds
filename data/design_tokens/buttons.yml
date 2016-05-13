@@ -1,0 +1,37 @@
+---
+  props:
+    default_button:
+      name:     "default-button-style"
+      value:    "default"
+      type:     "string"
+      category: "button-style"
+    outline_button:
+      name:     "outline-button-style"
+      value:    "outline"
+      type:     "string"
+      category: "button-style"
+    default_button_text_color:
+      name:     "default-button-text-color"
+      value:    "white"
+      type:     "string"
+      category: "text-color"
+    default_button_background_color:
+      name:     "default-button-background-color"
+      value:    "spring"
+      type:     "string"
+      category: "background-color"
+    outline_button_text_color:
+      name:     "outline-button-text-color"
+      value:    "iris"
+      type:     "string"
+      category: "text-color"
+    outline_button_background_color:
+      name:     "outline-button-background-color"
+      value:    "white"
+      type:     "string"
+      category: "background-color"
+    default_button_width:
+      name:     "default-button-width"
+      value:    300
+      type:     "number"
+      category: "width"

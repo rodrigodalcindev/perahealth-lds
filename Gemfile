@@ -18,6 +18,7 @@ gem 'middleman-robots'
 
 gem 'slim'
 gem 'jquery-middleman'
+gem 'font-awesome-middleman'
 
 # Bourbon suite
 gem 'bourbon'

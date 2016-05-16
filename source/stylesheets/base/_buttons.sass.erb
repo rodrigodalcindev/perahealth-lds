@@ -15,3 +15,11 @@
     &:hover
       background: darken($b-<%= prop.value %>-button-background-color, 5%)
   <% end %>
+
+  &.is-social
+    padding: ($b-space + $b-space-xs) $b-space-l
+
+    .fa
+      @include transform(translateY(-50%))
+      left: ($b-space + $b-space-xs)
+      top: 50%

@@ -9,8 +9,8 @@ h1 Buttons
     h2.mbm.ttc
       = prop.value
 
-    button class="is-#{prop.value}"
+    button.por class="is-#{prop.value} #{prop.social ? 'is-social' : ''}"
       - if prop.social
-        i.fa class="fa-#{prop.value}"
+        i.fa.fa-lg.poa class="fa-#{prop.value}"
       span.b-font-family-bold.b-letter-spacing-button.ttu
         | Start using Veri

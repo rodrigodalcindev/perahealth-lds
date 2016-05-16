@@ -15,11 +15,13 @@
       value:    "facebook"
       type:     "string"
       category: "button-style"
+      social:   true
     twitter_button:
       name:     "twitter-button-style"
       value:    "twitter"
       type:     "string"
       category: "button-style"
+      social:   true
     default_button_text_color:
       name:     "default-button-text-color"
       value:    "white"

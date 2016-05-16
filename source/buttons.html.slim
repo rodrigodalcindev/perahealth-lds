@@ -10,5 +10,7 @@ h1 Buttons
       = prop.value
 
     button class="is-#{prop.value}"
+      - if prop.social
+        i.fa class="fa-#{prop.value}"
       span.b-font-family-bold.b-letter-spacing-button.ttu
         | Start using Veri

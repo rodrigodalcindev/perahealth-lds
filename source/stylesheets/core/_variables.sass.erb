@@ -68,12 +68,12 @@ $b-<%= prop.name %>: <%= prop.value %>
 // Buttons
 /// Background color
 <% design_token("buttons", category: "background-color").each do |prop| %>
-$b-<%= prop.name %>: $<%= prop.value %>
+$b-<%= prop.name %>: <%= prop.value %>
 <% end %>
 
 /// Text color
 <% design_token("buttons", category: "text-color").each do |prop| %>
-$b-<%= prop.name %>: $<%= prop.value %>
+$b-<%= prop.name %>: <%= prop.value %>
 <% end %>
 
 /// Button width

@@ -24,42 +24,42 @@
       social:   true
     default_button_text_color:
       name:     "default-button-text-color"
-      value:    "white"
+      value:    "$white"
       type:     "string"
       category: "text-color"
     default_button_background_color:
       name:     "default-button-background-color"
-      value:    "spring"
+      value:    "$spring"
       type:     "string"
       category: "background-color"
     outline_button_text_color:
       name:     "outline-button-text-color"
-      value:    "iris"
+      value:    "$iris"
       type:     "string"
       category: "text-color"
     outline_button_background_color:
       name:     "outline-button-background-color"
-      value:    "white"
+      value:    "$white"
       type:     "string"
       category: "background-color"
     facebook_button_text_color:
       name:     "facebook-button-text-color"
-      value:    "white"
+      value:    "$white"
       type:     "string"
       category: "text-color"
     facebook_button_background_color:
       name:     "facebook-button-background-color"
-      value:    "facebook-blue"
+      value:    "$facebook-blue"
       type:     "string"
       category: "background-color"
     twitter_button_text_color:
       name:     "twitter-button-text-color"
-      value:    "white"
+      value:    "$white"
       type:     "string"
       category: "text-color"
     twitter_button_background_color:
       name:     "twitter-button-background-color"
-      value:    "twitter-blue"
+      value:    "$twitter-blue"
       type:     "string"
       category: "background-color"
     default_button_width:

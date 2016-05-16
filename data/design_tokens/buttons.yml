@@ -10,6 +10,16 @@
       value:    "outline"
       type:     "string"
       category: "button-style"
+    facebook_button:
+      name:     "facebook-button-style"
+      value:    "facebook"
+      type:     "string"
+      category: "button-style"
+    twitter_button:
+      name:     "twitter-button-style"
+      value:    "twitter"
+      type:     "string"
+      category: "button-style"
     default_button_text_color:
       name:     "default-button-text-color"
       value:    "white"
@@ -28,6 +38,26 @@
     outline_button_background_color:
       name:     "outline-button-background-color"
       value:    "white"
+      type:     "string"
+      category: "background-color"
+    facebook_button_text_color:
+      name:     "facebook-button-text-color"
+      value:    "white"
+      type:     "string"
+      category: "text-color"
+    facebook_button_background_color:
+      name:     "facebook-button-background-color"
+      value:    "facebook-blue"
+      type:     "string"
+      category: "background-color"
+    twitter_button_text_color:
+      name:     "twitter-button-text-color"
+      value:    "white"
+      type:     "string"
+      category: "text-color"
+    twitter_button_background_color:
+      name:     "twitter-button-background-color"
+      value:    "twitter-blue"
       type:     "string"
       category: "background-color"
     default_button_width:

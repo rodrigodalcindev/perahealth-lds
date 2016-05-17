@@ -73,12 +73,21 @@ h4.mtl Foundation Styles (Web)
 
     button.por class="is-#{prop.value} #{prop.social ? 'is-social' : ''}"
       - if prop.social
-        i.fa.fa-lg.poa class="fa-#{prop.value}"
+        i.fa.fa-lg.poa class="fa-#{prop.value == 'youtube' ? 'play' : prop.value}"
       span.b-font-family-bold.b-letter-spacing-button.ttu
         = prop.social ? "Connect #{prop.value}" : "Start using Veri"
 
     = code('sass', css_class: 'highlight mtm') do
-      |
-        &.is-#{prop.value}
-          background: $b-#{prop.value}-button-background-color
-          color: $b-#{prop.value}-button-text-color
+      - if prop.value == "instagram"
+        |
+          &.is-#{prop.value}
+            @include linear-gradient(to right, $instagram-blue, $instagram-pink)
+            color: $b-#{prop.value}-button-text-color
+
+            &:hover
+              @include linear-gradient(to right, darken($instagram-blue, 5%), darken($instagram-pink, 5%))
+      - else
+        |
+          &.is-#{prop.value}
+            background: $b-#{prop.value}-button-background-color
+            color: $b-#{prop.value}-button-text-color

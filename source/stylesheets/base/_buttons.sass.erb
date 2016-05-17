@@ -24,3 +24,10 @@
       @include transform(translate(-50%, -50%))
       left: $b-space*3/2
       top: 50%
+
+  // Instagram Overrides
+  &.is-instagram
+    @include linear-gradient(to right, $instagram-blue, $instagram-pink)
+
+    &:hover
+      @include linear-gradient(to right, darken($instagram-blue, 5%), darken($instagram-pink, 5%))

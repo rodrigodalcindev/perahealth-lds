@@ -17,9 +17,10 @@
   <% end %>
 
   &.is-social
-    padding: ($b-space + $b-space-xs) $b-space-l
+    padding: ($b-space + $b-space-xs) 0 ($b-space + $b-space-xs) ($b-space*3)
+    text-align: left
 
     .fa
-      @include transform(translateY(-50%))
-      left: ($b-space + $b-space-xs)
+      @include transform(translate(-50%, -50%))
+      left: $b-space*3/2
       top: 50%

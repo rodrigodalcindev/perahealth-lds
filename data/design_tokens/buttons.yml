@@ -5,6 +5,11 @@
       value:    "default"
       type:     "string"
       category: "button-style"
+    small_button:
+      name:     "small-button-style"
+      value:    "small"
+      type:     "string"
+      category: "button-style"
     outline_button:
       name:     "outline-button-style"
       value:    "outline"
@@ -47,6 +52,16 @@
       category: "text-color"
     default_button_background_color:
       name:     "default-button-background-color"
+      value:    "$spring"
+      type:     "string"
+      category: "background-color"
+    small_button_text_color:
+      name:     "small-button-text-color"
+      value:    "$white"
+      type:     "string"
+      category: "text-color"
+    small_button_background_color:
+      name:     "small-button-background-color"
       value:    "$spring"
       type:     "string"
       category: "background-color"
@@ -113,5 +128,10 @@
     default_button_width:
       name:     "default-button-width"
       value:    300
+      type:     "number"
+      category: "width"
+    small_button_width:
+      name:     "small-button-width"
+      value:    145
       type:     "number"
       category: "width"

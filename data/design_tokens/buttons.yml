@@ -22,6 +22,24 @@
       type:     "string"
       category: "button-style"
       social:   true
+    youtube_button:
+      name:     "youtube-button-style"
+      value:    "youtube"
+      type:     "string"
+      category: "button-style"
+      social:   true
+    instagram_button:
+      name:     "instagram-button-style"
+      value:    "instagram"
+      type:     "string"
+      category: "button-style"
+      social:   true
+    vine_button:
+      name:     "vine-button-style"
+      value:    "vine"
+      type:     "string"
+      category: "button-style"
+      social:   true
     default_button_text_color:
       name:     "default-button-text-color"
       value:    "$white"
@@ -60,6 +78,36 @@
     twitter_button_background_color:
       name:     "twitter-button-background-color"
       value:    "$twitter-blue"
+      type:     "string"
+      category: "background-color"
+    youtube_button_text_color:
+      name:     "youtube-button-text-color"
+      value:    "$white"
+      type:     "string"
+      category: "text-color"
+    youtube_button_background_color:
+      name:     "youtube-button-background-color"
+      value:    "$youtube-red"
+      type:     "string"
+      category: "background-color"
+    instagram_button_text_color:
+      name:     "instagram-button-text-color"
+      value:    "$white"
+      type:     "string"
+      category: "text-color"
+    instagram_button_background_color:
+      name:     "instagram-button-background-color"
+      value:    "$instagram-pink"
+      type:     "string"
+      category: "background-color"
+    vine_button_text_color:
+      name:     "vine-button-text-color"
+      value:    "$white"
+      type:     "string"
+      category: "text-color"
+    vine_button_background_color:
+      name:     "vine-button-background-color"
+      value:    "$vine-green"
       type:     "string"
       category: "background-color"
     default_button_width:

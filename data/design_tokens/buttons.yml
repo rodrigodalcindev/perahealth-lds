@@ -132,6 +132,6 @@
       category: "width"
     small_button_width:
       name:     "small-button-width"
-      value:    145
+      value:    160
       type:     "number"
       category: "width"

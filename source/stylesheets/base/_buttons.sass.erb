@@ -25,7 +25,10 @@
       left: $b-space*3/2
       top: 50%
 
-  // Instagram Overrides
+  // Overrides
+  &.is-small
+    min-width: rem($b-small-button-width)
+
   &.is-instagram
     @include linear-gradient(to right, $instagram-blue, $instagram-pink)
 

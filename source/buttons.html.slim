@@ -38,7 +38,7 @@ h4.mtl Foundation Styles (Web)
 .g-row
   .g-col-7
     p.mts.mbxs
-      | Social media buttons are represented by a corresponding Font Awesome icon placed on the same level as its content-wrapping <code>span</code>:
+      | Iconographic buttons such (e.g. social media) feature a Font Awesome or SVG icon placed on the same level as its content-wrapping <code>span</code>:
 
 .g-row
   = code('slim') do
@@ -48,12 +48,12 @@ h4.mtl Foundation Styles (Web)
 .g-row
   .g-col-7
     p.mts.mbxs
-      | Positioning of social button icons is determined by the folowing style variation based on a <code>.is-social</code> class:
+      | Positioning of icons is determined by the folowing style variation based on a <code>.has-icon</code> class:
 
 .g-row
   = code('sass') do
     |
-      &.is-social
+      &.has-icon
         padding: ($b-space + $b-space-xs) 0 ($b-space + $b-space-xs) ($b-space*3)
         text-align: left
 
@@ -75,7 +75,7 @@ h4.mtl Foundation Styles (Web)
       code.dib.vam.mls
         = ".is-" + prop.value
 
-    button.por class="is-#{prop.value} #{prop.social ? 'is-social' : ''}"
+    button.por class="is-#{prop.value} #{prop.social ? 'has-icon' : ''}"
       - if prop.social
         i.fa.fa-lg.poa class="fa-#{prop.value == 'youtube' ? 'play' : prop.value}"
       span.b-font-family-bold.b-letter-spacing-button.ttu

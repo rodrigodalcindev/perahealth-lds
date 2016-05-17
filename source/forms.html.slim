@@ -20,90 +20,94 @@ section.mtl
       p.mts.mbxs
         | Form fields are styled over a pre-defined set of global rules affecting all text inputs, including text areas:
 
-  = code('sass') do
-    |
-      \#{$all-text-inputs}
-        @include transition(padding .25s ease)
-        background: $white
-        border: none
-        color: lighten($black, 60%)
-        font-family: $font-family-book
-        font-size: $font-size-large
-        line-height: $line-height-text-input
-        margin-top: 2px
-        min-width: rem($text-input-min-width)
-        padding: ($b-space + $b-space-xs) $b-space
+  .g-row
+    = code('sass') do
+      |
+        \#{$all-text-inputs}
+          @include transition(padding .25s ease)
+          background: $white
+          border: none
+          color: lighten($black, 60%)
+          font-family: $font-family-book
+          font-size: $font-size-large
+          line-height: $line-height-text-input
+          margin-top: 2px
+          min-width: rem($text-input-min-width)
+          padding: ($b-space + $b-space-xs) $b-space
 
   .g-row
     .g-col-7
       p.mts.mbxs
         | The UI/UX dynamics between the input's placeholder and its label are based on the <code>:focus</code> pseudo-class paired up with toggling of a state-based class (<code>.is-dirty</code>) applied to the input element via javascript if presence of text is detected.
 
-  = code('sass', :start_line => 11) do
-    |
-      \#{$all-text-inputs}
-        /*(...)*/
-        @include placeholder
-          @include transition(opacity .25s ease)
-          line-height: initial
-
-        &:focus,
-        &.is-dirty
-          padding-bottom: ($b-space - $b-space-xs)
-          padding-top: ($b-space-l - $b-space-xs)
-
+  .g-row
+    = code('sass', :start_line => 11) do
+      |
+        \#{$all-text-inputs}
+          /*(...)*/
           @include placeholder
+            @include transition(opacity .25s ease)
+            line-height: initial
+
+          &:focus,
+          &.is-dirty
+            padding-bottom: ($b-space - $b-space-xs)
+            padding-top: ($b-space-l - $b-space-xs)
+
+            @include placeholder
+              opacity: 0
+
+          &:focus
+            color: $marine
+            outline: none
+
+          + label
+            @include transition(top .25s ease, opacity .25s ease)
+            background: $white
+            color: lighten($black, 90%)
+            height: ($b-space-l - $b-space-xs)
+            left: 0
+            line-height: $line-height-input-label
+            width: rem($text-input-min-width)
             opacity: 0
+            padding-left: $b-space
+            top: rem(15)
 
-        &:focus
-          color: $marine
-          outline: none
+          &:focus + label,
+          &.is-dirty + label
+            opacity: 1
+            top: rem(10)
 
-        + label
-          @include transition(top .25s ease, opacity .25s ease)
-          background: $white
-          color: lighten($black, 90%)
-          height: ($b-space-l - $b-space-xs)
-          left: 0
-          line-height: $line-height-input-label
-          width: rem($text-input-min-width)
-          opacity: 0
-          padding-left: $b-space
-          top: rem(15)
-
-        &:focus + label,
-        &.is-dirty + label
-          opacity: 1
-          top: rem(10)
-
-        &:focus + label
-          color: $marine
+          &:focus + label
+            color: $marine
 
   .g-row
     .g-col-7
       p.mtm.mbxs
         | As for the js-based state class toggling functionality:
 
-  = code('coffeescript') do
-    |
-      _.input.on 'blur', (e) ->
-        if $.trim($(this).val()).length > 0
-          $(this).addClass('is-dirty')
-        else
-          $(this).removeClass('is-dirty')
+  .g-row
+    = code('coffeescript') do
+      |
+        _.input.on 'blur', (e) ->
+          if $.trim($(this).val()).length > 0
+            $(this).addClass('is-dirty')
+          else
+            $(this).removeClass('is-dirty')
 
   .g-row
     .g-col-7
       p.mtm.mbxs
         | Markup-wise, both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input.is-text</code> container for simplified targetting with javascript. Note that the order of elements is important here:
 
-  = code('slim') do
-    |
-      .b-input.is-text.por
-        input id="email" type="text" placeholder="Email Address"
-        label.poa for="email"
-          small.b-font-family-bold.b-letter-spacing-label
-            | Email Address
+  .g-row
+    = code('slim') do
+      |
+        .b-input.is-text.por
+          input id="email" type="text" placeholder="Email Address"
+          label.poa for="email"
+            small.b-font-family-bold.b-letter-spacing-label
+              | Email Address
 
 section.mtl
   h2.mbm Text Area
@@ -121,11 +125,12 @@ section.mtl
       p.mts.mbxs
         | Text area elements inherit from the same global styles and UI/UX dynamics affecting text inputs, with a couple of overrides:
 
-  = code('sass') do
-    |
-      textarea
-        line-height: $line-height-text-area
-        min-height: rem($text-area-min-height)
+  .g-row
+    = code('sass') do
+      |
+        textarea
+          line-height: $line-height-text-area
+          min-height: rem($text-area-min-height)
 
 section.mtl
   h2.mbm Text Input Controls
@@ -135,37 +140,39 @@ section.mtl
       p.mbxs
         | Text input controls are interactive elements represented by icons that allow for modifying the field's content or the way it's being displayed. For web, the iconography consists of one or more SVG elements wrapped in a <code>figure</code> element identified with a <code>.b-input-control</code> class. Notice the <code>.has-controls</code> class applied to the <code>.b-input</code> wrapper:
 
-  = code('slim') do
-    |
-      .b-input.is-text.has-controls.fl.por
-        input
-        ...
-        figure.b-input-control.poa
-          svg
+  .g-row
+    = code('slim') do
+      |
+        .b-input.is-text.has-controls.fl.por
+          input
+          ...
+          figure.b-input-control.poa
+            svg
 
   .g-row
     .g-col-7
       p.mtm.mbxs
         | An input with a control component inherits from the same global styles and UI/UX dynamics affecting text inputs, with a set of overriddes based on the <code>.has-controls</code>:
 
-  = code('sass') do
-    |
-      .b-input
-        &.has-controls
-          input
-            padding-right: rem(90)
+  .g-row
+    = code('sass') do
+      |
+        .b-input
+          &.has-controls
+            input
+              padding-right: rem(90)
 
-      .b-input-control
-        @include transform(translateY(-50%))
-        cursor: pointer
-        height: rem($text-input-control-height)
-        right: $b-space
-        top: 50%
-        width: rem($text-input-control-width)
+        .b-input-control
+          @include transform(translateY(-50%))
+          cursor: pointer
+          height: rem($text-input-control-height)
+          right: $b-space
+          top: 50%
+          width: rem($text-input-control-width)
 
-        svg
-          height: 100%
-          width: 100%
+          svg
+            height: 100%
+            width: 100%
 
   h4.mtl.mbm Password Masking
 
@@ -187,16 +194,17 @@ section.mtl
       p.mtm.mbxs
         | UX for password masking is achieved by toggling the input's type attribute between <code>password</code> and <code>text</code> with js.
 
-  = code('coffeescript') do
-    |
-      _.textInputControl.on 'click', (e) ->
-        if $(this).hasClass('is-masking')
-          inputType = $(this).siblings('input').attr('type')
+  .g-row
+    = code('coffeescript') do
+      |
+        _.textInputControl.on 'click', (e) ->
+          if $(this).hasClass('is-masking')
+            inputType = $(this).siblings('input').attr('type')
 
-          if inputType == "password"
-            $(this).siblings('input').attr('type','text')
-          else if inputType == "text"
-            $(this).siblings('input').attr('type','password')
+            if inputType == "password"
+              $(this).siblings('input').attr('type','text')
+            else if inputType == "text"
+              $(this).siblings('input').attr('type','password')
 
   .g-row
     .g-col-7
@@ -205,25 +213,24 @@ section.mtl
         br
         | The <code>figure.b-input-control</code> element should be identified with a <code>.is-masking</code> class and contain one icon for each field state (masked/unmasked).
 
-  = code('sass') do
-    |
-      .b-input
-        &.has-controls
-          input
-            &[type="password"] ~ .b-input-control.is-masking
-              svg.is-active
-                display: none
+  .g-row
+    = code('sass') do
+      |
+        .b-input
+          &.has-controls
+            input
+              &[type="password"] ~ .b-input-control.is-masking
+                svg.is-active
+                  display: none
 
-            &[type="text"] ~ .b-input-control.is-masking
-              svg.is-inactive
-                display: none
-
-  br
-
-  = code('slim') do
-    |
-      figure.b-input-control.is-masking.poa
-        svg.is-active
-          use xlink:href="#eyeball-active"
-        svg.is-inactive
-          use xlink:href="#eyeball-inactive"
+              &[type="text"] ~ .b-input-control.is-masking
+                svg.is-inactive
+                  display: none
+  .g-row
+    = code('slim') do
+      |
+        figure.b-input-control.is-masking.poa
+          svg.is-active
+            use xlink:href="#eyeball-active"
+          svg.is-inactive
+            use xlink:href="#eyeball-inactive"

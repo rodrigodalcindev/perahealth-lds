@@ -41,6 +41,13 @@ $white: #ffffff
 #### Parsing
 Design tokens are parsed via a Gulp-based task that uses Saleforce's [Theo](https://www.npmjs.com/package/theo) plugin. The plugin can parse design tokens in a variety of formats including `.sass` (web), `.json` (iOS) and `.xml` (Android). Once a design token is ready to be exported, run `gulp` on your command line. The corresponding output files will be place under the `dist` directory.
 
+#### Formatting of Design Tokens
+The `name`, `value`, `type` and `category` keys are required, with `name` and `value` representing variable name and variable value respectively within Sass' context.
+
+*Numeric values* should be unitless and not wrapped in quotes. They are an abstraction of pixels/points, except for leading (line-height), in which case the value is multiplied by the element's font size to determine its [line box height](https://developer.mozilla.org/en/docs/Web/CSS/line-height).
+
+*String values* are used for non-numeric properties and should always be wrapped in quotes. If the value is a direct reference to a previously specified variable, remember to prefix it with `$`.
+
 ### Deployment
 - - -
 A build task has already been setup so the static files are generated upon deployment on Heroku, therefore there is no need to run a build locally before deploying.

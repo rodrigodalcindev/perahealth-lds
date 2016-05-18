@@ -8,7 +8,19 @@ section.mtl
   h2.mbm Main Colors
 
   ul
-    - design_token("color").each do |prop|
+    - design_token("color", category: "main-color").each do |prop|
+      li.dib.tac.mbm
+        .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop.name}"
+          span
+            = prop.value
+        code
+          = "$" + prop.name
+
+section.mtl
+  h2.mbm Social Media Colors
+
+  ul
+    - design_token("color", category: "social-color").each do |prop|
       li.dib.tac.mbm
         .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop.name}"
           span

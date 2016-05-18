@@ -52,6 +52,12 @@ textarea
   line-height: $b-line-height-text-area
   min-height: rem($b-text-area-min-height)
 
+// Submit (as button)
+input[type="submit"]
+  @extend .b-font-family-bold
+  @extend .b-letter-spacing-button
+  @extend .ttu
+
 // Input Wrappers
 .b-input
   &.has-controls

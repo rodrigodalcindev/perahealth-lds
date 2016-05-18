@@ -1,0 +1,137 @@
+---
+body_class: "is-buttons"
+---
+
+h1 Buttons
+
+h4.mtl Foundation Styles (Web)
+
+.g-row
+  .g-col-7
+    p.mts.mbxs
+      | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs and anchor tags sporting the <code>.as-button</code> class:
+
+.g-row
+  = code('sass') do
+    |
+      \#{$all-button-inputs}, .as-button
+        @include transition(background .25s ease)
+        border: none
+        cursor: pointer
+        line-height: $b-line-height-default-button
+        min-width: rem($b-default-button-width)
+        padding: ($b-space + $b-space-xs) 0
+        text-align: center
+        text-decoration: none
+
+.g-row
+  .g-col-7
+    p.mts.mbxs
+      | With basic markup being structured as follows, depending on the element of choice:
+
+.g-row
+  = code('slim') do
+    |
+      button.por
+        span.b-font-family-bold.b-letter-spacing-button.ttu
+          | Start using Veri
+
+.g-row
+  = code('slim') do
+    |
+      input type="submit" value="Start using Veri"
+
+.g-row
+  = code('slim') do
+    |
+      = link_to "#", class: "dib por as-button" do
+        span.b-font-family-bold.b-letter-spacing-button.ttu
+          | Start using Veri
+
+.g-row
+  .g-col-7
+    p.mts.mbxs
+      | Iconographic buttons (e.g. social media) feature a Font Awesome or SVG icon placed on the same level as its content-wrapping <code>span</code> element:
+
+.g-row
+  = code('slim') do
+    |
+      i.fa.fa-facebook.fa-lg.poa
+
+.g-row
+  .g-col-7
+    p.mts.mbxs
+      | Positioning of icons is determined by the folowing style variation based on a <code>.has-icon</code> class:
+
+.g-row
+  = code('sass') do
+    |
+      &.has-icon
+        padding: ($b-space + $b-space-xs) 0 ($b-space + $b-space-xs) ($b-space*3)
+        text-align: left
+
+        .fa
+          @include transform(translate(-50%, -50%))
+          left: $b-space*3/2
+          top: 50%
+
+.g-row
+  .g-col-7
+    p.mtl.mbm
+      | Style variations based on type of button are based on a state class defining a unique color scheme for each, as per listed below.
+
+- design_token("buttons", category: "button-style").each_with_index do |prop, index|
+  section.mbl
+    h4.mbm
+      span.ttc.dib.vam
+        = prop.value
+      code.dib.vam.mls
+        = ".is-" + prop.value
+
+    button.por class="is-#{prop.value} #{prop.social ? 'has-icon' : ''}"
+      - if prop.social
+        i.fa.fa-lg.poa class="fa-#{prop.value == 'youtube' ? 'play' : prop.value}"
+      span.b-font-family-bold.b-letter-spacing-button.ttu
+        - if prop.social
+          = "Connect #{prop.value}"
+        - elsif prop.value == "small"
+          = "Back"
+        - else
+          = "Start using Veri"
+
+    - if prop.value == "small"
+      button.por.is-small.has-icon.mls
+        i.fa.fa-camera.fa-lg.poa
+        span.b-font-family-bold.b-letter-spacing-button.ttu
+          | Take New
+
+    .g-row
+      = code('sass', css_class: 'highlight mtm') do
+        - if prop.value == "instagram"
+          |
+            &.is-#{prop.value}
+              @include linear-gradient(to right, $instagram-blue, $instagram-pink)
+              color: $b-#{prop.value}-button-text-color
+
+              &:hover
+                @include linear-gradient(to right, darken($instagram-blue, 5%), darken($instagram-pink, 5%))
+        - elsif prop.value == "small"
+          |
+            &.is-small
+              background: $b-#{prop.value}-button-background-color
+              color: $b-#{prop.value}-button-text-color
+              min-width: rem($b-small-button-width)
+
+              &.has-icon
+                padding-left: $b-space-s*5
+
+                i
+                  left: $b-space-s*5/2
+        - else
+          |
+            &.is-#{prop.value}
+              background: $b-#{prop.value}-button-background-color
+              color: $b-#{prop.value}-button-text-color
+
+              &:hover
+                background: darken($b-#{prop.value}-button-background-color, 5%)

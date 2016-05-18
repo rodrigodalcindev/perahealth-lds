@@ -119,3 +119,6 @@ h4.mtl Foundation Styles (Web)
             &.is-#{prop.value}
               background: $b-#{prop.value}-button-background-color
               color: $b-#{prop.value}-button-text-color
+
+              &:hover
+                background: darken($b-#{prop.value}-button-background-color, 5%)

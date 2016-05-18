@@ -109,6 +109,11 @@ section.mtl
             small.b-font-family-bold.b-letter-spacing-label
               | Email Address
 
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Note: Generally, <code>.b-input</code> wrappers' <code>overflow</code> should be set to <code>hidden</code>.
+
 section.mtl
   h2.mbm Text Area
 
@@ -158,6 +163,8 @@ section.mtl
     = code('sass') do
       |
         .b-input
+          overflow: hidden
+
           &.has-controls
             input
               padding-right: rem(90)
@@ -217,6 +224,8 @@ section.mtl
     = code('sass') do
       |
         .b-input
+          overflow: hidden
+
           &.has-controls
             input
               &[type="password"] ~ .b-input-control.is-masking
@@ -234,3 +243,68 @@ section.mtl
             use xlink:href="#eyeball-active"
           svg.is-inactive
             use xlink:href="#eyeball-inactive"
+
+section.mtl
+  h2.mbm Form Validation
+
+  h4.mbm Inline Validation
+
+  .b-input.is-text.has-errors.por
+    input id="email" type="text" placeholder="Email Address"
+    label.poa for="email"
+      small.b-font-family-bold.b-letter-spacing-label
+        | Email Address
+    span.b-input-error.b-font-size-small.poa
+      | This field is invalid
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Inline validation messages should be wrapped in a <code>.b-input-error</code> element placed on the same level as the <code>input</code> field:
+  .g-row
+    = code('slim') do
+      |
+        .b-input.is-text.por
+          input id="email" type="text" placeholder="Email Address"
+          label.poa for="email"
+            small.b-font-family-bold.b-letter-spacing-label
+              | Email Address
+          span.b-input-error.b-font-size-small.poa
+            | This field is invalid
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | The UI/UX dynamics affecting the <code>.b-input-error</code> element are based on toggling of a state-based class (<code>.has-errors</code>) applied to the invalid input wrapper:
+
+  .g-row
+    = code('sass') do
+      |
+        .b-input-error
+          @include transition(transform .25s ease, opacity .15s ease)
+          @include transform(translateY(100%))
+          bottom: 0
+          color: $azalea
+          left: 0
+          opacity: 0
+          padding-left: $b-space
+          pointer-events: none
+          width: rem($b-text-input-min-width)
+
+          .b-input.has-errors &
+            @include transform(translateY(0))
+            opacity: 1
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | The inline validation should also be temporarily hidden when its sibling input is focused:
+
+  .g-row
+    = code('sass', :start_line => 50) do
+      |
+        \#{$all-text-inputs}
+          /*(...)*/
+          &:focus ~ .b-input-error
+            @include transform(translateY(100%))
+            opacity: 0

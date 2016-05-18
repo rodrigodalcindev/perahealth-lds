@@ -9,12 +9,12 @@ h4.mtl Foundation Styles (Web)
 .g-row
   .g-col-7
     p.mts.mbxs
-      | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs:
+      | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs and anchor tags sporting the <code>.as-button</code> class:
 
 .g-row
   = code('sass') do
     |
-      \#{$all-button-inputs}
+      \#{$all-button-inputs}, .as-button
         @include transition(background .25s ease)
         border: none
         cursor: pointer
@@ -22,16 +22,29 @@ h4.mtl Foundation Styles (Web)
         min-width: rem($b-default-button-width)
         padding: ($b-space + $b-space-xs) 0
         text-align: center
+        text-decoration: none
 
 .g-row
   .g-col-7
     p.mts.mbxs
-      | With basic markup being structured as follows:
+      | With basic markup being structured as follows, depending on the element of choice:
 
 .g-row
   = code('slim') do
     |
       button.por
+        span.b-font-family-bold.b-letter-spacing-button.ttu
+          | Start using Veri
+
+.g-row
+  = code('slim') do
+    |
+      input type="submit" value="Start using Veri"
+
+.g-row
+  = code('slim') do
+    |
+      = link_to "#", class: "dib por as-button" do
         span.b-font-family-bold.b-letter-spacing-button.ttu
           | Start using Veri
 

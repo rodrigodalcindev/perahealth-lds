@@ -1,4 +1,4 @@
-#{$all-button-inputs}
+#{$all-button-inputs}, .as-button
   @include transition(background .25s ease)
   border: none
   cursor: pointer
@@ -6,6 +6,7 @@
   min-width: rem($b-default-button-width)
   padding: ($b-space + $b-space-xs) 0
   text-align: center
+  text-decoration: none
 
   <% design_token("buttons", category: "button-style").each do |prop| %>
   &.is-<%= prop.value %>

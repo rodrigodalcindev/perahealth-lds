@@ -55,6 +55,11 @@
       value:    "$spring"
       type:     "string"
       category: "background-color"
+    default_button_border_radius:
+      name:     "default-button-border-radius"
+      value:    4
+      type:     "number"
+      category: "border-radius"
     small_button_text_color:
       name:     "small-button-text-color"
       value:    "$white"

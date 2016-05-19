@@ -33,7 +33,7 @@ section.mtl
           line-height: $line-height-text-input
           margin-top: 2px
           min-width: rem($text-input-min-width)
-          padding: ($b-space + $b-space-xs) $b-space
+          padding: ($space + $space-xs) $space
 
   .g-row
     .g-col-7
@@ -51,8 +51,8 @@ section.mtl
 
           &:focus,
           &.is-dirty
-            padding-bottom: ($b-space - $b-space-xs)
-            padding-top: ($b-space-l - $b-space-xs)
+            padding-bottom: ($space - $space-xs)
+            padding-top: ($space-l - $space-xs)
 
             @include placeholder
               opacity: 0
@@ -65,12 +65,12 @@ section.mtl
             @include transition(top .25s ease, opacity .25s ease)
             background: $white
             color: lighten($black, 90%)
-            height: ($b-space-l - $b-space-xs)
+            height: ($space-l - $space-xs)
             left: 0
             line-height: $line-height-input-label
             width: rem($text-input-min-width)
             opacity: 0
-            padding-left: $b-space
+            padding-left: $space
             top: rem(15)
 
           &:focus + label,
@@ -173,7 +173,7 @@ section.mtl
           @include transform(translateY(-50%))
           cursor: pointer
           height: rem($text-input-control-height)
-          right: $b-space
+          right: $space
           top: 50%
           width: rem($text-input-control-width)
 
@@ -287,9 +287,9 @@ section.mtl
           color: $azalea
           left: 0
           opacity: 0
-          padding-left: $b-space
+          padding-left: $space
           pointer-events: none
-          width: rem($b-text-input-min-width)
+          width: rem($text-input-min-width)
 
           .b-input.has-errors &
             @include transform(translateY(0))

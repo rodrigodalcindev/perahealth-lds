@@ -18,9 +18,9 @@ h4.mtl Foundation Styles (Web)
         @include transition(background .25s ease)
         border: none
         cursor: pointer
-        line-height: $b-line-height-default-button
-        min-width: rem($b-default-button-width)
-        padding: ($b-space + $b-space-xs) 0
+        line-height: $line-height-default-button
+        min-width: rem($default-button-width)
+        padding: ($space + $space-xs) 0
         text-align: center
         text-decoration: none
 
@@ -67,12 +67,12 @@ h4.mtl Foundation Styles (Web)
   = code('sass') do
     |
       &.has-icon
-        padding: ($b-space + $b-space-xs) 0 ($b-space + $b-space-xs) ($b-space*3)
+        padding: ($space + $space-xs) 0 ($space + $space-xs) ($space*3)
         text-align: left
 
         .fa
           @include transform(translate(-50%, -50%))
-          left: $b-space*3/2
+          left: $space*3/2
           top: 50%
 
 .g-row
@@ -111,27 +111,27 @@ h4.mtl Foundation Styles (Web)
           |
             &.is-#{prop.value}
               @include linear-gradient(to right, $instagram-blue, $instagram-pink)
-              color: $b-#{prop.value}-button-text-color
+              color: $#{prop.value}-button-text-color
 
               &:hover
                 @include linear-gradient(to right, darken($instagram-blue, 5%), darken($instagram-pink, 5%))
         - elsif prop.value == "small"
           |
             &.is-small
-              background: $b-#{prop.value}-button-background-color
-              color: $b-#{prop.value}-button-text-color
-              min-width: rem($b-small-button-width)
+              background: $#{prop.value}-button-background-color
+              color: $#{prop.value}-button-text-color
+              min-width: rem($small-button-width)
 
               &.has-icon
-                padding-left: $b-space-s*5
+                padding-left: $space-s*5
 
                 i
-                  left: $b-space-s*5/2
+                  left: $space-s*5/2
         - else
           |
             &.is-#{prop.value}
-              background: $b-#{prop.value}-button-background-color
-              color: $b-#{prop.value}-button-text-color
+              background: $#{prop.value}-button-background-color
+              color: $#{prop.value}-button-text-color
 
               &:hover
-                background: darken($b-#{prop.value}-button-background-color, 5%)
+                background: darken($#{prop.value}-button-background-color, 5%)

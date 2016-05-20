@@ -45,8 +45,8 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
 /// Headings
-<% design_token("typography", category: "heading").each do |prop| %>
-$<%= prop.name %>: <%= prop.value %>px
+<% design_token("typography", category: "heading-size").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
 // Forms

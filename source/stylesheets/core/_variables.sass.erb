@@ -73,7 +73,7 @@ $b-<%= prop.name %>: <%= prop.value %>
 
 /// Button width
 <% design_token("buttons", category: "width").each do |prop| %>
-$b-<%= prop.name %>: <%= prop.value %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
 /// Button border-radius

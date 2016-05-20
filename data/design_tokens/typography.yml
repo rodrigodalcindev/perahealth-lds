@@ -1,35 +1,35 @@
 ---
   props:
-    h1:
-      name:     "heading1"
+    h1_size:
+      name:     "h1-size"
       value:    36
       type:     "number"
-      category: "heading"
-    h2:
-      name:     "heading2"
+      category: "heading-size"
+    h2_size:
+      name:     "h2-size"
       value:    30
       type:     "number"
-      category: "heading"
-    h3:
-      name:     "heading3"
+      category: "heading-size"
+    h3_size:
+      name:     "h3-size"
       value:    24
       type:     "number"
-      category: "heading"
-    h4:
-      name:     "heading4"
+      category: "heading-size"
+    h4_size:
+      name:     "h4-size"
       value:    20
       type:     "number"
-      category: "heading"
-    h5:
-      name:     "heading5"
+      category: "heading-size"
+    h5_size:
+      name:     "h5-size"
       value:    16
       type:     "number"
-      category: "heading"
-    h6:
-      name:     "heading6"
+      category: "heading-size"
+    h6_size:
+      name:     "h6-size"
       value:    14
       type:     "number"
-      category: "heading"
+      category: "heading-size"
     font_size_small:
       name:     "font-size-small"
       value:    13

@@ -26,10 +26,10 @@ small
 <% end %>
 
 // Headings
-<% design_token("typography", category: "heading").each_with_index do |prop, index| %>
+<% design_token("typography", category: "heading-size").each_with_index do |prop, index| %>
 h<%= index + 1 %>, .h<%= index + 1 %>
   font-family: $b-font-family-bold
-  font-size: $<%= prop.name %>
+  font-size: $b-<%= prop.name %>
   line-height: $b-line-height-heading
 <% end %>
 

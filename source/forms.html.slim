@@ -32,7 +32,7 @@ section.mtl
           font-size: $font-size-large
           line-height: $line-height-text-input
           margin-top: 2px
-          min-width: rem($text-input-min-width)
+          min-width: $text-input-min-width
           padding: ($space + $space-xs) $space
 
   .g-row
@@ -68,15 +68,15 @@ section.mtl
             height: ($space-l - $space-xs)
             left: 0
             line-height: $line-height-input-label
-            width: rem($text-input-min-width)
+            min-width: $text-input-min-width
             opacity: 0
             padding-left: $space
-            top: rem(15)
+            top: ($space-s + $space-xs)
 
           &:focus + label,
           &.is-dirty + label
             opacity: 1
-            top: rem(10)
+            top: rem(2)
 
           &:focus + label
             color: $marine
@@ -135,7 +135,7 @@ section.mtl
       |
         textarea
           line-height: $line-height-text-area
-          min-height: rem($text-area-min-height)
+          min-height: $text-area-min-height
 
 section.mtl
   h2.mbm Text Input Controls
@@ -172,10 +172,10 @@ section.mtl
         .b-input-control
           @include transform(translateY(-50%))
           cursor: pointer
-          height: rem($text-input-control-height)
+          height: $text-input-control-height
           right: $space
           top: 50%
-          width: rem($text-input-control-width)
+          width: $text-input-control-width
 
           svg
             height: 100%
@@ -289,7 +289,7 @@ section.mtl
           opacity: 0
           padding-left: $space
           pointer-events: none
-          width: rem($text-input-min-width)
+          min-width: $text-input-min-width
 
           .b-input.has-errors &
             @include transform(translateY(0))

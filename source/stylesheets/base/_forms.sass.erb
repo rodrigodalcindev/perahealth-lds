@@ -7,7 +7,7 @@
   font-size: $b-font-size-large
   line-height: $b-line-height-text-input
   margin-top: 2px
-  min-width: rem($b-text-input-min-width)
+  min-width: $b-text-input-min-width
   padding: ($b-space + $b-space-xs) $b-space
 
   @include placeholder
@@ -34,16 +34,16 @@
     height: ($b-space-l - $b-space-xs)
     left: 0
     line-height: $b-line-height-input-label
-    width: rem($b-text-input-min-width)
+    min-width: $b-text-input-min-width
     opacity: 0
     padding-left: $b-space
     pointer-events: none
-    top: rem(15)
+    top: ($b-space-s + $b-space-xs)
 
   &:focus + label,
   &.is-dirty + label
     opacity: 1
-    top: 2px
+    top: rem(2)
 
   &:focus + label
     color: $marine
@@ -56,7 +56,7 @@
 // Textarea
 textarea
   line-height: $b-line-height-text-area
-  min-height: rem($b-text-area-min-height)
+  min-height: $b-text-area-min-height
 
 // Submit (as button)
 input[type="submit"]
@@ -84,10 +84,10 @@ input[type="submit"]
 .b-input-control
   @include transform(translateY(-50%))
   cursor: pointer
-  height: rem($b-text-input-control-height)
+  height: $b-text-input-control-height
   right: $b-space
   top: 50%
-  width: rem($b-text-input-control-width)
+  width: $b-text-input-control-width
 
   svg
     height: 100%
@@ -103,7 +103,7 @@ input[type="submit"]
   opacity: 0
   padding-left: $b-space
   pointer-events: none
-  width: rem($b-text-input-min-width)
+  min-width: $b-text-input-min-width
 
   .b-input.has-errors &
     @include transform(translateY(0))

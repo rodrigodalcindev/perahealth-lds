@@ -83,5 +83,5 @@ $b-<%= prop.name %>: <%= prop.value %>
 
 /// Button border-radius
 <% design_token("buttons", category: "border-radius").each do |prop| %>
-$b-<%= prop.name%>: <%= prop.value %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
 <% end %>

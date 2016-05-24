@@ -1,0 +1,29 @@
+---
+body_class: "is-iconography"
+---
+
+h1 Typography
+
+section.mtl
+  h2.mbm SVG Icons
+
+  ul
+    - design_token("iconography", category: "svg-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        figure.b-icon
+          svg
+            use xlink:href="#{'#' + prop.value}"
+          figcaption
+            code
+              = prop.value
+
+section.mtl
+  h2.mbm FontAwesome Icons
+
+  ul
+    - design_token("iconography", category: "font-awesome-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        .b-icon
+          i.fa.fa-5x class="#{prop.value}"
+          code.mtm
+            = prop.value

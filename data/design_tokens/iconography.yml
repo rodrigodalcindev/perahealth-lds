@@ -62,6 +62,6 @@
       category: "font-awesome-icon"
     youtube:
       name:     "youtube"
-      value:    "fa-youtube"
+      value:    "fa-play"
       type:     "icon"
       category: "font-awesome-icon"

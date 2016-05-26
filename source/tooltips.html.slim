@@ -1,0 +1,13 @@
+---
+body_class: "is-tooltips"
+---
+
+h1.mbl Tooltips
+
+- design_token("tooltips", category: "tooltip-style").each_with_index do |prop, index|
+  section.mtl
+    h2.ttc.mbm
+      = "#{prop.value} Tooltips"
+
+    .b-tooltip.prs.pls.pbxs.ptxs.por.dib class="is-#{prop.value}"
+      h5.tsi Test

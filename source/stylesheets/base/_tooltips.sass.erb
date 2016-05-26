@@ -1,0 +1,17 @@
+.b-tooltip
+  background: lighten($azalea, 45%)
+  color: $azalea
+
+  &:before
+    position: absolute
+    right: 0
+
+  <% design_token("tooltips", category: "tooltip-style").each do |prop| %>
+  &.is-<%= prop.value %>
+    border-radius: $b-<%= prop.value %>-tooltip-border-radius
+
+    &:before
+      @include rounded-triangle($b-<%= prop.value %>-tooltip-caret-size, $b-<%= prop.value %>-tooltip-border-radius, lighten($azalea, 45%))
+      margin: 0 $b-<%= prop.value %>-tooltip-caret-distance*1.5
+      top: ($b-<%= prop.value %>-tooltip-caret-size/2)*-1
+  <% end %>

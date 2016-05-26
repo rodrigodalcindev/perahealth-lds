@@ -13,6 +13,22 @@
 
     @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark)
 
+// Returns the opposite direction of each direction in a list (https://css-tricks.com/snippets/sass/opposite-direction-function/)
+// @param {List} $directions - List of initial directions
+// @return {List} - List of opposite directions
+@function opposite-direction($directions)
+  $opposite-directions: ()
+  $direction-map: ('top':'bottom','right':'left','bottom':'top','left':'right','center':'center','ltr':'rtl','rtl':'ltr')
+
+  @each $direction in $directions
+    $direction: to-lower-case($direction)
+    @if map-has-key($direction-map, $direction)
+      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)))
+    @else
+      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted."
+
+  @return $opposite-directions
+
 // Code Highlighting
 @mixin code
   background: rgba($white,.75)
@@ -22,3 +38,35 @@
   font-size: 0.92857rem
   font-weight: normal
   padding: 0.1em 0.3em
+
+// CSS Triangle (https://css-tricks.com/snippets/sass/css-triangle-mixin/)
+// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+// @param {Color} $color [currentcolor] - Triangle color
+// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em)
+  @if not index(top right bottom left, $direction)
+    @warn "Direction must be either `top`, `right`, `bottom` or `left`."
+
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color
+  content: ''
+  height: 0
+  width: 0
+  z-index: 2
+
+  $perpendicular-borders: $size solid transparent
+
+  @if $direction == top or $direction == bottom
+    border-left:   $perpendicular-borders
+    border-right:  $perpendicular-borders
+  @else if $direction == right or $direction == left
+    border-bottom: $perpendicular-borders
+    border-top:    $perpendicular-borders
+
+@mixin rounded-triangle($size: rem(11), $border-radius: rem(2), $color: currentcolor)
+  @include transform(rotate(45deg))
+  border-radius: $border-radius
+  background: $color
+  content: ''
+  display: block
+  height: $size
+  width: $size

@@ -80,3 +80,19 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% design_token("buttons", category: "border-radius").each do |prop| %>
 $b-<%= prop.name%>: rem(<%= prop.value %>)
 <% end %>
+
+// Tooltips
+/// Border radius
+<% design_token("tooltips", category: "border-radius").each do |prop| %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
+<% end %>
+
+/// Caret size
+<% design_token("tooltips", category: "caret-size").each do |prop| %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
+<% end %>
+
+/// Caret distance
+<% design_token("tooltips", category: "caret-distance").each do |prop| %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
+<% end %>

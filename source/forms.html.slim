@@ -5,7 +5,9 @@ body_class: "is-forms"
 h1 Forms
 
 section.mtl
-  h2.mbm Text Inputs
+  h2.mbm  Text Inputs
+
+  h4.mbm Foundation Styles (Web)
 
   .b-input.is-text.por
     input id="email" type="text" placeholder="Email Address"
@@ -13,11 +15,9 @@ section.mtl
       small.b-font-family-bold.b-letter-spacing-label
         | Email Address
 
-  h4.mtl Foundation Styles (Web)
-
   .g-row
     .g-col-7
-      p.mts.mbxs
+      p.mtm.mbxs
         | Form fields are styled over a pre-defined set of global rules affecting all text inputs, including text areas:
 
   .g-row
@@ -111,8 +111,46 @@ section.mtl
 
   .g-row
     .g-col-7
-      p.mtm.mbxs
+      p.mtm.mbl
         | Note: Generally, <code>.b-input</code> wrappers' <code>overflow</code> should be set to <code>hidden</code>.
+
+  h4.mbm Specialty Styles (Web)
+
+  .b-input.is-text.is-rainbow.dib.por
+    input id="email" type="text" placeholder="Email Address"
+    label.poa for="email"
+      small.b-font-family-bold.b-letter-spacing-label
+        | Email Address
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Specialty styles such as gradient border inputs are defined through a <code>.is-rainbow</code> class applies do the <code>.b-input</code> wrapper:
+
+  .g-row
+    = code('sass') do
+      |
+        .b-input
+          overflow: hidden
+
+          &.is-rainbow
+            @include linear-gradient(to right, $azalea, $spring)
+            border-radius: $b-default-input-border-radius
+
+            \#{$all-text-inputs}
+              background: $powder
+              border-radius: $b-default-input-border-radius/2
+              margin: rem(1)
+
+              + label
+                background: transparent
+                margin-left: rem(1)
+                min-width: 0
+
+  .g-row
+    .g-col-7
+      p.mtm
+        | Note that the background of the input element should correspond to the background of the outmost wrapper or current page.
 
 section.mtl
   h2.mbm Text Area

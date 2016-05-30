@@ -60,6 +60,11 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
+/// Input border radius
+<% design_token("forms", category: "border-radius").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
+
 // Buttons
 /// Background color
 <% design_token("buttons", category: "background-color").each do |prop| %>

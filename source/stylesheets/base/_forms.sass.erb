@@ -2,11 +2,11 @@
   @include transition(padding .25s ease)
   background: $white
   border: none
-  color: lighten($black, 60%)
+  color: lighten($asphalt, 3.5%)
   font-family: $b-font-family-book
   font-size: $b-font-size-large
   line-height: $b-line-height-text-input
-  margin-top: 2px
+  margin-top: rem(2)
   min-width: $b-text-input-min-width
   padding: ($b-space + $b-space-xs) $b-space
 
@@ -67,6 +67,20 @@ input[type="submit"]
 // Input Wrappers
 .b-input
   overflow: hidden
+
+  &.is-rainbow
+    @include linear-gradient(to right, $azalea, $spring)
+    border-radius: $b-default-input-border-radius
+
+    #{$all-text-inputs}
+      background: $powder
+      border-radius: $b-default-input-border-radius/2
+      margin: rem(1)
+
+      + label
+        background: transparent
+        margin-left: rem(1)
+        min-width: 0
 
   &.has-controls
     input

@@ -87,6 +87,15 @@ $b-<%= prop.name%>: rem(<%= prop.value %>)
 <% end %>
 
 // Tooltips
+/// Width
+<% design_token("tooltips", category: "width").each do |prop| %>
+<% if prop.value == 0 %>
+$b-<%= prop.name%>: none
+<% else %>
+$b-<%= prop.name%>: rem(<%= prop.value %>)
+<% end %>
+<% end %>
+
 /// Border radius
 <% design_token("tooltips", category: "border-radius").each do |prop| %>
 $b-<%= prop.name%>: rem(<%= prop.value %>)

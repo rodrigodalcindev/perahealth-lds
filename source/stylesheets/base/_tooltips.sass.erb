@@ -9,6 +9,7 @@
   <% design_token("tooltips", category: "tooltip-style").each do |prop| %>
   &.is-<%= prop.value %>
     border-radius: $b-<%= prop.value %>-tooltip-border-radius
+    max-width: $b-<%= prop.value %>-tooltip-max-width
 
     &:before
       @include rounded-triangle($b-<%= prop.value %>-tooltip-caret-size, $b-<%= prop.value %>-tooltip-border-radius, lighten($azalea, 45%))

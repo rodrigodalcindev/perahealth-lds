@@ -1,0 +1,52 @@
+---
+  props:
+    inline_tooltip:
+      name:     "inline-tooltip"
+      value:    "inline"
+      type:     "string"
+      category: "tooltip-style"
+    multiline_tooltip:
+      name:     "multiline-tooltip"
+      value:    "multiline"
+      type:     "string"
+      category: "tooltip-style"
+    inline_tooltip_max_width:
+      name:     "inline-tooltip-max-width"
+      value:    0
+      type:     "number"
+      category: "width"
+    multiline_tooltip_max_width:
+      name:     "multiline-tooltip-max-width"
+      value:    300
+      type:     "number"
+      category: "width"
+    inline_tooltip_border_radius:
+      name:     "inline-tooltip-border-radius"
+      value:    2
+      type:     "number"
+      category: "border-radius"
+    multiline_tooltip_border_radius:
+      name:     "multiline-tooltip-border-radius"
+      value:    2
+      type:     "number"
+      category: "border-radius"
+    inline_tooltip_caret_size:
+      name:     "inline-tooltip-caret-size"
+      value:    11
+      type:     "number"
+      category: "caret-size"
+    multiline_tooltip_caret_size:
+      name:     "multiline-tooltip-caret-size"
+      value:    16
+      type:     "number"
+      category: "caret-size"
+    inline_tooltip_caret_distance:
+      name:     "inline-tooltip-caret-distance"
+      value:    7
+      type:     "number"
+      category: "caret-distance"
+    multiline_tooltip_caret_distance:
+      name:     "multiline-tooltip-caret-distance"
+      value:    8
+      type:     "number"
+      category: "caret-distance"

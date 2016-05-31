@@ -7,7 +7,14 @@
 
   &:before
     position: absolute
-    right: 0
+
+  &.caret--left
+    &:before
+      left: 0
+
+  &.caret--right
+    &:before
+      right: 0
 
   <% design_token("tooltips", category: "tooltip-style").each do |prop| %>
   &.is-<%= prop.value %>
@@ -17,7 +24,15 @@
     &:before
       @include rounded-triangle($b-<%= prop.value %>-tooltip-caret-size, $b-<%= prop.value %>-tooltip-border-radius, $white)
       margin: 0 $b-<%= prop.value %>-tooltip-caret-distance*1.5
-      top: ($b-<%= prop.value %>-tooltip-caret-size/2)*-1
+
+    // Tooltip Positions
+    &.caret--top
+      &:before
+        top: ($b-<%= prop.value %>-tooltip-caret-size/2)*-1 + rem(1)
+
+    &.caret--bottom
+      &:before
+        bottom: ($b-<%= prop.value %>-tooltip-caret-size/2)*-1 + rem(1)
   <% end %>
 
   <% design_token("color", category: "main-color").each do |prop| %>

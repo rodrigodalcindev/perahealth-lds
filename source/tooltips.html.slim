@@ -32,6 +32,23 @@ h4.mbs Foundation Styles (Web)
           &:before
             right: 0
 
+.g-row
+  .g-col-7
+    p.mtm.mbxs
+      | Furthermore, the tooltip caret is built with a mixin applied to a <code>:before</code> pseudo-element:
+
+.g-row
+  = code('sass') do
+    |
+      @mixin rounded-triangle($size: rem(11), $border-radius: rem(2), $color: currentcolor)
+        @include transform(rotate(45deg))
+        border-radius: $border-radius
+        background: $color
+        content: ''
+        display: block
+        height: $size
+        width: $size
+
 - design_token("tooltips", category: "tooltip-style").each_with_index do |prop, index|
   section.mtl
     h2.ttc.mbm

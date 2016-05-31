@@ -4,10 +4,140 @@ body_class: "is-tooltips"
 
 h1.mbl Tooltips
 
+h4.mbs Foundation Styles (Web)
+
+.g-row
+  .g-col-7
+    p.mbxs
+      | Basic styles for tooltip elements consist of color scheme fallbacks and caret positioning rules:
+
+.g-row
+  = code('sass') do
+    |
+      .b-tooltip
+        background: $white
+        color: $asphalt
+
+        .b-tooltip-heading
+          color: $ink
+
+        &:before
+          position: absolute
+
+        &.caret--left
+          &:before
+            left: 0
+
+        &.caret--right
+          &:before
+            right: 0
+
 - design_token("tooltips", category: "tooltip-style").each_with_index do |prop, index|
   section.mtl
     h2.ttc.mbm
       = "#{prop.value} Tooltips"
 
-    .b-tooltip.prs.pls.pbxs.ptxs.por.dib class="is-#{prop.value}"
-      h5.tsi Test
+    h4.mbm Markup
+
+    .g-row
+      = code('slim') do
+        - if prop.value == "inline"
+          |
+            .b-tooltip.is-inline.por.dib
+              h5.b-tooltip-heading.prs.pls.pbxs.ptxs.tsi 993
+        - elsif prop.value == "multiline"
+          |
+            .b-tooltip.is-multiline.por.dib
+              .b-tooltip-wrapper.pam
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm a fan
+                p.mbm
+                  | If you are interested in meeting a social celebrity.
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm the talent
+                p
+                  | If you have more than a total of  10,000 followers combined on all your social media accounts.
+
+
+    h4.mtm.mbm Styles
+
+    .g-row
+      = code('sass') do
+        |
+          &.is-#{prop.value}
+            border-radius: $b-#{prop.value}-tooltip-border-radius
+            max-width: $b-#{prop.value}-tooltip-max-width
+
+            &:before
+              @include rounded-triangle($b-#{prop.value}-tooltip-caret-size, $b-#{prop.value}-tooltip-border-radius, $white)
+              margin: 0 $b-#{prop.value}-tooltip-caret-distance*1.5
+
+    h4.mtm.mbm Color Schemes
+
+    ul
+      - design_token("color", category: "main-color").each do |color|
+        - next if color.name == "powder" || color.name == "black"
+        li.mbm.mrm class="#{'dib' unless prop.value == 'inline'}"
+          .b-tooltip.caret--right.caret--top.por.dib class="is-#{prop.value} is-#{color.name}"
+            - if prop.value == "inline"
+              h5.b-tooltip-heading.prs.pls.pbxs.ptxs.tsi 993
+            - elsif prop.value == "multiline"
+              .b-tooltip-wrapper.pam
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm a fan
+                p.mbm
+                  | If you are interested in meeting a social celebrity.
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm the talent
+                p
+                  | If you have more than a total of  10,000 followers combined on all your social media accounts.
+          span class="#{'db tac mts' unless prop.value == 'inline'}"
+            code.mlm
+              = ".is-" + color.name
+
+    .g-row
+      = code('sass') do
+        |
+          &.is-#{prop.value}
+            &.is-color
+              background: lighten($color, 45%)
+
+              .b-tooltip-heading
+                color: $color
+
+              &:before
+                background: lighten($color, 45%)
+
+    h4.mtm.mbm Caret Positioning
+
+    ul
+      - ["caret--right caret--top", "caret--right caret--bottom", "caret--left caret--top", "caret--left caret--bottom"].each do |position|
+        li.mbm.mrm class="#{'dib' unless prop.value == 'inline'}"
+          .b-tooltip.por.dib class="is-#{prop.value} is-asphalt #{position}"
+            - if prop.value == "inline"
+              h5.b-tooltip-heading.prs.pls.pbxs.ptxs.tsi 993
+            - elsif prop.value == "multiline"
+              .b-tooltip-wrapper.pam
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm a fan
+                p.mbm
+                  | If you are interested in meeting a social celebrity.
+                span.b-tooltip-heading.b-font-family-bold.b-letter-spacing-button.ttu
+                  | I'm the talent
+                p
+                  | If you have more than a total of  10,000 followers combined on all your social media accounts.
+          span class="#{'db tac mts' unless prop.value == 'inline'}"
+            code.mlm
+              = '.' + position.gsub!(/\s/,'.')
+
+    .g-row
+      = code('sass') do
+        |
+          &.is-#{prop.value}
+            &.caret--top
+              &:before
+                top: ($b-#{prop.value}-tooltip-caret-size/2)*-1 + rem(1)
+
+            &.caret--bottom
+              &:before
+                bottom: ($b-#{prop.value}-tooltip-caret-size/2)*-1 + rem(1)

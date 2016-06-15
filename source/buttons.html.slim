@@ -9,12 +9,12 @@ h4.mtl Foundation Styles (Web)
 .g-row
   .g-col-7
     p.mts.mbxs
-      | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs and anchor tags sporting the <code>.as-button</code> class:
+      | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs and anchor tags sporting the <code>.is-button</code> class:
 
 .g-row
   = code('sass') do
     |
-      \#{$all-button-inputs}, .as-button
+      \#{$all-button-inputs}, .is-button
         @include transition(background .25s ease)
         border: none
         border-radius: $default-button-border-radius
@@ -45,7 +45,7 @@ h4.mtl Foundation Styles (Web)
 .g-row
   = code('slim') do
     |
-      = link_to "#", class: "dib por as-button" do
+      = link_to "#", class: "dib por is-button" do
         span.b-font-family-bold.b-letter-spacing-button.ttu
           | Start using Veri
 

@@ -27,7 +27,7 @@ section.mtl
           span.db a b c d e f g h i j k l m n o p q r s t u v w x y z
           span.db 0 1 2 3 4 5 6 7 8 9
         code
-          = "$" + prop.name
+          = prop.name
 
 
 section.mtl
@@ -39,7 +39,7 @@ section.mtl
         p class="b-#{prop.name}"
           = "The quick, brown fox (#{prop.value}px)"
         code
-          = "$#{prop.name}"
+          = prop.name
 
 section.mtl
   h2.mbm Line Height
@@ -59,7 +59,7 @@ section.mtl
             | No worries. We'll help you out.
         - next unless prop.name == 'line-height-default' || prop.name == 'line-height-heading'
         code
-          = "$#{prop.name}"
+          = prop.name
 
 section.mtl
   h2.mbm Letter Spacing
@@ -75,7 +75,7 @@ section.mtl
             small.b-font-family-bold class="b-#{prop.name}"
              | Email Address
         code
-          = "$#{prop.name}"
+          = prop.name
 
 section.mtl
   h2.mbm Default Styles (Web)

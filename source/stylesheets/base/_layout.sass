@@ -26,34 +26,34 @@ a
 
 
 .l-navigation
-  background: $asphalt
-  color: $white
+  background: $b-color-asphalt
+  color: $b-color-white
   width: rem(200)
 
   figure
-    background: $azalea
+    background: $b-color-azalea
 
     img
       height: 45px
 
   a, a:hover
-    color: $white
+    color: $b-color-white
     text-decoration: none
 
   ul li
     @include transition(background .15s ease)
     background: transparent
-    border-top: 1px solid rgba($powder, .35)
+    border-top: 1px solid rgba($b-color-powder, .35)
 
     &:first-child
       border: none
 
     &:hover
-      background: lighten($asphalt, 10%)
+      background: lighten($b-color-asphalt, 10%)
 
     a
       display: block
 
 .l-main
-  background: $powder
+  background: $b-color-powder
   margin-left: rem(200)

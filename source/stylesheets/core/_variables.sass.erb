@@ -12,7 +12,7 @@ $stratum-top:     10000
 
 // Color Palette
 <% design_token("color").each do |prop| %>
-$<%= prop.name %>: <%= prop.value %>
+$b-color-<%= prop.name %>: <%= prop.value %>
 <% end %>
 
 // Border
@@ -68,12 +68,12 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 // Buttons
 /// Background color
 <% design_token("buttons", category: "background-color").each do |prop| %>
-$b-<%= prop.name %>: <%= prop.value %>
+$b-<%= prop.name %>: $b-color-<%= prop.value %>
 <% end %>
 
 /// Text color
 <% design_token("buttons", category: "text-color").each do |prop| %>
-$b-<%= prop.name %>: <%= prop.value %>
+$b-<%= prop.name %>: $b-color-<%= prop.value %>
 <% end %>
 
 /// Button width

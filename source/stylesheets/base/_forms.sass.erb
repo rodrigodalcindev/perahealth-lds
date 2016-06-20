@@ -1,8 +1,8 @@
 #{$all-text-inputs}
   @include transition(padding .25s ease)
-  background: $white
+  background: $b-color-white
   border: none
-  color: lighten($asphalt, 3.5%)
+  color: lighten($b-color-asphalt, 3.5%)
   font-family: $b-font-family-book
   font-size: $b-font-size-large
   line-height: $b-line-height-text-input
@@ -23,14 +23,14 @@
       opacity: 0
 
   &:focus
-    color: $marine
+    color: $b-color-marine
     outline: none
 
   // Input label (adjacent)
   + label
     @include transition(top .25s ease, opacity .25s ease)
-    background: $white
-    color: lighten($black, 90%)
+    background: $b-color-white
+    color: lighten($b-color-black, 90%)
     height: ($b-space-l - $b-space-xs)
     left: 0
     line-height: $b-line-height-input-label
@@ -46,7 +46,7 @@
     top: rem(2)
 
   &:focus + label
-    color: $marine
+    color: $b-color-marine
 
   // Input validation
   &:focus ~ .b-input-error
@@ -69,11 +69,11 @@ input[type="submit"]
   overflow: hidden
 
   &.is-rainbow
-    @include linear-gradient(to right, $azalea, $spring)
+    @include linear-gradient(to right, $b-color-azalea, $b-color-spring)
     border-radius: $b-default-input-border-radius
 
     #{$all-text-inputs}
-      background: $powder
+      background: $b-color-powder
       border-radius: $b-default-input-border-radius/2
       margin: rem(1)
 
@@ -112,7 +112,7 @@ input[type="submit"]
   @include transition(transform .25s ease, opacity .15s ease)
   @include transform(translateY(100%))
   bottom: 0
-  color: $azalea
+  color: $b-color-azalea
   left: 0
   opacity: 0
   padding-left: $b-space

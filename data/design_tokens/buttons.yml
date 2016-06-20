@@ -47,12 +47,12 @@
       social:   true
     default_button_text_color:
       name:     "default-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     default_button_background_color:
       name:     "default-button-background-color"
-      value:    "$spring"
+      value:    "spring"
       type:     "string"
       category: "background-color"
     default_button_border_radius:
@@ -62,72 +62,72 @@
       category: "border-radius"
     small_button_text_color:
       name:     "small-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     small_button_background_color:
       name:     "small-button-background-color"
-      value:    "$spring"
+      value:    "spring"
       type:     "string"
       category: "background-color"
     outline_button_text_color:
       name:     "outline-button-text-color"
-      value:    "$iris"
+      value:    "iris"
       type:     "string"
       category: "text-color"
     outline_button_background_color:
       name:     "outline-button-background-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "background-color"
     facebook_button_text_color:
       name:     "facebook-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     facebook_button_background_color:
       name:     "facebook-button-background-color"
-      value:    "$facebook-blue"
+      value:    "facebook-blue"
       type:     "string"
       category: "background-color"
     twitter_button_text_color:
       name:     "twitter-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     twitter_button_background_color:
       name:     "twitter-button-background-color"
-      value:    "$twitter-blue"
+      value:    "twitter-blue"
       type:     "string"
       category: "background-color"
     youtube_button_text_color:
       name:     "youtube-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     youtube_button_background_color:
       name:     "youtube-button-background-color"
-      value:    "$youtube-red"
+      value:    "youtube-red"
       type:     "string"
       category: "background-color"
     instagram_button_text_color:
       name:     "instagram-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     instagram_button_background_color:
       name:     "instagram-button-background-color"
-      value:    "$instagram-pink"
+      value:    "instagram-pink"
       type:     "string"
       category: "background-color"
     vine_button_text_color:
       name:     "vine-button-text-color"
-      value:    "$white"
+      value:    "white"
       type:     "string"
       category: "text-color"
     vine_button_background_color:
       name:     "vine-button-background-color"
-      value:    "$vine-green"
+      value:    "vine-green"
       type:     "string"
       category: "background-color"
     default_button_width:

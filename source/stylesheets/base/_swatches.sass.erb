@@ -3,13 +3,13 @@
   @include display(flex)
   @include align-items(center)
   @include justify-content(center)
-  border: 1px solid rgba($asphalt,.15)
+  border: 1px solid rgba($b-color-asphalt,.15)
   border-radius: $b-border-radius
   height: 100px
   width: 150px
 
 <% design_token("color").each do |prop| %>
 .b-swatch--<%= prop.name %>
-  background: $<%= prop.name %>
-  color: color-contrast($<%= prop.name %>)
+  background: $b-color-<%= prop.name %>
+  color: color-contrast($b-color-<%= prop.name %>)
 <% end %>

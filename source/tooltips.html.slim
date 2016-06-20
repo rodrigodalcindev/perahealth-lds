@@ -15,11 +15,11 @@ h4.mbs Foundation Styles (Web)
   = code('sass') do
     |
       .b-tooltip
-        background: $white
-        color: $asphalt
+        background: $b-color-white
+        color: $b-color-asphalt
 
         .b-tooltip-heading
-          color: $ink
+          color: $b-color-ink
 
         &:before
           position: absolute
@@ -86,7 +86,7 @@ h4.mbs Foundation Styles (Web)
             max-width: $b-#{prop.value}-tooltip-max-width
 
             &:before
-              @include rounded-triangle($b-#{prop.value}-tooltip-caret-size, $b-#{prop.value}-tooltip-border-radius, $white)
+              @include rounded-triangle($b-#{prop.value}-tooltip-caret-size, $b-#{prop.value}-tooltip-border-radius, $b-color-white)
               margin: 0 $b-#{prop.value}-tooltip-caret-distance*1.5
 
     h4.mtm.mbm Color Schemes

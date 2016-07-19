@@ -1,11 +1,11 @@
-# Veri - Living Design System
+# PeraHealth - Living Design System
 This repository features a living design system + style guide with UI/UX directives that can consistenly be applied across different platforms (e.g.: web and mobile).
 
 It uses [Middleman](https://middlemanapp.com) as a framework for easy tapping of key-value design attributes stored on YML files.
 
 ### Setup
 - - -
-1. `git clone https://github.com/DynamoMTL/veri-lds.git`
+1. `git clone https://github.com/DynamoMTL/perahealth-lds.git`
 2. `bundle install`
 3. `npm rm --global gulp`
 4. `npm install`
@@ -54,7 +54,7 @@ A build task has already been setup so the static files are generated upon deplo
 
 In order to deploy, please make sure you've been granted access to the Heroku app first and then:
 
-1. `heroku git:remote -a veri-lds`
+1. `heroku git:remote -a perahealth-lds`
 2. `git push heroku master`
 
-The URL for the Heroku instance is https://veri-lds.herokuapp.com/
+The URL for the Heroku instance is https://perahealth-lds.herokuapp.com/

@@ -26,15 +26,22 @@ a
 
 
 .l-navigation
-  background: $b-color-asphalt
+  background: $b-color-violet-slate
   color: $b-color-white
   width: rem(200)
 
   figure
-    background: $b-color-azalea
+    @include display(flex)
+    @include flex-direction(column)
+    @include align-items(center)
+    @include justify-content(center)
+    background: $b-color-white
 
     img
-      height: 45px
+      width: 160px
+
+    figcaption
+      color: $b-color-violet-slate
 
   a, a:hover
     color: $b-color-white
@@ -43,17 +50,17 @@ a
   ul li
     @include transition(background .15s ease)
     background: transparent
-    border-top: 1px solid rgba($b-color-powder, .35)
+    border-top: 1px solid rgba($b-color-white, .35)
 
     &:first-child
       border: none
 
     &:hover
-      background: lighten($b-color-asphalt, 10%)
+      background: lighten($b-color-violet-slate, 10%)
 
     a
       display: block
 
 .l-main
-  background: $b-color-powder
+  background: lighten($b-color-black, 95%)
   margin-left: rem(200)

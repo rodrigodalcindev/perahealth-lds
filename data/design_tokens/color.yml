@@ -10,68 +10,38 @@
       value:    "#FFF"
       type:     "color"
       category: "main-color"
-    asphalt:
-      name:     "asphalt"
-      value:    "#3F4959"
+    violet_slate:
+      name:     "violet-slate"
+      value:    "#565B6C"
       type:     "color"
       category: "main-color"
-    powder:
-      name:     "powder"
-      value:    "#F2F7FB"
+    canary_yellow:
+      name:     "canary-yellow"
+      value:    "#FFCB05"
       type:     "color"
       category: "main-color"
-    ink:
-      name:     "ink"
-      value:    "#12306B"
+    turquoise:
+      name:     "turquoise"
+      value:    "#00B0AD"
       type:     "color"
       category: "main-color"
-    marine:
-      name:     "marine"
-      value:    "#193E99"
+    purple:
+      name:     "purple"
+      value:    "#A490C4"
       type:     "color"
       category: "main-color"
-    iris:
-      name:     "iris"
-      value:    "#33B0FF"
+    blue:
+      name:     "blue"
+      value:    "#7595CC"
       type:     "color"
       category: "main-color"
-    spring:
-      name:     "spring"
-      value:    "#15E6C3"
-      type:     "color"
-      category: "main-color"
-    azalea:
-      name:     "azalea"
-      value:    "#E013E6"
-      type:     "color"
-      category: "main-color"
-    facebook_blue:
-      name:     "facebook-blue"
-      value:    "#4A649D"
-      type:     "color"
-      category: "social-color"
     twitter_blue:
       name:     "twitter-blue"
       value:    "#4099FF"
       type:     "color"
       category: "social-color"
-    instagram_blue:
-      name:     "instagram-blue"
-      value:    "#476BDA"
-      type:     "color"
-      category: "social-color"
-    instagram_pink:
-      name:     "instagram-pink"
-      value:    "#E22081"
-      type:     "color"
-      category: "social-color"
     youtube_red:
       name:     "youtube-red"
       value:    "#E52D27"
-      type:     "color"
-      category: "social-color"
-    vine_green:
-      name:     "vine-green"
-      value:    "#5DC093"
       type:     "color"
       category: "social-color"

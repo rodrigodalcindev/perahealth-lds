@@ -1,13 +1,13 @@
 {
-  "name": "VeriLivingDesignSystem",
+  "name": "PeraHealthLivingDesignSystem",
   "version": "1.0.0",
-  "description": "A living design system and style guide repository for the Veri app",
+  "description": "A living design system and style guide repository for the PeraHealth website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DynamoMTL/veri-lds"
+    "url": "https://github.com/DynamoMTL/perahealth-lds"
   },
   "keywords": [
-    "veri",
+    "perahealth",
     "style",
     "properties",
     "css",
@@ -17,9 +17,9 @@
   "author": "Dynamo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DynamoMTL/veri-lds/issues"
+    "url": "https://github.com/DynamoMTL/perahealth-lds/issues"
   },
-  "homepage": "https://veri-lds.herokuapp.com",
+  "homepage": "https://perahealth-lds.herokuapp.com",
   "devDependencies": {
     "gulp": "^3.8.10",
     "theo": "^4.0.0",

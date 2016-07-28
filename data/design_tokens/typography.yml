@@ -80,6 +80,11 @@
       value:    1.08
       type:     "number"
       category: "letter-spacing"
+    letter_spacing_default:
+      name:     "letter-spacing-default"
+      value:    1
+      type:     "number"
+      category: "letter-spacing"
     line_height_default:
       name:     "line-height-default"
       value:    1.5

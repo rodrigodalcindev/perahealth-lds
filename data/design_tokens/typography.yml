@@ -1,5 +1,45 @@
 ---
   props:
+    font_family_serif:
+      name:     "font-family-serif"
+      value:    "Sentinel A, Sentinel B"
+      type:     "string"
+      category: "font-family"
+    font_family_sans:
+      name:     "font-family-sans"
+      value:    "Whitney A, Whitney B"
+      type:     "string"
+      category: "font-family"
+    font_size_small:
+      name:     "font-size-small"
+      value:    13
+      type:     "number"
+      category: "font-size"
+    font_size_medium:
+      name:     "font-size-medium"
+      value:    16
+      type:     "number"
+      category: "font-size"
+    font_size_large:
+      name:     "font-size-large"
+      value:    20
+      type:     "number"
+      category: "font-size"
+    font_size_extra_large:
+      name:     "font-size-x-large"
+      value:    24
+      type:     "number"
+      category: "font-size"
+    font_weight_book:
+      name:     "font-weight-book"
+      value:    400
+      type:     "number"
+      category: "font-weight"
+    font_weight_bold:
+      name:     "font-weight-bold"
+      value:    700
+      type:     "number"
+      category: "font-weight"
     h1_size:
       name:     "h1-size"
       value:    36
@@ -30,26 +70,16 @@
       value:    14
       type:     "number"
       category: "heading-size"
-    font_size_small:
-      name:     "font-size-small"
-      value:    13
+    letter_spacing_button:
+      name:     "letter-spacing-button"
+      value:    1.89
       type:     "number"
-      category: "font-size"
-    font_size_medium:
-      name:     "font-size-medium"
-      value:    16
+      category: "letter-spacing"
+    letter_spacing_label:
+      name:     "letter-spacing-label"
+      value:    1.08
       type:     "number"
-      category: "font-size"
-    font_size_large:
-      name:     "font-size-large"
-      value:    20
-      type:     "number"
-      category: "font-size"
-    font_size_extra_large:
-      name:     "font-size-x-large"
-      value:    24
-      type:     "number"
-      category: "font-size"
+      category: "letter-spacing"
     line_height_default:
       name:     "line-height-default"
       value:    1.5
@@ -80,23 +110,3 @@
       value:    1.2
       type:     "number"
       category: "line-height"
-    letter_spacing_button:
-      name:     "letter-spacing-button"
-      value:    1.89
-      type:     "number"
-      category: "letter-spacing"
-    letter_spacing_label:
-      name:     "letter-spacing-label"
-      value:    1.08
-      type:     "number"
-      category: "letter-spacing"
-    font_family_serif:
-      name:     "font-family-serif"
-      value:    "Sentinel A, Sentinel B"
-      type:     "string"
-      category: "font-family"
-    font_family_sans:
-      name:     "font-family-sans"
-      value:    "Whitney A, Whitney B"
-      type:     "string"
-      category: "font-family"

@@ -5,14 +5,18 @@ body_class: "is-typography"
 h1 Typography
 
 section.mtl
-  h2.mbm Headings
+  h2.mbm Default Styles (Web)
 
-  ul
-    - design_token("typography", category: "heading-size").each_with_index do |prop, index|
-      li.mbm
-        code.dib.vam
-          = "h#{index + 1}"
-        span.b-font-family-serif.dib.mlm.vam class="h#{index + 1}" Lifesaving Intelligence
+  p.mbxs
+    | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
+
+  .g-row
+    = code('sass') do
+      |
+        body
+          font-family: $font-family-medium
+          font-size: $font-size-medium
+          line-height: $line-height-default
 
 section.mtl
   h2.mbm Font Families
@@ -29,6 +33,18 @@ section.mtl
         code
           = prop.name
 
+section.mtl
+  h2.mbm Font Weights
+
+  ul
+    - design_token("typography", category: "font-weight").each do |prop|
+      li.mbm
+        p.b-font-family-sans.b-font-size-large.mbxs class="b-#{prop.name}"
+          = "The quick, brown fox (#{prop.value})"
+        p.b-font-family-serif.b-font-size-large.mbxs class="b-#{prop.name}"
+          = "The quick, brown fox (#{prop.value})"
+        code
+          = prop.name
 
 section.mtl
   h2.mbm Type Sizes
@@ -53,7 +69,7 @@ section.mtl
               p.tfbk
                 | ICU beds are arguably one of the most precious resources in the acute care setting. Minimizing unnecessary use of these beds is key to an efficient enterprise: from both a throughput and clinical perspective. PeraTrend provides the tools to make ICU Optimization possible.
         - elsif prop.name == 'line-height-heading'
-          h3
+          h3.b-font-family-serif
             | Forgot your password?
             br
             | No worries. We'll help you out.
@@ -78,15 +94,11 @@ section.mtl
           = prop.name
 
 section.mtl
-  h2.mbm Default Styles (Web)
+  h2.mbm Headings
 
-  p.mbxs
-    | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
-
-  .g-row
-    = code('sass') do
-      |
-        body
-          font-family: $font-family-medium
-          font-size: $font-size-medium
-          line-height: $line-height-default
+  ul
+    - design_token("typography", category: "heading-size").each_with_index do |prop, index|
+      li.mbm
+        code.dib.vam
+          = "h#{index + 1}"
+        span.b-font-family-serif.dib.mlm.vam class="h#{index + 1}" Lifesaving Intelligence

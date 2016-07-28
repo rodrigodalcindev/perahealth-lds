@@ -29,6 +29,11 @@ $b-<%= prop.name%>: rem(<%= prop.value %>)
 $b-<%= prop.name %>: <%= prop.value %>, sans-serif !default
 <% end %>
 
+/// Font Weight
+<% design_token("typography", category: "font-weight").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>
+
 /// Type Sizing
 <% design_token("typography", category: "font-size").each do |prop| %>
 $b-<%= prop.name %>: rem(<%= prop.value %>)

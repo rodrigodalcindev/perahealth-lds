@@ -22,3 +22,29 @@ $b-border-radius: 4px !default
 <% design_token("spacing", category: "space").each do |prop| %>
 $b-<%= prop.name%>: rem(<%= prop.value %>)
 <% end %>
+
+// Typography
+/// Font Families
+<% design_token("typography", category: "font-family").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>, sans-serif !default
+<% end %>
+
+/// Type Sizing
+<% design_token("typography", category: "font-size").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
+
+/// Line Height
+<% design_token("typography", category: "line-height").each do |prop| %>
+$b-<%= prop.name %>: <%= prop.value %>
+<% end %>
+
+/// Letter Spacing
+<% design_token("typography", category: "letter-spacing").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
+
+/// Headings
+<% design_token("typography", category: "heading-size").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>

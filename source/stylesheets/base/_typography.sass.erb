@@ -1,4 +1,39 @@
 body
-  font-family: "Whitney A", "Whitney B"
-  font-style: normal
-  font-weight: 400
+  +font-feature-settings("kern", "liga", "pnum")
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-family: $b-font-family-sans
+  font-size: $b-font-size-medium
+  line-height: $b-line-height-default
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+small
+  font-size: $b-font-size-small
+
+// Font Families
+<% design_token("typography", category: "font-family").each do |prop| %>
+.b-<%= prop.name %>
+  font-family: $b-<%= prop.name %>
+<% end %>
+
+// Headings
+<% design_token("typography", category: "heading-size").each_with_index do |prop, index| %>
+h<%= index + 1 %>, .h<%= index + 1 %>
+  //font-family: $b-font-family-bold
+  font-size: $b-<%= prop.name %>
+  line-height: $b-line-height-heading
+<% end %>
+
+// Type Sizing
+<% design_token("typography", category: "font-size").each do |prop| %>
+.b-<%= prop.name %>
+  font-size: $b-<%= prop.name %>
+<% end %>
+
+// Letter Spacing
+<% design_token("typography", category: "letter-spacing").each do |prop| %>
+.b-<%= prop.name %>
+  letter-spacing: $b-<%= prop.name %>
+<% end %>

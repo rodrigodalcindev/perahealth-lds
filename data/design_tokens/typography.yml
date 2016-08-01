@@ -12,17 +12,17 @@
       category: "font-family"
     font_size_small:
       name:     "font-size-small"
-      value:    13
+      value:    18
       type:     "number"
       category: "font-size"
     font_size_medium:
       name:     "font-size-medium"
-      value:    16
+      value:    20
       type:     "number"
       category: "font-size"
     font_size_large:
       name:     "font-size-large"
-      value:    20
+      value:    22
       type:     "number"
       category: "font-size"
     font_size_extra_large:
@@ -42,12 +42,12 @@
       category: "font-weight"
     h1_size:
       name:     "h1-size"
-      value:    36
+      value:    48
       type:     "number"
       category: "heading-size"
     h2_size:
       name:     "h2-size"
-      value:    30
+      value:    36
       type:     "number"
       category: "heading-size"
     h3_size:

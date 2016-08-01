@@ -17,6 +17,18 @@ section.mtl
           = prop.name
 
 section.mtl
+  h2.mbm Secondary Colors
+
+  ul
+    - design_token("color", category: "secondary-color").each do |prop|
+      li.dib.tac.mbm
+        .b-swatch.mlxs.mrxs.mbs class="b-swatch--#{prop.name}"
+          span
+            = prop.value
+        code
+          = prop.name
+
+section.mtl
   h2.mbm Social Media Colors
 
   ul

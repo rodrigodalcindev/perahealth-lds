@@ -45,3 +45,8 @@
       value:    "#E52D27"
       type:     "color"
       category: "social-color"
+    secondary_blue:
+      name:     "medium-blue"
+      value:    "#4771B8"
+      type:     "color"
+      category: "secondary-color"

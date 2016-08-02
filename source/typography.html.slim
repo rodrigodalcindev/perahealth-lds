@@ -90,6 +90,10 @@ section.mtl
           - elsif prop.name.end_with? 'label'
             small.b-font-family-bold class="b-#{prop.name}"
              | Email Address
+          - else
+            small.b-font-family-bold class="b-#{prop.name}"
+             | Peer-Reviewed Publications
+
         code
           = prop.name
 

@@ -10,6 +10,11 @@
       value:    "Whitney A, Whitney B"
       type:     "string"
       category: "font-family"
+    font_family_sans_small_caps:
+      name:     "font-family-sans-small-caps"
+      value:    "Whitney Small Caps A, Whitney Small Caps B"
+      type:     "string"
+      category: "font-family"
     font_size_small:
       name:     "font-size-small"
       value:    18

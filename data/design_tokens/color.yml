@@ -10,6 +10,11 @@
       value:    "#FFF"
       type:     "color"
       category: "main-color"
+    charcoal:
+      name:     "charcoal"
+      value:    "#505460"
+      type:     "color"
+      category: "main-color"
     violet_slate:
       name:     "violet-slate"
       value:    "#565B6C"

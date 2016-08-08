@@ -15,8 +15,8 @@
       value:    "Whitney Small Caps A, Whitney Small Caps B"
       type:     "string"
       category: "font-family"
-    font_size_x_small:
-      name:     "font-size-x-small"
+    font_size_extra_small:
+      name:     "font-size-extra-small"
       value:    12
       type:     "number"
       category: "font-size"

@@ -40,6 +40,11 @@
       value:    24
       type:     "number"
       category: "font-size"
+    font_weight_light:
+      name:     "font-weight-light"
+      value:    300
+      type:     "number"
+      category: "font-weight"
     font_weight_book:
       name:     "font-weight-book"
       value:    400

@@ -5,7 +5,7 @@ body_class: "is-typography"
 h1 Typography
 
 section.mtl
-  h2.mbm Default Styles (Web)
+  h2.mbm Default Styles
 
   p.mbxs
     | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
@@ -106,3 +106,47 @@ section.mtl
         code.dib.vam
           = "h#{index + 1}"
         span.dib.mlm.vam class="h#{index + 1} #{index == 1 || index == 2 ? 'b-font-family-sans' : 'b-font-family-serif'}" Lifesaving Intelligence
+
+section.mtl
+  h2.mbm Style Recipes
+
+  ul
+    li.mbm
+      .g-row
+        .g-col-5
+          h4.mbxs
+            | Blockquotes
+          blockquote.maf
+            p.db.h2.mtm.mbl.b-font-weight-light
+              | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
+            span.b-quote-name.b-font-size-x-large.db
+              | Daniel Smith
+            span.b-quote-role.b-font-family-sans-small-caps.b-font-size-medium.db
+              | m.d. palliative care and hospice specialist
+
+      .g-row
+        = code('sass', css_class: 'highlight mtm') do
+          |
+            blockquote
+              p
+                &:before,
+                &:after
+                  display: block
+                  font-family: $font-family-serif
+                  font-size: rem(72)
+                  font-weight: $font-weight-light
+                  height: rem(20)
+                  line-height: .675
+
+                &:before
+                  content: '“'
+                  margin-bottom: $space
+
+                &:after
+                  content: '”'
+                  margin-top: $space
+
+              .b-quote-name,
+              .b-quote-role
+                line-height: normal
+

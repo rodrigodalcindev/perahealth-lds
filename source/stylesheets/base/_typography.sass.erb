@@ -43,3 +43,28 @@ h<%= index + 1 %>, .h<%= index + 1 %>
 .b-<%= prop.name %>
   letter-spacing: $b-<%= prop.name %>
 <% end %>
+
+/// Recipes
+// Blockquotes
+blockquote
+  p
+    &:before,
+    &:after
+      display: block
+      font-family: $b-font-family-serif
+      font-size: rem(72)
+      font-weight: $b-font-weight-light
+      height: rem(20)
+      line-height: .675
+
+    &:before
+      content: '“'
+      margin-bottom: $b-space
+
+    &:after
+      content: '”'
+      margin-top: $b-space
+
+  .b-quote-name,
+  .b-quote-role
+    line-height: normal

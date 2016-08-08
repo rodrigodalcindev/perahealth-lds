@@ -16,7 +16,7 @@
       type:     "string"
       category: "font-family"
     font_size_extra_small:
-      name:     "font-size-extra-small"
+      name:     "font-size-x-small"
       value:    12
       type:     "number"
       category: "font-size"

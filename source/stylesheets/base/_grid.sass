@@ -1,12 +1,12 @@
 // Neat Grid System
 .g-container
   @include outer-container
-  @include padding(null $b-space null $b-space)
+  @include padding(null $container-padding null $container-padding)
 
 .g-row
   @include row
 
-@for $i from 1 through 12
+@for $i from 1 through $grid-columns
   .g-col-#{$i}
     @include span-columns($i)
 
@@ -15,3 +15,18 @@
 
   .g-col-omega-#{$i}
     @include omega("#{$i}n")
+
+// Grid Token View
+.b-column
+  @include display(flex)
+  @include align-items(center)
+  @include justify-content(center)
+  background: $b-color-white
+  border: 1px solid $b-color-light-grey
+  border-radius: $b-border-radius
+  height: 50px
+  width: 100%
+
+  code
+    background: none
+    border: none

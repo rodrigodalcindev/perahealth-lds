@@ -19,4 +19,9 @@
       name: "max-width"
       value: 1360
       type: "number"
-      category: "grid-width"
+      category: "grid-container"
+    grid_container_padding:
+      name: "container-padding"
+      value: 15
+      type: "number"
+      category: "grid-container"

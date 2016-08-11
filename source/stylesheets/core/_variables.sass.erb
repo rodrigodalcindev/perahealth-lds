@@ -20,7 +20,16 @@ $b-border-radius: 4px !default
 
 // Sizing
 <% design_token("spacing", category: "space").each do |prop| %>
-$b-<%= prop.name%>: rem(<%= prop.value %>)
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
+
+// Grid Variables
+<% design_token("grid").each do |prop| %>
+<% if prop.name == "grid-columns" %>
+$<%= prop.name %>: <%= prop.value %>
+<% else %>
+$<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
 <% end %>
 
 // Typography

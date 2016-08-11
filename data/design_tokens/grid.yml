@@ -1,0 +1,27 @@
+---
+  props:
+    grid_columns:
+      name: "grid-columns"
+      value: 12
+      type: "number"
+      category: "grid-column"
+    grid_column_width:
+      name: "column"
+      value: 83
+      type: "number"
+      category: "grid-column"
+    grid_gutter:
+      name: "gutter"
+      value: 30
+      type: "number"
+      category: "grid-gutter"
+    grid_max_width:
+      name: "max-width"
+      value: 1360
+      type: "number"
+      category: "grid-container"
+    grid_container_padding:
+      name: "container-padding"
+      value: 15
+      type: "number"
+      category: "grid-container"

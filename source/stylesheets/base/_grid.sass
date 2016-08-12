@@ -1,4 +1,6 @@
 // Neat Grid System
+$mobile: new-breakpoint(max-width 1170px)
+
 .g-container
   @include outer-container
   @include padding(null $container-padding null $container-padding)
@@ -6,9 +8,16 @@
 .g-row
   @include row
 
+  @include media($mobile)
+    margin-bottom: 0
+
 @for $i from 1 through $grid-columns
   .g-col-#{$i}
     @include span-columns($i)
+
+    @include media($mobile)
+      @include span-columns($grid-columns)
+      margin-bottom: $b-space
 
   .g-col-shift-#{$i}
     @include shift($i)

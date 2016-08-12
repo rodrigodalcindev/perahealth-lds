@@ -27,5 +27,24 @@ section.mtl
 section.mtl
   h2.mbm Usage
 
-  p.mbxs
-    | Layout grid is based on the <a href="http://neat.bourbon.io/" target="_blank">Neat framework</a>. Adding the list of output grid variables from Theo will automatically override the framework's default values.
+  .g-row
+    .g-col-6
+      p.mbxs
+        | Layout grid is based on the <a href="http://neat.bourbon.io/" target="_blank">Neat framework</a>. Adding the list of output grid variables from Theo will automatically override the framework's default values.
+
+  .g-row
+    .g-col-6
+      h4.mtm.mbxs Responsiveness
+
+      p.mbm
+        | The grid is fluid by default, with a basic <code>$mobile</code> breakpoint set to determine the stacking of columns.
+
+  .g-row
+    = code('sass') do
+      |
+        @for $i from 1 through $grid-columns
+          .g-col-\#{$i}
+            @include span-columns($i)
+
+            @include media($mobile)
+              @include span-columns($grid-columns)

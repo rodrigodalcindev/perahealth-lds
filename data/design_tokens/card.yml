@@ -15,8 +15,28 @@
       value: 50
       type: "number"
       category: "card-padding"
-    card_min_height:
-      name: "card-min-height"
+    card_feature_height:
+      name: "card-feature-height"
+      value: 315
+      type: "number"
+      category: "card-height"
+    card_top_headed_height:
+      name: "card-top-headed-height"
       value: 300
+      type: "number"
+      category: "card-height"
+    card_left_headed_height:
+      name: "card-left-headed-height"
+      value: 340
+      type: "number"
+      category: "card-height"
+    card_headless_square_height:
+      name: "card-headless-square-height"
+      value: 375
+      type: "number"
+      category: "card-height"
+    card_headless_rectangular_height:
+      name: "card-headless-rectangular-height"
+      value: 265
       type: "number"
       category: "card-height"

@@ -85,6 +85,18 @@
       background-size: auto 140%
       height: $b-card-feature-image-height
 
+      &:before
+        @include linear-gradient(-50deg, rgba($b-color-turquoise,1) 5%, rgba($b-color-turquoise,0) 55%)
+        background-color: transparent
+        content: ''
+        display: block
+        height: 100%
+        left: 0
+        opacity: .4
+        position: absolute
+        top: 0
+        width: 100%
+
     .m-card-inner
       min-height: $b-card-feature-height
 

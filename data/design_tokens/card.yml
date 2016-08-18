@@ -1,0 +1,22 @@
+---
+  props:
+    card_graphic_size:
+      name: "card-graphic-size"
+      value: 85
+      type: "number"
+      category: "card-graphic"
+    card_horizontal_padding:
+      name: "card-horizontal-padding"
+      value: 30
+      type: "number"
+      category: "card-padding"
+    card_vertical_padding:
+      name: "card-vertical-padding"
+      value: 50
+      type: "number"
+      category: "card-padding"
+    card_min_height:
+      name: "card-min-height"
+      value: 300
+      type: "number"
+      category: "card-height"

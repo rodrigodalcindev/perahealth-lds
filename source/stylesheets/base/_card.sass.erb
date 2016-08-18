@@ -1,45 +1,115 @@
 .m-card
+  background: $b-color-white
   text-decoration: none
+
+  &:before
+    background: $b-color-light-grey
+    content: ''
+    display: block
 
   &:after
     @include transition(transform .2s ease)
-    @include transform-origin(left)
-    @include transform(scaleX(0))
     background: $b-color-canary-yellow
     bottom: 0
     content: ''
     display: inline-block
-    height: 2px
-    left: 0
     position: absolute
-    width: 100%
 
-  &:hover
+  &.is-top-headed,
+  &.is-headless-square,
+  &.is-headless-rectangular
     &:after
-      @include transform(scaleX(1))
+      @include transform-origin(left)
+      @include transform(scaleX(0))
+      height: 2px
+      left: 0
+      width: 100%
 
-  .m-card-heading
-    background: $b-color-light-grey
-    height: $card-graphic-size
+    &:hover
+      &:after
+        @include transform(scaleX(1))
+
+  &[class*="is-headless"]
+    &:before
+      display: none
+
+    .m-card-inner
+      padding: $card-horizontal-padding
+
+  &.is-top-headed
+    &:before
+      height: $card-graphic-size
+      width: 100%
+
+    .m-card-inner
+      min-height: $card-top-headed-height
+
+  &.is-left-headed
+    &:before
+      float: left
+      min-height: $card-left-headed-height
+      width: $card-graphic-size
+
+    &:after
+      @include transform-origin(bottom)
+      @include transform(scaleY(0))
+      height: 100%
+      right: 0
+      width: 2px
+
+    &:hover
+      &:after
+        @include transform(scaleY(1))
+
+    .m-card-inner
+      min-height: $card-left-headed-height
+
+  &.is-headless-square
+    .m-card-inner
+      min-height: $card-headless-square-height
+
+  &.is-headless-rectangular
+    .m-card-inner
+      min-height: $card-headless-rectangular-height
+
+      .m-card-headline
+        font-size: $b-font-size-large
 
   .m-card-inner
     @include display(flex)
     @include flex-direction(column)
     @include justify-content(space-between)
-    background: $b-color-white
-    min-height: $card-min-height
     padding: $card-vertical-padding $card-horizontal-padding
 
     h4
       color: $b-color-violet-slate
-      font-size: rem(28)
-      font-weight: 300
-      line-height: 1.25
+
+      time
+        /* To be refactored into typographic design token updates */
+        font-size: rem(17)
+        font-style: italic
+        font-weight: 300
+        /* To be refactored into spacing design token updates */
+        margin-bottom: rem(30)
+
+      .m-card-category
+        /* To be refactored into typographic design token updates */
+        font-family: "Whitney Small Caps A", "Whitney Small Caps B"
+        font-size: rem(20)
+        letter-spacing: rem(1)
+        text-transform: lowercase
+
+      .m-card-headline
+        /* To be refactored into typographic design token updates */
+        font-size: rem(28)
+        font-weight: 300
+        line-height: 1.25
 
     span
       small
         border-bottom: 2px solid
         color: $b-color-turquoise
+        /* To be refactored into typographic design token updates */
         font-size: rem(14)
         font-weight: 500
         letter-spacing: rem(.7)

@@ -15,6 +15,7 @@
     display: inline-block
     position: absolute
 
+  &.is-feature,
   &.is-top-headed,
   &.is-headless-square,
   &.is-headless-rectangular
@@ -29,26 +30,28 @@
       &:after
         @include transform(scaleX(1))
 
+  &.is-headless-rectangular,
+  &.is-feature
+    .m-card-inner
+      padding: $b-card-horizontal-padding
+
   &[class*="is-headless"]
     &:before
       display: none
 
-    .m-card-inner
-      padding: $card-horizontal-padding
-
   &.is-top-headed
     &:before
-      height: $card-graphic-size
+      height: $b-card-graphic-size
       width: 100%
 
     .m-card-inner
-      min-height: $card-top-headed-height
+      min-height: $b-card-top-headed-height
 
   &.is-left-headed
     &:before
       float: left
-      min-height: $card-left-headed-height
-      width: $card-graphic-size
+      min-height: $b-card-left-headed-height
+      width: $b-card-graphic-size
 
     &:after
       @include transform-origin(bottom)
@@ -62,24 +65,37 @@
         @include transform(scaleY(1))
 
     .m-card-inner
-      min-height: $card-left-headed-height
+      min-height: $b-card-left-headed-height
 
   &.is-headless-square
     .m-card-inner
-      min-height: $card-headless-square-height
+      min-height: $b-card-headless-square-height
 
   &.is-headless-rectangular
     .m-card-inner
-      min-height: $card-headless-rectangular-height
+      min-height: $b-card-headless-rectangular-height
 
       .m-card-headline
         font-size: $b-font-size-large
+
+  &.is-feature
+    .m-card-image
+      background-position: center
+      background-repeat: no-repeat
+      background-size: auto 140%
+      height: $b-card-feature-image-height
+
+    .m-card-inner
+      min-height: $b-card-feature-height
+
+      .m-card-headline
+        font-size: $b-h2-size
 
   .m-card-inner
     @include display(flex)
     @include flex-direction(column)
     @include justify-content(space-between)
-    padding: $card-vertical-padding $card-horizontal-padding
+    padding: $b-card-vertical-padding $b-card-horizontal-padding
 
     h4
       color: $b-color-violet-slate

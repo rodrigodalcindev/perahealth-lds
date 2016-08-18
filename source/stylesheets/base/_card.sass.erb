@@ -1,0 +1,45 @@
+.m-card
+  text-decoration: none
+
+  &:after
+    @include transition(transform .2s ease)
+    @include transform-origin(left)
+    @include transform(scaleX(0))
+    background: $b-color-canary-yellow
+    bottom: 0
+    content: ''
+    display: inline-block
+    height: 2px
+    left: 0
+    position: absolute
+    width: 100%
+
+  &:hover
+    &:after
+      @include transform(scaleX(1))
+
+  .m-card-heading
+    background: $b-color-light-grey
+    height: $card-graphic-size
+
+  .m-card-inner
+    @include display(flex)
+    @include flex-direction(column)
+    @include justify-content(space-between)
+    background: $b-color-white
+    min-height: $card-min-height
+    padding: $card-vertical-padding $card-horizontal-padding
+
+    h4
+      color: $b-color-violet-slate
+      font-size: rem(28)
+      font-weight: 300
+      line-height: 1.25
+
+    span
+      small
+        border-bottom: 2px solid
+        color: $b-color-turquoise
+        font-size: rem(14)
+        font-weight: 500
+        letter-spacing: rem(.7)

@@ -51,8 +51,8 @@
       type:     "number"
       category: "font-weight"
     font_weight_bold:
-      name:     "font-weight-bold"
-      value:    700
+      name:     "font-weight-medium"
+      value:    500
       type:     "number"
       category: "font-weight"
     h1_size:

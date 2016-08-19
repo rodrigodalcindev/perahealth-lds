@@ -10,94 +10,109 @@
       value:    "Whitney A, Whitney B"
       type:     "string"
       category: "font-family"
-    font_size_small:
-      name:     "font-size-small"
+    font_family_sans_small_caps:
+      name:     "font-family-sans-small-caps"
+      value:    "Whitney Small Caps A, Whitney Small Caps B"
+      type:     "string"
+      category: "font-family"
+    font_size_cta_anchor:
+      name:     "font-size-cta-anchor"
+      value:    14
+      type:     "number"
+      category: "font-size"
+    font_size_navigation_description:
+      name:     "font-size-navigation-description"
+      value:    15
+      type:     "number"
+      category: "font-size"
+    font_size_navigation_anchor:
+      name:     "font-size-navigation-anchor"
+      value:    16
+      type:     "number"
+      category: "font-size"
+    font_size_note:
+      name:     "font-size-note"
+      value:    17
+      type:     "number"
+      category: "font-size"
+    font_size_body_small:
+      name:     "font-size-body-small"
       value:    18
       type:     "number"
       category: "font-size"
-    font_size_medium:
-      name:     "font-size-medium"
+    font_size_body_default:
+      name:     "font-size-body-default"
+      value:    19
+      type:     "number"
+      category: "font-size"
+    font_size_label:
+      name:     "font-size-label"
       value:    20
       type:     "number"
       category: "font-size"
-    font_size_large:
-      name:     "font-size-large"
-      value:    22
+    font_weight_light:
+      name:     "font-weight-light"
+      value:    300
       type:     "number"
-      category: "font-size"
-    font_size_extra_large:
-      name:     "font-size-x-large"
-      value:    24
-      type:     "number"
-      category: "font-size"
+      category: "font-weight"
     font_weight_book:
       name:     "font-weight-book"
       value:    400
       type:     "number"
       category: "font-weight"
     font_weight_bold:
-      name:     "font-weight-bold"
-      value:    700
+      name:     "font-weight-medium"
+      value:    500
       type:     "number"
       category: "font-weight"
     h1_size:
       name:     "h1-size"
-      value:    48
+      value:    55
       type:     "number"
       category: "heading-size"
     h2_size:
       name:     "h2-size"
-      value:    36
+      value:    40
       type:     "number"
       category: "heading-size"
     h3_size:
       name:     "h3-size"
-      value:    24
+      value:    36
       type:     "number"
       category: "heading-size"
     h4_size:
       name:     "h4-size"
-      value:    20
+      value:    28
       type:     "number"
       category: "heading-size"
     h5_size:
       name:     "h5-size"
-      value:    16
+      value:    22
       type:     "number"
       category: "heading-size"
     h6_size:
       name:     "h6-size"
-      value:    14
+      value:    20
       type:     "number"
       category: "heading-size"
-    letter_spacing_button:
-      name:     "letter-spacing-button"
-      value:    1.89
+    letter_spacing_cta_anchor:
+      name:     "letter-spacing-cta-anchor"
+      value:    0.7
       type:     "number"
       category: "letter-spacing"
     letter_spacing_label:
       name:     "letter-spacing-label"
-      value:    1.08
-      type:     "number"
-      category: "letter-spacing"
-    letter_spacing_default:
-      name:     "letter-spacing-default"
       value:    1
       type:     "number"
       category: "letter-spacing"
     line_height_default:
       name:     "line-height-default"
-      value:    1.5
+      value:    1.57
       type:     "number"
       category: "line-height"
-    line_height_heading:
-      name:     "line-height-heading"
-      value:    1.2
-      type:     "number"
-      category: "line-height"
-    line_height_input_label:
-      name:     "line-height-input-label"
-      value:    2.75
+    line_height_multiline_heading:
+      name:     "line-height-multiline-heading"
+      value:    1.25
       type:     "number"
       category: "line-height"
     line_height_text_input:

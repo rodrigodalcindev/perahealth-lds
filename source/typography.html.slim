@@ -5,7 +5,7 @@ body_class: "is-typography"
 h1 Typography
 
 section.mtl
-  h2.mbm Default Styles (Web)
+  h2.mbm Default Styles
 
   p.mbxs
     | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
@@ -14,9 +14,9 @@ section.mtl
     = code('sass') do
       |
         body
-          font-family: $font-family-medium
-          font-size: $font-size-medium
-          line-height: $line-height-default
+          font-family: $b-font-family-sans
+          font-size: $b-font-size-body-default
+          line-height: $b-line-height-default
 
 section.mtl
   h2.mbm Font Families
@@ -66,14 +66,14 @@ section.mtl
         - if prop.name == 'line-height-default'
           .g-row
             .g-col-5
-              p.tfbk
+              p
                 | ICU beds are arguably one of the most precious resources in the acute care setting. Minimizing unnecessary use of these beds is key to an efficient enterprise: from both a throughput and clinical perspective. PeraTrend provides the tools to make ICU Optimization possible.
-        - elsif prop.name == 'line-height-heading'
-          h3.b-font-family-serif
+        - elsif prop.name == 'line-height-multiline-heading'
+          h3.b-font-family-serif.b-line-height-multiline-heading
             | Forgot your password?
             br
             | No worries. We'll help you out.
-        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-heading'
+        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-multiline-heading'
         code
           = prop.name
 
@@ -84,12 +84,12 @@ section.mtl
     - design_token("typography", category: "letter-spacing").each do |prop|
       li.mbm
         p
-          - if prop.name.end_with? 'button'
-            span.b-font-family-bold.ttu class="b-#{prop.name}"
-             | Lifesaving Intelligence
+          - if prop.name.end_with? 'cta-anchor'
+            span.b-font-size-cta-anchor.b-font-weight-medium class="b-#{prop.name}"
+             | Read more
           - elsif prop.name.end_with? 'label'
-            small.b-font-family-bold class="b-#{prop.name}"
-             | Email Address
+            small.b-font-size-label.b-font-weight-medium class="b-#{prop.name}"
+             | Send
         code
           = prop.name
 
@@ -101,4 +101,65 @@ section.mtl
       li.mbm
         code.dib.vam
           = "h#{index + 1}"
-        span.b-font-family-serif.dib.mlm.vam class="h#{index + 1}" Lifesaving Intelligence
+        span.dib.mlm.vam class="h#{index + 1} #{index == 2 || index == 3 ? 'b-font-family-sans b-font-weight-light' : 'b-font-family-serif b-font-weight-book'}" Lifesaving Intelligence
+
+section.mtl
+  h2.mbm Style Recipes
+
+  ul
+    li.mbm
+      .g-row
+        .g-col-5
+          h4.mbxs
+            | Blockquotes
+          blockquote.maf
+            h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
+              | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
+            span.h5.b-quote-name.b-font-weight-book.db
+              | Daniel Smith
+            span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+              | M.D. Palliative Care and Hospice Specialist
+
+      .g-row
+        .g-col-5
+          h5.mtm.mbxs
+            | Markup
+          = code('slim') do
+            |
+              blockquote.maf
+                h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
+                  | With one look at the Rothman Index, our nurses and physicians can see
+                  | trends in a patient's condition, both at that point in time and over time.
+                span.h5.b-quote-name.b-font-weight-book.db
+                  | Daniel Smith
+                span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+                  | M.D. Palliative Care and Hospice Specialist
+
+      .g-row
+        .g-col-5
+          h5.mtm.mbxs
+            | Styles
+          = code('sass') do
+            |
+              blockquote
+                h3
+                  &:before,
+                  &:after
+                    display: block
+                    font-family: $font-family-serif
+                    font-size: rem(72)
+                    font-weight: $font-weight-light
+                    height: rem(20)
+                    line-height: .675
+
+                  &:before
+                    content: '“'
+                    margin-bottom: $space
+
+                  &:after
+                    content: '”'
+                    margin-top: $space
+
+                .b-quote-role
+                  font-style: italic
+

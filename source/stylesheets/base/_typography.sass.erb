@@ -3,15 +3,15 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   font-family: $b-font-family-sans
-  font-size: $b-font-size-medium
+  font-size: $b-font-size-body-default
   line-height: $b-line-height-default
 
 h1, h2, h3, h4, h5, h6, p
   font-weight: normal
   margin: 0
 
-small
-  font-size: $b-font-size-small
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
 
 // Font Families
 <% design_token("typography", category: "font-family").each do |prop| %>
@@ -28,9 +28,7 @@ small
 // Headings
 <% design_token("typography", category: "heading-size").each_with_index do |prop, index| %>
 h<%= index + 1 %>, .h<%= index + 1 %>
-  //font-family: $b-font-family-bold
   font-size: $b-<%= prop.name %>
-  line-height: $b-line-height-heading
 <% end %>
 
 // Type Sizing
@@ -44,3 +42,33 @@ h<%= index + 1 %>, .h<%= index + 1 %>
 .b-<%= prop.name %>
   letter-spacing: $b-<%= prop.name %>
 <% end %>
+
+// Letter Spacing
+<% design_token("typography", category: "line-height").each do |prop| %>
+.b-<%= prop.name %>
+  line-height: $b-<%= prop.name %>
+<% end %>
+
+/// Recipes
+// Blockquotes
+blockquote
+  h3
+    &:before,
+    &:after
+      display: block
+      font-family: $b-font-family-serif
+      font-size: rem(72)
+      font-weight: $b-font-weight-light
+      height: rem(20)
+      line-height: .675
+
+    &:before
+      content: '“'
+      margin-bottom: $b-space
+
+    &:after
+      content: '”'
+      margin-top: $b-space
+
+  .b-quote-role
+    font-style: italic

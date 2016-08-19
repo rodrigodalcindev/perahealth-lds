@@ -95,18 +95,13 @@
       value:    20
       type:     "number"
       category: "heading-size"
-    letter_spacing_button:
-      name:     "letter-spacing-button"
-      value:    1.89
+    letter_spacing_cta_anchor:
+      name:     "letter-spacing-cta-anchor"
+      value:    0.7
       type:     "number"
       category: "letter-spacing"
     letter_spacing_label:
       name:     "letter-spacing-label"
-      value:    1.08
-      type:     "number"
-      category: "letter-spacing"
-    letter_spacing_default:
-      name:     "letter-spacing-default"
       value:    1
       type:     "number"
       category: "letter-spacing"

@@ -84,16 +84,12 @@ section.mtl
     - design_token("typography", category: "letter-spacing").each do |prop|
       li.mbm
         p
-          - if prop.name.end_with? 'button'
-            span.b-font-family-bold.ttu class="b-#{prop.name}"
-             | Lifesaving Intelligence
+          - if prop.name.end_with? 'cta-anchor'
+            span.b-font-size-cta-anchor.b-font-weight-medium class="b-#{prop.name}"
+             | Read more
           - elsif prop.name.end_with? 'label'
-            small.b-font-family-bold class="b-#{prop.name}"
-             | Email Address
-          - else
-            small.b-font-family-bold class="b-#{prop.name}"
-             | Peer-Reviewed Publications
-
+            small.b-font-size-label.b-font-weight-medium class="b-#{prop.name}"
+             | Send
         code
           = prop.name
 

@@ -15,29 +15,39 @@
       value:    "Whitney Small Caps A, Whitney Small Caps B"
       type:     "string"
       category: "font-family"
-    font_size_extra_small:
-      name:     "font-size-x-small"
-      value:    12
+    font_size_cta_anchor:
+      name:     "font-size-cta-anchor"
+      value:    14
       type:     "number"
       category: "font-size"
-    font_size_small:
-      name:     "font-size-small"
+    font_size_navigation_description:
+      name:     "font-size-navigation-description"
+      value:    15
+      type:     "number"
+      category: "font-size"
+    font_size_navigation_anchor:
+      name:     "font-size-navigation-anchor"
+      value:    16
+      type:     "number"
+      category: "font-size"
+    font_size_note:
+      name:     "font-size-note"
+      value:    17
+      type:     "number"
+      category: "font-size"
+    font_size_body_small:
+      name:     "font-size-body-small"
       value:    18
       type:     "number"
       category: "font-size"
-    font_size_medium:
-      name:     "font-size-medium"
+    font_size_body_default:
+      name:     "font-size-body-default"
+      value:    19
+      type:     "number"
+      category: "font-size"
+    font_size_label:
+      name:     "font-size-label"
       value:    20
-      type:     "number"
-      category: "font-size"
-    font_size_large:
-      name:     "font-size-large"
-      value:    22
-      type:     "number"
-      category: "font-size"
-    font_size_extra_large:
-      name:     "font-size-x-large"
-      value:    24
       type:     "number"
       category: "font-size"
     font_weight_light:

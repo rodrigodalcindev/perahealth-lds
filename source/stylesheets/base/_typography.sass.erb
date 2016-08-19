@@ -3,7 +3,7 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   font-family: $b-font-family-sans
-  font-size: $b-font-size-medium
+  font-size: $b-font-size-body-default
   line-height: $b-line-height-default
 
 h1, h2, h3, h4, h5, h6, p
@@ -11,9 +11,6 @@ h1, h2, h3, h4, h5, h6, p
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal
-
-small
-  font-size: $b-font-size-small
 
 // Font Families
 <% design_token("typography", category: "font-family").each do |prop| %>

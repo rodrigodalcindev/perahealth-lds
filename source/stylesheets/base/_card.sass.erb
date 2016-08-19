@@ -3,7 +3,8 @@
   text-decoration: none
 
   &:before
-    background: $b-color-light-grey
+    @include transition(background-position .35s ease-out)
+    background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
     content: ''
     display: block
 
@@ -41,14 +42,20 @@
 
   &.is-top-headed
     &:before
+      background-position: left 50% bottom 30%
       height: $b-card-graphic-size
       width: 100%
+
+    &:hover
+      &:before
+        background-position: left 55% bottom 30%
 
     .m-card-inner
       min-height: $b-card-top-headed-height
 
   &.is-left-headed
     &:before
+      background-position: left 40% bottom 5%
       float: left
       min-height: $b-card-left-headed-height
       width: $b-card-graphic-size
@@ -61,6 +68,9 @@
       width: 2px
 
     &:hover
+      &:before
+        background-position: left 45% bottom 5%
+
       &:after
         @include transform(scaleY(1))
 

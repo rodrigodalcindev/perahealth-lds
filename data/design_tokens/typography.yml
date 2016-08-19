@@ -57,32 +57,32 @@
       category: "font-weight"
     h1_size:
       name:     "h1-size"
-      value:    48
+      value:    55
       type:     "number"
       category: "heading-size"
     h2_size:
       name:     "h2-size"
-      value:    36
+      value:    40
       type:     "number"
       category: "heading-size"
     h3_size:
       name:     "h3-size"
-      value:    24
+      value:    36
       type:     "number"
       category: "heading-size"
     h4_size:
       name:     "h4-size"
-      value:    20
+      value:    28
       type:     "number"
       category: "heading-size"
     h5_size:
       name:     "h5-size"
-      value:    16
+      value:    22
       type:     "number"
       category: "heading-size"
     h6_size:
       name:     "h6-size"
-      value:    14
+      value:    20
       type:     "number"
       category: "heading-size"
     letter_spacing_button:

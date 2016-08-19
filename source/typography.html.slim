@@ -113,12 +113,12 @@ section.mtl
           h4.mbxs
             | Blockquotes
           blockquote.maf
-            p.h2.mtm.mbl.b-font-weight-light
+            h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
               | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
-            span.b-quote-name.b-font-size-x-large.db
+            span.h5.b-quote-name.b-font-weight-book.db
               | Daniel Smith
-            span.b-quote-role.b-font-family-sans-small-caps.b-font-size-medium.db
-              | m.d. palliative care and hospice specialist
+            span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+              | M.D. Palliative Care and Hospice Specialist
 
       .g-row
         .g-col-5
@@ -127,12 +127,13 @@ section.mtl
           = code('slim') do
             |
               blockquote.maf
-                p.h2.mbl.b-font-weight-light
-                  | With one look at the Rothman Index, our nurses (...)
-                span.b-quote-name.b-font-size-x-large.db
+                h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
+                  | With one look at the Rothman Index, our nurses and physicians can see
+                  | trends in a patient's condition, both at that point in time and over time.
+                span.h5.b-quote-name.b-font-weight-book.db
                   | Daniel Smith
-                span.b-quote-role.b-font-family-sans-small-caps.b-font-size-medium.db
-                  | m.d. palliative care and hospice specialist
+                span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+                  | M.D. Palliative Care and Hospice Specialist
 
       .g-row
         .g-col-5
@@ -141,7 +142,7 @@ section.mtl
           = code('sass') do
             |
               blockquote
-                p
+                h3
                   &:before,
                   &:after
                     display: block
@@ -159,7 +160,6 @@ section.mtl
                     content: '”'
                     margin-top: $space
 
-                .b-quote-name,
                 .b-quote-role
-                  line-height: normal
+                  font-style: italic
 

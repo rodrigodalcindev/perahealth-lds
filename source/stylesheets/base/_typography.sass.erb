@@ -27,9 +27,7 @@ h1, h2, h3, h4, h5, h6
 // Headings
 <% design_token("typography", category: "heading-size").each_with_index do |prop, index| %>
 h<%= index + 1 %>, .h<%= index + 1 %>
-  //font-family: $b-font-family-bold
   font-size: $b-<%= prop.name %>
-  line-height: $b-line-height-heading
 <% end %>
 
 // Type Sizing
@@ -42,6 +40,12 @@ h<%= index + 1 %>, .h<%= index + 1 %>
 <% design_token("typography", category: "letter-spacing").each do |prop| %>
 .b-<%= prop.name %>
   letter-spacing: $b-<%= prop.name %>
+<% end %>
+
+// Letter Spacing
+<% design_token("typography", category: "line-height").each do |prop| %>
+.b-<%= prop.name %>
+  line-height: $b-<%= prop.name %>
 <% end %>
 
 /// Recipes

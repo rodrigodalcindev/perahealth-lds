@@ -14,9 +14,9 @@ section.mtl
     = code('sass') do
       |
         body
-          font-family: $font-family-medium
-          font-size: $font-size-medium
-          line-height: $line-height-default
+          font-family: $b-font-family-sans
+          font-size: $b-font-size-body-default
+          line-height: $b-line-height-default
 
 section.mtl
   h2.mbm Font Families
@@ -68,12 +68,12 @@ section.mtl
             .g-col-5
               p
                 | ICU beds are arguably one of the most precious resources in the acute care setting. Minimizing unnecessary use of these beds is key to an efficient enterprise: from both a throughput and clinical perspective. PeraTrend provides the tools to make ICU Optimization possible.
-        - elsif prop.name == 'line-height-heading'
-          h3.b-font-family-serif
+        - elsif prop.name == 'line-height-multiline-heading'
+          h3.b-font-family-serif.b-line-height-multiline-heading
             | Forgot your password?
             br
             | No worries. We'll help you out.
-        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-heading'
+        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-multiline-heading'
         code
           = prop.name
 

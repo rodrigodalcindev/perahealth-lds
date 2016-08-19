@@ -112,17 +112,12 @@
       category: "letter-spacing"
     line_height_default:
       name:     "line-height-default"
-      value:    1.5
+      value:    1.57
       type:     "number"
       category: "line-height"
-    line_height_heading:
-      name:     "line-height-heading"
-      value:    1.2
-      type:     "number"
-      category: "line-height"
-    line_height_input_label:
-      name:     "line-height-input-label"
-      value:    2.75
+    line_height_multiline_heading:
+      name:     "line-height-multiline-heading"
+      value:    1.25
       type:     "number"
       category: "line-height"
     line_height_text_input:

@@ -113,11 +113,11 @@ section.mtl
           h4.mbxs
             | Blockquotes
           blockquote.maf
-            h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
+            h3.mtm.mbl
               | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
-            span.h5.b-quote-name.b-font-weight-book.db
+            span.h5.b-quote-name.db
               | Daniel Smith
-            span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+            span.b-quote-role.db
               | M.D. Palliative Care and Hospice Specialist
 
       .g-row
@@ -127,12 +127,12 @@ section.mtl
           = code('slim') do
             |
               blockquote.maf
-                h3.mtm.mbl.b-font-weight-light.b-line-height-multiline-heading
+                h3.mtm.mbl
                   | With one look at the Rothman Index, our nurses and physicians can see
                   | trends in a patient's condition, both at that point in time and over time.
-                span.h5.b-quote-name.b-font-weight-book.db
+                span.h5.b-quote-name.db
                   | Daniel Smith
-                span.b-quote-role.b-font-family-serif.b-font-weight-light.b-font-size-note.db
+                span.b-quote-role.db
                   | M.D. Palliative Care and Hospice Specialist
 
       .g-row
@@ -143,12 +143,14 @@ section.mtl
             |
               blockquote
                 h3
+                  font-weight: $font-weight-light
+                  line-height: $line-height-multiline-heading
+
                   &:before,
                   &:after
                     display: block
                     font-family: $font-family-serif
                     font-size: rem(72)
-                    font-weight: $font-weight-light
                     height: rem(20)
                     line-height: .675
 
@@ -160,6 +162,12 @@ section.mtl
                     content: '”'
                     margin-top: $space
 
+                .b-quote-name
+                  font-weight: $font-weight-book
+
                 .b-quote-role
+                  font-family: $font-family-serif
+                  font-size: $font-size-note
                   font-style: italic
+                  font-weight: $font-weight-light
 

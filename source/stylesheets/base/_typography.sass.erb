@@ -52,12 +52,14 @@ h<%= index + 1 %>, .h<%= index + 1 %>
 // Blockquotes
 blockquote
   h3
+    font-weight: $b-font-weight-light
+    line-height: $b-line-height-multiline-heading
+
     &:before,
     &:after
       display: block
       font-family: $b-font-family-serif
       font-size: rem(72)
-      font-weight: $b-font-weight-light
       height: rem(20)
       line-height: .675
 
@@ -69,5 +71,11 @@ blockquote
       content: '”'
       margin-top: $b-space
 
+  .b-quote-name
+    font-weight: $b-font-weight-book
+
   .b-quote-role
+    font-family: $b-font-family-serif
+    font-size: $b-font-size-note
     font-style: italic
+    font-weight: $b-font-weight-light

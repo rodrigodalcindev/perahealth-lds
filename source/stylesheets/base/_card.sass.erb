@@ -113,11 +113,21 @@
     @include justify-content(space-between)
     padding: $b-card-vertical-padding $b-card-horizontal-padding
 
+    h3, h4
+      font-weight: $b-font-weight-light
+
+    h5
+      font-weight: $b-font-weight-book
+
     h3, h4, h5
       color: $b-color-violet-slate
+      line-height: $b-line-height-multiline-heading
 
       time
+        font-family: $b-font-family-serif
+        font-weight: $b-font-weight-light
         font-style: italic
+        font-size: $b-font-size-note
         /* To be refactored into spacing design token updates */
         margin-bottom: rem(30)
 
@@ -125,3 +135,11 @@
       small
         border-bottom: 1px solid
         color: $b-color-turquoise
+        font-size: $b-font-size-cta-anchor
+        font-weight: $b-font-weight-medium
+        letter-spacing: $b-letter-spacing-cta-anchor
+
+    .m-card-category
+      font-family: $b-font-family-sans-small-caps
+      font-size: $b-font-size-label
+      font-weight: $b-font-weight-book

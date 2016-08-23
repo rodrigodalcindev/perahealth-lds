@@ -25,6 +25,31 @@
       value: "feature"
       type: "string"
       category: "card-type"
+    card_top_headed_columns:
+      name: "card-top-headed-columns"
+      value: 4
+      type: "number"
+      category: "card-columns"
+    card_left_headed_columns:
+      name: "card-left-headed-columns"
+      value: 6
+      type: "number"
+      category: "card-columns"
+    card_headless_square_columns:
+      name: "card-headless-square-columns"
+      value: 4
+      type: "number"
+      category: "card-columns"
+    card_headless_rectangular_columns:
+      name: "card-headless-rectangular-columns"
+      value: 6
+      type: "number"
+      category: "card-columns"
+    card_feature_columns:
+      name: "card-feature-columns"
+      value: 8
+      type: "number"
+      category: "card-columns"
     card_graphic_size:
       name: "card-graphic-size"
       value: 85

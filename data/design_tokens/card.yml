@@ -1,0 +1,97 @@
+---
+  props:
+    card_top_headed:
+      name: "card-top-headed"
+      value: "top-headed"
+      type: "string"
+      category: "card-type"
+    card_left_headed:
+      name: "card-left-headed"
+      value: "left-headed"
+      type: "string"
+      category: "card-type"
+    card_headless_square:
+      name: "card-headless-square"
+      value: "headless-square"
+      type: "string"
+      category: "card-type"
+    card_headless_rectangular:
+      name: "card-headless-rectangular"
+      value: "headless-rectangular"
+      type: "string"
+      category: "card-type"
+    card_feature:
+      name: "card-feature"
+      value: "feature"
+      type: "string"
+      category: "card-type"
+    card_top_headed_columns:
+      name: "card-top-headed-columns"
+      value: 4
+      type: "number"
+      category: "card-columns"
+    card_left_headed_columns:
+      name: "card-left-headed-columns"
+      value: 6
+      type: "number"
+      category: "card-columns"
+    card_headless_square_columns:
+      name: "card-headless-square-columns"
+      value: 4
+      type: "number"
+      category: "card-columns"
+    card_headless_rectangular_columns:
+      name: "card-headless-rectangular-columns"
+      value: 6
+      type: "number"
+      category: "card-columns"
+    card_feature_columns:
+      name: "card-feature-columns"
+      value: 8
+      type: "number"
+      category: "card-columns"
+    card_graphic_size:
+      name: "card-graphic-size"
+      value: 85
+      type: "number"
+      category: "card-graphic"
+    card_horizontal_padding:
+      name: "card-horizontal-padding"
+      value: 30
+      type: "number"
+      category: "card-padding"
+    card_vertical_padding:
+      name: "card-vertical-padding"
+      value: 50
+      type: "number"
+      category: "card-padding"
+    card_feature_height:
+      name: "card-feature-height"
+      value: 315
+      type: "number"
+      category: "card-height"
+    card_feature_image_height:
+      name: "card-feature-image-height"
+      value: 465
+      type: "number"
+      category: "card-height"
+    card_top_headed_height:
+      name: "card-top-headed-height"
+      value: 300
+      type: "number"
+      category: "card-height"
+    card_left_headed_height:
+      name: "card-left-headed-height"
+      value: 340
+      type: "number"
+      category: "card-height"
+    card_headless_square_height:
+      name: "card-headless-square-height"
+      value: 375
+      type: "number"
+      category: "card-height"
+    card_headless_rectangular_height:
+      name: "card-headless-rectangular-height"
+      value: 265
+      type: "number"
+      category: "card-height"

@@ -1,0 +1,149 @@
+.m-card
+  background: $b-color-white
+  text-decoration: none
+
+  &:before
+    @include transition(background-position .35s ease-out)
+    background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
+    content: ''
+    display: block
+
+  &:after
+    @include transition(transform .2s ease)
+    background: $b-color-canary-yellow
+    bottom: 0
+    content: ''
+    display: inline-block
+    position: absolute
+
+  &.is-feature,
+  &.is-top-headed,
+  &.is-headless-square,
+  &.is-headless-rectangular
+    &:after
+      @include transform-origin(left)
+      @include transform(scaleX(0))
+      height: 2px
+      left: 0
+      width: 100%
+
+    &:hover
+      &:after
+        @include transform(scaleX(1))
+
+  &.is-headless-rectangular,
+  &.is-feature
+    .m-card-inner
+      padding: $b-card-horizontal-padding
+
+  &[class*="is-headless"]
+    &:before
+      display: none
+
+  &.is-top-headed
+    &:before
+      background-position: left 50% bottom 30%
+      height: $b-card-graphic-size
+      width: 100%
+
+    &:hover
+      &:before
+        background-position: left 55% bottom 30%
+
+    .m-card-inner
+      min-height: $b-card-top-headed-height
+
+  &.is-left-headed
+    padding-left: $b-card-graphic-size
+
+    &:before
+      background-position: left 40% bottom 5%
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: $b-card-graphic-size
+
+    &:after
+      @include transform-origin(bottom)
+      @include transform(scaleY(0))
+      height: 100%
+      right: 0
+      width: 2px
+
+    &:hover
+      &:before
+        background-position: left 45% bottom 5%
+
+      &:after
+        @include transform(scaleY(1))
+
+    .m-card-inner
+      min-height: $b-card-left-headed-height
+
+  &.is-headless-square
+    .m-card-inner
+      min-height: $b-card-headless-square-height
+
+  &.is-headless-rectangular
+    .m-card-inner
+      min-height: $b-card-headless-rectangular-height
+
+  &.is-feature
+    .m-card-image
+      background-position: center
+      background-repeat: no-repeat
+      background-size: auto 140%
+      height: $b-card-feature-image-height
+
+      &:before
+        @include linear-gradient(-50deg, rgba($b-color-turquoise,1) 5%, rgba($b-color-turquoise,0) 55%)
+        background-color: transparent
+        content: ''
+        display: block
+        height: 100%
+        left: 0
+        opacity: .4
+        position: absolute
+        top: 0
+        width: 100%
+
+    .m-card-inner
+      min-height: $b-card-feature-height
+
+  .m-card-inner
+    @include display(flex)
+    @include flex-direction(column)
+    @include justify-content(space-between)
+    padding: $b-card-vertical-padding $b-card-horizontal-padding
+
+    h3, h4
+      font-weight: $b-font-weight-light
+
+    h5
+      font-weight: $b-font-weight-book
+
+    h3, h4, h5
+      color: $b-color-violet-slate
+      line-height: $b-line-height-multiline-heading
+
+      time
+        font-family: $b-font-family-serif
+        font-weight: $b-font-weight-light
+        font-style: italic
+        font-size: $b-font-size-note
+        /* To be refactored into spacing design token updates */
+        margin-bottom: rem(30)
+
+    span
+      small
+        border-bottom: 1px solid
+        color: $b-color-turquoise
+        font-size: $b-font-size-cta-anchor
+        font-weight: $b-font-weight-medium
+        letter-spacing: $b-letter-spacing-cta-anchor
+
+    .m-card-category
+      font-family: $b-font-family-sans-small-caps
+      font-size: $b-font-size-label
+      font-weight: $b-font-weight-book

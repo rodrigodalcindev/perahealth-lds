@@ -1,0 +1,222 @@
+---
+body_class: "is-card"
+---
+
+h1 Content Cards
+
+section.mtl
+  .g-row
+    .g-col-8
+      h2.mbm Types
+
+      p.mbxs
+        | There are five different types of content cards, with common / conditional elements displayed according to the type being rendered:
+
+  - design_token("card", category: "card-type").each_with_index do |prop, idx|
+    .g-row.mbl
+      div class="g-col-#{design_token('card', category: 'card-columns')[idx].value}"
+        a.m-card.por.db class="is-#{prop.value}" href="#"
+          - if prop.value == "feature"
+            .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
+          .m-card-inner
+            - if prop.value == "top-headed" || prop.value == "left-headed" || prop.value == "headless-square"
+              h4
+                = partial "layouts/card-inner-heading", locals: {type: prop.value}
+            - elsif prop.value == "headless-rectangular"
+              h5
+                = partial "layouts/card-inner-heading", locals: {type: prop.value}
+            - elsif prop.value == "feature"
+              h3
+                = partial "layouts/card-inner-heading", locals: {type: prop.value}
+            span
+              small.dib
+                | Read more
+
+      .clear
+
+      code.dib.mts
+        = prop.value
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Markup
+      = code('slim') do
+        |
+          .g-col-#
+            a.m-card.por.db.is-type-name href="#"
+              // If feature
+                .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
+              .m-card-inner
+                h3 # Feature
+                h4 # Headed and headless-square
+                h5 # Headless-rectangular
+                  // If feature or headless
+                    span.m-card-category.ttl.db # Add .fl for feature and headless-rectangular
+                      | healthcare informatics
+                  // If feature, headless or left-headed
+                    time.db # Add .fr for feature and headless-rectangular
+                      | May 9, 2016
+                  .clear
+                  span.m-card-headline
+                    | One South Carolina hospital is leveraging a commercialized solution that
+                    | brings the value of the Rothman Index directly to nurse managers
+                span
+                  small.dib
+                    | Read more
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Styles
+      = code('sass') do
+        |
+          .m-card
+            background: $color-white
+            text-decoration: none
+
+            &:before
+              @include transition(background-position .35s ease-out)
+              background: $color-light-grey url('../images/graph-background.jpg') no-repeat
+              content: ''
+              display: block
+
+            &:after
+              @include transition(transform .2s ease)
+              background: $color-canary-yellow
+              bottom: 0
+              content: ''
+              display: inline-block
+              position: absolute
+
+            &.is-feature,
+            &.is-top-headed,
+            &.is-headless-square,
+            &.is-headless-rectangular
+              &:after
+                @include transform-origin(left)
+                @include transform(scaleX(0))
+                height: 2px
+                left: 0
+                width: 100%
+
+              &:hover
+                &:after
+                  @include transform(scaleX(1))
+
+            &.is-headless-rectangular,
+            &.is-feature
+              .m-card-inner
+                padding: $card-horizontal-padding
+
+            &[class*="is-headless"]
+              &:before
+                display: none
+
+            &.is-top-headed
+              &:before
+                background-position: left 50% bottom 30%
+                height: $card-graphic-size
+                width: 100%
+
+              &:hover
+                &:before
+                  background-position: left 55% bottom 30%
+
+              .m-card-inner
+                min-height: $card-top-headed-height
+
+            &.is-left-headed
+              padding-left: $card-graphic-size
+
+              &:before
+                background-position: left 40% bottom 5%
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                width: $card-graphic-size
+
+              &:after
+                @include transform-origin(bottom)
+                @include transform(scaleY(0))
+                height: 100%
+                right: 0
+                width: 2px
+
+              &:hover
+                &:before
+                  background-position: left 45% bottom 5%
+
+                &:after
+                  @include transform(scaleY(1))
+
+              .m-card-inner
+                min-height: $card-left-headed-height
+
+            &.is-headless-square
+              .m-card-inner
+                min-height: $card-headless-square-height
+
+            &.is-headless-rectangular
+              .m-card-inner
+                min-height: $card-headless-rectangular-height
+
+            &.is-feature
+              .m-card-image
+                background-position: center
+                background-repeat: no-repeat
+                background-size: auto 140%
+                height: $card-feature-image-height
+
+                &:before
+                  @include linear-gradient(-50deg, rgba($color-turquoise,1) 5%, rgba($color-turquoise,0) 55%)
+                  background-color: transparent
+                  content: ''
+                  display: block
+                  height: 100%
+                  left: 0
+                  opacity: .4
+                  position: absolute
+                  top: 0
+                  width: 100%
+
+              .m-card-inner
+                min-height: $card-feature-height
+
+            .m-card-inner
+              @include display(flex)
+              @include flex-direction(column)
+              @include justify-content(space-between)
+              padding: $card-vertical-padding $card-horizontal-padding
+
+              h3, h4
+                font-weight: $font-weight-light
+
+              h5
+                font-weight: $font-weight-book
+
+              h3, h4, h5
+                color: $color-violet-slate
+                line-height: $line-height-multiline-heading
+
+                time
+                  font-family: $font-family-serif
+                  font-weight: $font-weight-light
+                  font-style: italic
+                  font-size: $font-size-note
+                  margin-bottom: rem(30)
+
+              span
+                small
+                  border-bottom: 1px solid
+                  color: $color-turquoise
+                  font-size: $font-size-cta-anchor
+                  font-weight: $font-weight-medium
+                  letter-spacing: $letter-spacing-cta-anchor
+
+              .m-card-category
+                font-family: $font-family-sans-small-caps
+                font-size: $font-size-label
+                font-weight: $font-weight-book
+

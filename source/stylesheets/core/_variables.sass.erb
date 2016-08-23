@@ -62,3 +62,8 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% design_token("typography", category: "heading-size").each do |prop| %>
 $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
+
+/// Cards
+<% design_token("card").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>

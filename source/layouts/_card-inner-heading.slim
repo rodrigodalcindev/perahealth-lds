@@ -1,0 +1,9 @@
+- unless type.include? "headed"
+  span.m-card-category.ttl.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fl' : ''}"
+    | healthcare informatics
+- unless type == "top-headed"
+  time.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fr' : ''}"
+    | May 9, 2016
+.clear
+span.m-card-headline
+  | One South Carolina hospital is leveraging a commercialized solution that brings the value of the Rothman Index directly to nurse managers

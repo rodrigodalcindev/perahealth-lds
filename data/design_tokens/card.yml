@@ -1,5 +1,30 @@
 ---
   props:
+    card_top_headed:
+      name: "card-top-headed"
+      value: "top-headed"
+      type: "string"
+      category: "card-type"
+    card_left_headed:
+      name: "card-left-headed"
+      value: "left-headed"
+      type: "string"
+      category: "card-type"
+    card_headless_square:
+      name: "card-headless-square"
+      value: "headless-square"
+      type: "string"
+      category: "card-type"
+    card_headless_rectangular:
+      name: "card-headless-rectangular"
+      value: "headless-rectangular"
+      type: "string"
+      category: "card-type"
+    card_feature:
+      name: "card-feature"
+      value: "feature"
+      type: "string"
+      category: "card-type"
     card_graphic_size:
       name: "card-graphic-size"
       value: 85

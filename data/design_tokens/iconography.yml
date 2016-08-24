@@ -87,6 +87,21 @@
       category: "svg-menu-icon"
     facebook:
       name:     "facebook"
-      value:    "fa-facebook"
+      value:    "fa-facebook-official"
+      type:     "icon"
+      category: "font-awesome-icon"
+    twitter:
+      name:     "twitter"
+      value:    "fa-twitter"
+      type:     "icon"
+      category: "font-awesome-icon"
+    linkedin:
+      name:     "linkedin"
+      value:    "fa-linkedin-square"
+      type:     "icon"
+      category: "font-awesome-icon"
+    caret:
+      name:     "caret"
+      value:    "fa-angle-down"
       type:     "icon"
       category: "font-awesome-icon"

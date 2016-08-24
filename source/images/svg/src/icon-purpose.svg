@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Purpose - Inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Purpose---Inactive" transform="translate(1.000000, 1.000000)" stroke-width="2">
+            <path d="M27.6879593,27.6879593 L14.4397965,14.4397965" id="Stroke-10"></path>
+            <path d="M34.5880441,27.6879593 L47.5602035,14.4397965" id="Stroke-11"></path>
+            <path d="M34.3120407,34.3120407 L47.5602035,47.5602035" id="Stroke-12"></path>
+            <path d="M26.5839457,34.3120407 L14.4397965,46.4561899" id="Stroke-13"></path>
+            <path d="M55.2882985,31 C55.2882985,44.4137648 44.4137648,55.2882985 31,55.2882985 C17.5862352,55.2882985 6.71170153,44.4137648 6.71170153,31 C6.71170153,17.5862352 17.5862352,6.71170153 31,6.71170153 C44.4137648,6.71170153 55.2882985,17.5862352 55.2882985,31 L55.2882985,31 Z" id="Stroke-16"></path>
+            <polyline id="Stroke-1" stroke="#F9C623" points="27.6879593 27.6879593 31 0.0876201244 34.3120407 27.6879593"></polyline>
+            <polyline id="Stroke-3" stroke="#F9C623" points="34.3120407 34.3120407 31 61.9123799 27.6879593 34.3120407"></polyline>
+            <polyline id="Stroke-5" stroke="#F9C623" points="34.3120407 27.6879593 61.9123799 31 34.3120407 34.3120407"></polyline>
+            <polyline id="Stroke-7" stroke="#F9C623" points="27.6879593 34.3120407 0.0876201244 31 27.6879593 27.6879593"></polyline>
+            <path d="M35.4160543,31 C35.4160543,33.43987 33.43987,35.4160543 31,35.4160543 C28.56013,35.4160543 26.5839457,33.43987 26.5839457,31 C26.5839457,28.56013 28.56013,26.5839457 31,26.5839457 C33.43987,26.5839457 35.4160543,28.56013 35.4160543,31 L35.4160543,31 Z" id="Stroke-14" stroke="#F9C623"></path>
+        </g>
+    </g>
+</svg>

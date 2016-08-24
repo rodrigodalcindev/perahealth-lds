@@ -1,0 +1,61 @@
+---
+body_class: "is-iconography"
+---
+
+h1 Iconography
+
+section.mtl
+  h2.mbm SVG Menu Icons
+
+  ul
+    - design_token("iconography", category: "svg-menu-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        figure.b-icon.b-icon-menu
+          svg data-svg="#{prop.name}"
+            use class="#{prop.name}" xlink:href="#{'#' + prop.value}"
+          figcaption.mtm
+            code
+              = prop.value
+
+  .g-row
+    .g-col-12
+      h5.mtm.mbxs
+        | Markup
+      p.mts
+        | SVG assets should be preferably <a href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/" taregt="_blank">bundled as sprites (symbols)</a> for organization and cleaner markup.
+
+  .g-row
+    .g-col-12
+      h5.mtm.mbxs
+        | Styles
+      p.mts
+        | Navigation SVG icons respond to mouse hovering with a change of their color scheme. Since they're being instantiated as a result of the sprite technique mentioned above, targetting SVG components separately demands a few requirements:
+      ul.mts.plm
+        li
+          p Icons should be mostly based on stroked elements, no filled areas.
+        li.mts
+          p <code>stroke</code> and <code>fill</code> presentation attributes should be removed from the SVG source file on the uppermost grouping element level (e.g.: <code>&lt;g&gt;</code>).
+        li.mts
+          p Style changes should be applied directly to the <code>use</code> element.
+        li.mtm
+          = code('sass') do
+            |
+              figure
+                svg use
+                  fill: transparent
+                  stroke: $b-color
+
+                &:hover
+                  svg use
+                    stroke: $b-color
+
+section.mtl
+  h2.mbm FontAwesome Icons
+
+  ul
+    - design_token("iconography", category: "font-awesome-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        .b-icon
+          i.fa.fa-5x class="#{prop.value}"
+          code.mtm
+            = prop.value

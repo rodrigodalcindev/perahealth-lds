@@ -12,7 +12,7 @@ section.mtl
   ul
     - design_token("iconography", category: "svg-menu-icon").each do |prop|
       li.dib.mrm.mbm.tac
-        figure.b-icon.b-icon-menu
+        figure.b-icon.b-icon-menu.l-well
           svg data-svg="#{prop.name}"
             use class="#{prop.name}" xlink:href="#{'#' + prop.value}"
           figcaption.mtm

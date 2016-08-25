@@ -106,68 +106,168 @@ section.mtl
 section.mtl
   h2.mbm Style Recipes
 
-  ul
-    li.mbm
-      .g-row
-        .g-col-5
-          h4.mbxs
-            | Blockquotes
+  .g-row
+    .g-col-5
+      h4.mbxs
+        | Heading with tagline
+      .l-well.ptm.pll.prl.pbl
+        h1.has-tagline
+          | Featured News
+          span.h5.db
+            | Short description of news page goes here
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Markup
+      = code('slim') do
+        |
+          h1.has-tagline
+            | Featured News
+            span.h5.db
+              | Short description of news page goes here
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Styles
+      = code('sass') do
+        |
+          h1
+            &.has-tagline
+              font-family: $font-family-serif
+              line-height: 1.3
+
+              span
+                font-family: $font-family-sans
+
+              &:after
+                background: $color-canary-yellow
+                content: ''
+                display: block
+                height: rem(2)
+                margin-top: rem(50)
+                width: rem(62)
+
+  .g-row
+    .g-col-7
+      h4.mtl.mbxs
+        | Heading with label and timestamp
+      .l-well.ptm.pll.prl.pbl
+        h2.has-label.has-timestamp
+          span.is-label.ttl.dib
+            | press release |
+          time.dib.mlxs
+            | May 9, 2016
+          span.db.mts
+            | University Health Care System Partners with PeraHealth to Enhance Physician-Nurse Communication, Patient Safety
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Markup
+      = code('slim') do
+        |
+          h2.has-label.has-timestamp
+            span.is-label.ttl.dib
+              | press release |
+            time.dib.mlxs
+              | May 9, 2016
+            span.db.mts
+              | University Health Care System Partners with PeraHealth to Enhance
+              | Physician-Nurse Communication, Patient Safety
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Styles
+      = code('sass') do
+        |
+          h2
+            &.has-label.has-timestamp
+              font-family: $font-family-serif
+              line-height: $line-height-multiline-heading
+
+              span
+                &.is-label
+                  font-family: $font-family-sans-small-caps
+                  font-size: $font-size-label
+                  font-weight: $font-weight-book
+
+              time
+                font-weight: $font-weight-light
+                font-style: italic
+                font-size: $font-size-note
+
+              &:after
+                background: $color-canary-yellow
+                content: ''
+                display: block
+                height: rem(2)
+                margin-top: rem(50)
+                width: rem(62)
+
+  .g-row
+    .g-col-5
+      h4.mbxs.mtl
+        | Blockquotes
+      .l-well.ptm.pll.prl.pbl
+        blockquote.maf
+          h3.mtm.mbl
+            | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
+          span.h5.b-quote-name.db
+            | Daniel Smith
+          span.b-quote-role.db
+            | M.D. Palliative Care and Hospice Specialist
+
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Markup
+      = code('slim') do
+        |
           blockquote.maf
             h3.mtm.mbl
-              | With one look at the Rothman Index, our nurses and physicians can see trends in a patient's condition, both at that point in time and over time.
+              | With one look at the Rothman Index, our nurses and physicians can see
+              | trends in a patient's condition, both at that point in time and over time.
             span.h5.b-quote-name.db
               | Daniel Smith
             span.b-quote-role.db
               | M.D. Palliative Care and Hospice Specialist
 
-      .g-row
-        .g-col-5
-          h5.mtm.mbxs
-            | Markup
-          = code('slim') do
-            |
-              blockquote.maf
-                h3.mtm.mbl
-                  | With one look at the Rothman Index, our nurses and physicians can see
-                  | trends in a patient's condition, both at that point in time and over time.
-                span.h5.b-quote-name.db
-                  | Daniel Smith
-                span.b-quote-role.db
-                  | M.D. Palliative Care and Hospice Specialist
+  .g-row
+    .g-col-5
+      h5.mtm.mbxs
+        | Styles
+      = code('sass') do
+        |
+          blockquote
+            h3
+              font-weight: $font-weight-light
+              line-height: $line-height-multiline-heading
 
-      .g-row
-        .g-col-5
-          h5.mtm.mbxs
-            | Styles
-          = code('sass') do
-            |
-              blockquote
-                h3
-                  font-weight: $font-weight-light
-                  line-height: $line-height-multiline-heading
+              &:before,
+              &:after
+                display: block
+                font-family: $font-family-serif
+                font-size: rem(72)
+                height: rem(20)
+                line-height: .675
 
-                  &:before,
-                  &:after
-                    display: block
-                    font-family: $font-family-serif
-                    font-size: rem(72)
-                    height: rem(20)
-                    line-height: .675
+              &:before
+                content: '“'
+                margin-bottom: $space
 
-                  &:before
-                    content: '“'
-                    margin-bottom: $space
+              &:after
+                content: '”'
+                margin-top: $space
 
-                  &:after
-                    content: '”'
-                    margin-top: $space
+            .b-quote-name
+              font-weight: $font-weight-book
 
-                .b-quote-name
-                  font-weight: $font-weight-book
-
-                .b-quote-role
-                  font-family: $font-family-serif
-                  font-size: $font-size-note
-                  font-style: italic
-                  font-weight: $font-weight-light
+            .b-quote-role
+              font-family: $font-family-serif
+              font-size: $font-size-note
+              font-style: italic
+              font-weight: $font-weight-light
 

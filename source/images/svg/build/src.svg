@@ -148,8 +148,10 @@
 
     <g id="Navigation" stroke-width="1" fill-rule="evenodd">
         <g id="PeraTrend---Inactive">
-            <polyline id="Stroke-5" stroke="#F9C623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="1.45738636 21.3728693 10.734375 13.3636364 13.1420455 30.4708807 19.4669744 38.0209517 24.8181818 28.0909091 29.7272727 33 33 13.3636364 40.446733 15.7009943 46.0909091 10.0909091"/>
+            <polyline id="Stroke-5" stroke="#F9C623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6 21.3728693 13.4825282 13.3636364 15.4244797 30.4708807 20.5259691 38.0209517 24.8420852 28.0909091 28.801604 33 31.4412832 13.3636364 37.4475845 15.7009943 42 10.0909091"/>
             <use id="Rectangle" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"/>
+            <path d="M6,7 L6,42" id="Line" stroke-width="2" stroke-linecap="square"/>
+            <path d="M41.7269781,42 L5.98925781,42" id="Line" stroke-width="2" stroke-linecap="square"/>
         </g>
     </g>
 </symbol><symbol id="icon-pera-watch" viewBox="0 0 48 41">

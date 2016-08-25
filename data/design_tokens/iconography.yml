@@ -100,6 +100,11 @@
       value:    "fa-linkedin-square"
       type:     "icon"
       category: "font-awesome-icon"
+    play:
+      name:     "play"
+      value:    "fa-play"
+      type:     "icon"
+      category: "font-awesome-icon"
     caret:
       name:     "caret"
       value:    "fa-angle-down"

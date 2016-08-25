@@ -5,7 +5,9 @@ body_class: "is-iconography"
 h1 Iconography
 
 section.mtl
-  h2.mbm SVG Menu Icons
+  h2.mbs SVG Icons
+
+  h3.mbm Menu
 
   ul
     - design_token("iconography", category: "svg-menu-icon").each do |prop|
@@ -29,14 +31,20 @@ section.mtl
       h5.mtm.mbxs
         | Styles
       p.mts
-        | Navigation SVG icons respond to mouse hovering with a change of their color scheme. Since they're being instantiated as a result of the sprite technique mentioned above, targetting SVG components separately demands a few requirements:
+        | Navigation SVG icons respond to mouse hovering with a change of their color scheme. Since they're being instantiated as a result of the sprite technique mentioned above, targeting SVG components separately demands a few requirements (for further info, <a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/" target="_blank">check this out</a>):
       ul.mts.plm
         li
-          p Icons should be mostly based on stroked elements, no filled areas.
+          p
+            i.fa.fa-angle-right.mrs
+            | Icons should be mostly based on stroked elements, no filled areas.
         li.mts
-          p <code>stroke</code> and <code>fill</code> presentation attributes should be removed from the SVG source file on the uppermost grouping element level (e.g.: <code>&lt;g&gt;</code>).
+          p
+            i.fa.fa-angle-right.mrs
+            | <code>stroke</code> and <code>fill</code> presentation attributes should be removed from the SVG source file on the uppermost grouping element level (e.g.: <code>&lt;g&gt;</code>).
         li.mts
-          p Style changes should be applied directly to the <code>use</code> element.
+          p
+            i.fa.fa-angle-right.mrs
+            | Style changes should be applied directly to the <code>use</code> element.
         li.mtm
           = code('sass') do
             |

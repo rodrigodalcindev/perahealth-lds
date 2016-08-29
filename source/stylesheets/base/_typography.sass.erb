@@ -13,6 +13,12 @@ h1, h2, h3, h4, h5, h6, p
 h1, h2, h3, h4, h5, h6
   font-weight: normal
 
+small
+  font-family: $b-font-family-sans
+  font-size: $b-font-size-fine-print
+  font-weight: $b-font-weight-book
+  line-height: $b-line-height-fine-print
+
 // Font Families
 <% design_token("typography", category: "font-family").each do |prop| %>
 .b-<%= prop.name %>

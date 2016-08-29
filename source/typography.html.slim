@@ -63,7 +63,14 @@ section.mtl
   ul
     - design_token("typography", category: "line-height").each do |prop|
       li.mbm
-        - if prop.name == 'line-height-default'
+        - if prop.name == 'line-height-fine-print'
+          .g-row
+            .g-col-5
+              small.db
+                | US Patent Nos. 8,092,380; 8,100,829; 8,355,925; 8,403,847 and 8,454,506;
+                br
+                | Canadian Patent No. 2,599,387 and other Canadian and foreign patents pending.
+        - elsif prop.name == 'line-height-default'
           .g-row
             .g-col-5
               p
@@ -73,7 +80,7 @@ section.mtl
             | Forgot your password?
             br
             | No worries. We'll help you out.
-        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-multiline-heading'
+        - next unless prop.name == 'line-height-default' || prop.name == 'line-height-multiline-heading' || prop.name == 'line-height-fine-print'
         code
           = prop.name
 

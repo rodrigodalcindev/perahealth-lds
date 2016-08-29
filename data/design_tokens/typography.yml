@@ -15,6 +15,11 @@
       value:    "Whitney Small Caps A, Whitney Small Caps B"
       type:     "string"
       category: "font-family"
+    font_size_fine_print:
+      name:     "font-size-fine-print"
+      value:    13
+      type:     "number"
+      category: "font-size"
     font_size_cta_anchor:
       name:     "font-size-cta-anchor"
       value:    14
@@ -108,6 +113,11 @@
     line_height_default:
       name:     "line-height-default"
       value:    1.57
+      type:     "number"
+      category: "line-height"
+    line_height_fine_print:
+      name:     "line-height-fine-print"
+      value:    1.38
       type:     "number"
       category: "line-height"
     line_height_multiline_heading:

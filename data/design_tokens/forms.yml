@@ -1,0 +1,7 @@
+---
+  props:
+    text_input_min_width:
+      name:     "text-input-min-width"
+      value:    300
+      type:     "number"
+      category: "width"

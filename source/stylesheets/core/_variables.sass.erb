@@ -63,6 +63,11 @@ $b-<%= prop.name %>: rem(<%= prop.value %>)
 $b-<%= prop.name %>: rem(<%= prop.value %>)
 <% end %>
 
+/// Forms
+<% design_token("forms").each do |prop| %>
+$b-<%= prop.name %>: rem(<%= prop.value %>)
+<% end %>
+
 /// Cards
 <% design_token("card").each do |prop| %>
 <% next if prop.category == "card-columns" || prop.category == "card-type" %>

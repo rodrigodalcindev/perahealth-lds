@@ -1,0 +1,69 @@
+---
+body_class: "is-iconography"
+---
+
+h1 Iconography
+
+section.mtl
+  h2.mbs SVG Icons
+
+  h3.mbm Menu
+
+  ul
+    - design_token("iconography", category: "svg-menu-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        figure.b-icon.b-icon-menu.l-well
+          svg data-svg="#{prop.name}"
+            use class="#{prop.name}" xlink:href="#{'#' + prop.value}"
+          figcaption.mtm
+            code
+              = prop.value
+
+  .g-row
+    .g-col-12
+      h5.mtm.mbxs
+        | Markup
+      p.mts
+        | SVG assets should be preferably <a href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/" taregt="_blank">bundled as sprites (symbols)</a> for organization and cleaner markup.
+
+  .g-row
+    .g-col-12
+      h5.mtm.mbxs
+        | Styles
+      p.mts
+        | Navigation SVG icons respond to mouse hovering with a change of their color scheme. Since they're being instantiated as a result of the sprite technique mentioned above, targeting SVG components separately demands a few requirements (for further info, <a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/" target="_blank">check this out</a>):
+      ul.mts.plm
+        li
+          p
+            i.fa.fa-angle-right.mrs
+            | Icons should be mostly based on stroked elements, no filled areas.
+        li.mts
+          p
+            i.fa.fa-angle-right.mrs
+            | <code>stroke</code> and <code>fill</code> presentation attributes should be removed from the SVG source file on the uppermost grouping element level (e.g.: <code>&lt;g&gt;</code>).
+        li.mts
+          p
+            i.fa.fa-angle-right.mrs
+            | Style changes should be applied directly to the <code>use</code> element.
+        li.mtm
+          = code('sass') do
+            |
+              figure
+                svg use
+                  fill: transparent
+                  stroke: $b-color
+
+                &:hover
+                  svg use
+                    stroke: $b-color
+
+section.mtl
+  h2.mbm FontAwesome Icons
+
+  ul
+    - design_token("iconography", category: "font-awesome-icon").each do |prop|
+      li.dib.mrm.mbm.tac
+        .b-icon
+          i.fa.fa-5x class="#{prop.value}"
+          code.mtm
+            = prop.value

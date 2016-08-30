@@ -1,0 +1,36 @@
+.b-icon
+  @include display(flex)
+  @include align-items(center)
+  @include justify-content(center)
+  @include flex-direction(column)
+  height: rem(250)
+  width: rem(250)
+
+  svg
+    width: rem(100)
+
+    path
+      fill: inherit
+
+  &[class*="menu"]
+    cursor: pointer
+
+    svg
+      height: rem(50)
+
+      &[data-svg="icon-pera-trend"]
+        height: rem(48)
+        width: rem(48)
+
+      &[data-svg="icon-pera-watch"]
+        height: rem(41)
+        width: rem(48)
+
+      use
+        @include transition(stroke .15s ease)
+        fill: transparent
+        stroke: $b-color-dark-grey
+
+    &:hover
+      svg use
+        stroke: $b-color-turquoise

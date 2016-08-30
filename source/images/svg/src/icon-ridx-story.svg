@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="39px" height="48px" viewBox="0 0 39 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Story - Active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke-width="1" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Navigation---1" transform="translate(-492.000000, -129.000000)" stroke-width="2">
+            <g id="Story---Active" transform="translate(493.000000, 130.000000)">
+                <path d="M6.81578947,4.79166667 L2.92105263,4.79166667 C1.85,4.79166667 0.973684211,5.65416667 0.973684211,6.70833333 L0.973684211,43.125 C0.973684211,44.1791667 1.85,45.0416667 2.92105263,45.0416667 L6.81578947,45.0416667" id="Stroke-1"></path>
+                <polyline id="Stroke-5" points="30.1842105 4.79166667 36.0263158 4.79166667 36.0263158 45.0416667 6.81578947 45.0416667 6.81578947 4.79166667 22.3947368 4.79166667"></polyline>
+                <polygon id="Stroke-3" stroke="#F9C623" points="30.1842105 20.1240417 26.2894737 16.2907083 22.3947368 20.1240417 22.3947368 0.959291667 30.1842105 0.959291667"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

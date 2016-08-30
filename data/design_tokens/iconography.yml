@@ -1,0 +1,112 @@
+---
+  props:
+    icon_careers:
+      name:     "icon-careers"
+      value:    "icon-careers"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_case_studies:
+      name:     "icon-case-studies"
+      value:    "icon-case-studies"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_conferences:
+      name:     "icon-conferences"
+      value:    "icon-conferences"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_mobile:
+      name:     "icon-mobile"
+      value:    "icon-mobile"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_model:
+      name:     "icon-model"
+      value:    "icon-model"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_news:
+      name:     "icon-news"
+      value:    "icon-news"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_our_story:
+      name:     "icon-our-story"
+      value:    "icon-our-story"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_pera_analytics:
+      name:     "icon-pera-analytics"
+      value:    "icon-pera-analytics"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_pera_trend:
+      name:     "icon-pera-trend"
+      value:    "icon-pera-trend"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_pera_watch:
+      name:     "icon-pera-watch"
+      value:    "icon-pera-watch"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_publications:
+      name:     "icon-publications"
+      value:    "icon-publications"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_purpose:
+      name:     "icon-purpose"
+      value:    "icon-purpose"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_releases:
+      name:     "icon-releases"
+      value:    "icon-releases"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_ridx_story:
+      name:     "icon-ridx-story"
+      value:    "icon-ridx-story"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_team:
+      name:     "icon-team"
+      value:    "icon-team"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_upcoming_webinars:
+      name:     "icon-upcoming-webinars"
+      value:    "icon-upcoming-webinars"
+      type:     "icon"
+      category: "svg-menu-icon"
+    icon_white_papers:
+      name:     "icon-white-papers"
+      value:    "icon-white-papers"
+      type:     "icon"
+      category: "svg-menu-icon"
+    facebook:
+      name:     "facebook"
+      value:    "fa-facebook-official"
+      type:     "icon"
+      category: "font-awesome-icon"
+    twitter:
+      name:     "twitter"
+      value:    "fa-twitter"
+      type:     "icon"
+      category: "font-awesome-icon"
+    linkedin:
+      name:     "linkedin"
+      value:    "fa-linkedin-square"
+      type:     "icon"
+      category: "font-awesome-icon"
+    play:
+      name:     "play"
+      value:    "fa-play"
+      type:     "icon"
+      category: "font-awesome-icon"
+    caret:
+      name:     "caret"
+      value:    "fa-angle-down"
+      type:     "icon"
+      category: "font-awesome-icon"

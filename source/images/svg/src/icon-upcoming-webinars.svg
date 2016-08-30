@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="55px" viewBox="0 0 54 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Upcoming Webinars - Inactive</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Navigation" stroke-width="1" fill-rule="evenodd">
+        <g id="Upcoming-Webinars---Inactive" transform="translate(1.000000, 1.000000)">
+            <path d="M0.0158644068,11.0257143 L44.5313898,11.0257143" id="Stroke-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13,0 L13,6" id="Stroke-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M31,0 L31,6" id="Stroke-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M37.1122001,2.95132203 C41.2095639,2.95132203 44.5308092,6.31514739 44.5308092,10.4647685 L44.5308092,27.9980792" id="Stroke-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M27.2198826,45.5313898 L7.43563477,45.5313898 C3.33827097,45.5313898 0.0150902237,42.1675645 0.0150902237,38.0179433 L0.0150902237,10.4647685 C0.0150902237,6.31514739 3.33827097,2.95132203 7.43563477,2.95132203" id="Stroke-11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22.8753571,30.4035714 C22.8753571,28.0535714 21.6253571,26.7285714 19.4503571,26.1285714 C21.2753571,25.5285714 22.5503571,24.3285714 22.5503571,22.2285714 C22.5503571,19.9535714 20.9753571,17.8035714 17.1753571,17.8035714 C15.0753571,17.8035714 13.5753571,18.4035714 12.2753571,19.3535714 L12.6003571,21.4535714 C13.8503571,20.4535714 15.3253571,19.8285714 17.0753571,19.8285714 C19.2003571,19.8285714 20.2503571,20.8785714 20.2503571,22.3285714 C20.2503571,24.1535714 18.9253571,25.1535714 16.1253571,25.1535714 L14.8503571,25.1535714 L15.1753571,27.1535714 L15.9503571,27.1535714 C19.2003571,27.1535714 20.5753571,28.3785714 20.5753571,30.4285714 C20.5753571,32.3285714 19.2003571,33.3285714 16.9753571,33.3285714 C15.2003571,33.3285714 13.8003571,32.8035714 12.3753571,31.8285714 L12.0003571,34.0285714 C13.3003571,34.8285714 15.0753571,35.3535714 16.8503571,35.3535714 C20.5503571,35.3535714 22.8753571,33.3785714 22.8753571,30.4035714 L22.8753571,30.4035714 Z" id="31" stroke="none" fill="#F9C623"></path>
+            <polygon id="Path" stroke="none" fill="#F9C623" points="30.5753571 35.0285714 30.5753571 18.0785714 28.6253571 18.0785714 24.5753571 19.9535714 24.8253571 21.7535714 28.3503571 20.4285714 28.3503571 35.0285714"></polygon>
+            <g id="Page-1" transform="translate(32.240000, 33.240000)" stroke-width="2">
+                <polygon id="Stroke-1" stroke-linecap="round" stroke-linejoin="round" points="7.18545455 5.38909091 7.18545455 14.2859901 13.981697 9.8375405"></polygon>
+                <circle id="Oval" cx="9.88" cy="9.88" r="9.88"></circle>
+            </g>
+            <path d="M7.85058594,3 L37.625,3" id="Path-2" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>

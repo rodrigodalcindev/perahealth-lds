@@ -1,0 +1,60 @@
+#{$all-text-inputs}, label
+  color: $b-color-violet-slate
+  font-size: $b-font-size-input
+  font-weight: $b-font-weight-book
+  line-height: $b-line-height-text-input
+  min-width: $b-text-input-min-width
+  padding: $b-space
+  width: 100%
+
+#{$all-text-inputs}
+  background: $b-color-white
+  border: none
+
+  + label
+    @include transition(opacity .15s ease-in)
+    color: rgba($b-color-violet-slate, .5)
+    left: 0
+    pointer-events: none
+    top: 0
+
+    span
+      @include transition(opacity .15s ease-in)
+
+    &:after
+      @include transition(transform .15s ease)
+      @include transform-origin(bottom)
+      @include transform(scaleY(0))
+      background: $b-color-canary-yellow
+      bottom: 0
+      content: ''
+      display: inline-block
+      height: 100%
+      position: absolute
+      right: 0
+      width: 2px
+
+  &:focus
+    outline: none
+
+  &:focus + label,
+  &.is-dirty + label
+    span
+      opacity: 0
+
+    &:after
+      @include transform(scaleY(1))
+
+  &:focus ~ .b-input-error
+    opacity: 0
+
+// Textarea
+textarea
+  min-height: $b-text-area-min-height
+
+  + label
+    height: 100%
+
+// Input Wrappers
+.b-input
+  overflow: hidden

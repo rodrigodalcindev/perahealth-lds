@@ -5,3 +5,8 @@
       value:    300
       type:     "number"
       category: "width"
+    text_area_min_height:
+      name:     "text-area-min-height"
+      value:    220
+      type:     "number"
+      category: "height"

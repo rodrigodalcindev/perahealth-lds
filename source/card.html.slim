@@ -16,10 +16,10 @@ section.mtl
     .g-row.mbl
       div class="g-col-#{design_token('card', category: 'card-columns')[idx].value}"
         a.m-card.por.db class="is-#{prop.value}" href="#"
-          - if prop.value == "feature"
+          - if prop.value == "feature" || prop.value == "bio"
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-          .m-card-inner
-            - if prop.value == "top-headed" || prop.value == "left-headed" || prop.value == "headless-square"
+          .m-card-inner class="#{prop.value == 'bio' ? 'tac' : ''}"
+            - if prop.value == "top-headed" || prop.value == "left-headed" || prop.value == "headless-square" || prop.value == "bio"
               h4
                 = partial "layouts/card-inner-heading", locals: {type: prop.value}
             - elsif prop.value == "headless-rectangular"
@@ -28,9 +28,10 @@ section.mtl
             - elsif prop.value == "feature"
               h3
                 = partial "layouts/card-inner-heading", locals: {type: prop.value}
-            span
-              small.dib
-                | Read more
+            - unless prop.value == "bio"
+              span
+                small.dib
+                  | Read more
 
       .clear
 
@@ -45,7 +46,7 @@ section.mtl
         |
           .g-col-#
             a.m-card.por.db.is-type-name href="#"
-              // If feature
+              // If feature or bio
                 .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
               .m-card-inner
                 h3 # Feature
@@ -57,10 +58,14 @@ section.mtl
                   // If feature, headless or left-headed
                     time.db # Add .fr for feature and headless-rectangular
                       | May 9, 2016
-                  .clear
+                  // If feature or headless-rectangular
+                    .clear
                   span.m-card-headline
                     | One South Carolina hospital is leveraging a commercialized solution that
                     | brings the value of the Rothman Index directly to nurse managers
+                  // If bio
+                    span.m-card-role.db.mtxs
+                      | Vice President, Marketing and Product Strategy
                 span
                   small.dib
                     | Read more
@@ -89,6 +94,7 @@ section.mtl
               display: inline-block
               position: absolute
 
+            &.is-bio,
             &.is-feature,
             &.is-top-headed,
             &.is-headless-square,
@@ -104,10 +110,17 @@ section.mtl
                 &:after
                   @include transform(scaleX(1))
 
-            &.is-headless-rectangular,
-            &.is-feature
+            &.is-feature,
+            &.is-headless-rectangular
               .m-card-inner
                 padding: $card-horizontal-padding
+
+            &.is-bio,
+            &.is-feature
+              .m-card-image
+                background-position: center
+                background-repeat: no-repeat
+                background-size: auto 140%
 
             &[class*="is-headless"]
               &:before
@@ -162,11 +175,17 @@ section.mtl
               .m-card-inner
                 min-height: $card-headless-rectangular-height
 
+            &.is-bio
+              .m-card-image
+                height: $b-card-bio-image-height
+
+              .m-card-inner
+                @include justify-content(center)
+                min-height: $b-card-bio-height
+                padding: 0 $b-card-horizontal-padding
+
             &.is-feature
               .m-card-image
-                background-position: center
-                background-repeat: no-repeat
-                background-size: auto 140%
                 height: $card-feature-image-height
 
                 &:before
@@ -219,4 +238,9 @@ section.mtl
                 font-family: $font-family-sans-small-caps
                 font-size: $font-size-label
                 font-weight: $font-weight-book
+
+              .m-card-role
+                font-family: $b-font-family-sans
+                font-size: $b-font-size-body-small
+                font-weight: $b-font-weight-book
 

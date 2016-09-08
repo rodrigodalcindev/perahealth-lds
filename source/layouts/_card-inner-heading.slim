@@ -1,10 +1,16 @@
-- unless type.include? "headed"
+- unless /headed|bio/.match(type)
   span.m-card-category.ttl.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fl' : ''}"
     | healthcare informatics
-- unless type == "top-headed"
+- unless type == "top-headed" || type == "bio"
   time.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fr' : ''}"
     | May 9, 2016
 - if type == "headless-rectangular" || type == "feature"
   .clear
 span.m-card-headline
-  | One South Carolina hospital is leveraging a commercialized solution that brings the value of the Rothman Index directly to nurse managers
+  - if type == "bio"
+    | Meredith Cage
+  - else
+    | One South Carolina hospital is leveraging a commercialized solution that brings the value of the Rothman Index directly to nurse managers
+- if type == "bio"
+  span.m-card-role.db.mtxs
+    | Vice President, Marketing and Product Strategy

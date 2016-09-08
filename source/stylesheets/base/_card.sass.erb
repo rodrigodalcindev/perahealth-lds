@@ -16,6 +16,7 @@
     display: inline-block
     position: absolute
 
+  &.is-bio,
   &.is-feature,
   &.is-top-headed,
   &.is-headless-square,
@@ -31,10 +32,17 @@
       &:after
         @include transform(scaleX(1))
 
+  &.is-feature,
   &.is-headless-rectangular,
-  &.is-feature
     .m-card-inner
       padding: $b-card-horizontal-padding
+
+  &.is-bio,
+  &.is-feature
+    .m-card-image
+      background-position: center
+      background-repeat: no-repeat
+      background-size: auto 140%
 
   &[class*="is-headless"]
     &:before
@@ -89,11 +97,17 @@
     .m-card-inner
       min-height: $b-card-headless-rectangular-height
 
+  &.is-bio
+    .m-card-image
+      height: $b-card-bio-image-height
+
+    .m-card-inner
+      @include justify-content(center)
+      min-height: $b-card-bio-height
+      padding: 0 $b-card-horizontal-padding
+
   &.is-feature
     .m-card-image
-      background-position: center
-      background-repeat: no-repeat
-      background-size: auto 140%
       height: $b-card-feature-image-height
 
       &:before
@@ -146,4 +160,9 @@
     .m-card-category
       font-family: $b-font-family-sans-small-caps
       font-size: $b-font-size-label
+      font-weight: $b-font-weight-book
+
+    .m-card-role
+      font-family: $b-font-family-sans
+      font-size: $b-font-size-body-small
       font-weight: $b-font-weight-book

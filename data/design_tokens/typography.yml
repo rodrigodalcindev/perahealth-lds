@@ -55,6 +55,11 @@
       value:    20
       type:     "number"
       category: "font-size"
+    font_size_input:
+      name:     "font-size-input"
+      value:    22
+      type:     "number"
+      category: "font-size"
     font_weight_light:
       name:     "font-weight-light"
       value:    300
@@ -125,14 +130,19 @@
       value:    1.25
       type:     "number"
       category: "line-height"
+    line_height_input_label:
+      name:     "line-height-input-label"
+      value:    1.55
+      type:     "number"
+      category: "line-height"
     line_height_text_input:
       name:     "line-height-text-input"
-      value:    0.6675
+      value:    1.45
       type:     "number"
       category: "line-height"
     line_height_default_button:
       name:     "line-height-default-button"
-      value:    0.6675
+      value:    1
       type:     "number"
       category: "line-height"
     line_height_text_area:

@@ -45,16 +45,11 @@
       value:    "#7595CC"
       type:     "color"
       category: "main-color"
-    twitter_blue:
-      name:     "twitter-blue"
-      value:    "#4099FF"
-      type:     "color"
-      category: "social-color"
-    youtube_red:
-      name:     "youtube-red"
+    red:
+      name:     "red"
       value:    "#E52D27"
       type:     "color"
-      category: "social-color"
+      category: "secondary-color"
     medium_blue:
       name:     "medium-blue"
       value:    "#4771B8"
@@ -70,3 +65,8 @@
       value:    "#F2FAFA"
       type:     "color"
       category: "secondary-color"
+    twitter_blue:
+      name:     "twitter-blue"
+      value:    "#4099FF"
+      type:     "color"
+      category: "social-color"

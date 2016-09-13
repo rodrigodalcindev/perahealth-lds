@@ -12,7 +12,12 @@ class APP.Forms
 
   watchTextInput: ->
     _ = this
+    _.textInput.on 'focus', (e) ->
+      $(this).parent().addClass('has-focus')
+
     _.textInput.on 'blur', (e) ->
+      $(this).parent().removeClass('has-focus')
+
       if $.trim($(this).val()).length > 0
         $(this).addClass('is-dirty')
       else

@@ -142,7 +142,7 @@
       category: "line-height"
     line_height_default_button:
       name:     "line-height-default-button"
-      value:    0.6675
+      value:    1
       type:     "number"
       category: "line-height"
     line_height_text_area:

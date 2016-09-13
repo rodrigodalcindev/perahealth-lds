@@ -9,6 +9,8 @@ section.mtl
     .g-col-4
       h2.mbm  Text Inputs
 
+      h4.mbm Foundation Styles (Web)
+
       .b-input.is-text.por
         input id="email" type="text" placeholder="Email Address"
         label.poa for="email"
@@ -16,11 +18,126 @@ section.mtl
             | Email Address
 
   .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Form fields are styled over a pre-defined set of global rules affecting all text inputs, including text areas:
+
+  .g-row
+    = code('sass') do
+      |
+        \#{$all-text-inputs}
+          @include transition(padding .25s ease)
+          background: $b-color-white
+          border: none
+          color: lighten($b-color-violet-slate, 3.5%)
+          font-weight: $b-font-weight-book
+          font-size: $b-font-size-input
+          line-height: $b-line-height-text-input
+          margin-top: rem(2)
+          min-width: $b-text-input-min-width
+          padding: $b-space
+          width: 100%
+
+  .g-row
+    .g-col-7
+      p.mts.mbxs
+        | The UI/UX dynamics between the input's placeholder and its label are based on the <code>:focus</code> pseudo-class paired up with toggling of a state-based class (<code>.is-dirty</code>) applied to the input element via javascript if presence of text is detected.
+
+  .g-row
+    = code('sass', :start_line => 11) do
+      |
+        \#{$all-text-inputs}
+          /*(...)*/
+          @include placeholder
+            @include transition(opacity .25s ease)
+            line-height: initial
+
+          &:focus,
+          &.is-dirty
+            padding-bottom: ($b-space - $b-space-s)
+            padding-top: ($b-space + $b-space-s)
+
+            @include placeholder
+              opacity: 0
+
+          &:focus
+            outline: none
+
+          + label
+            @include transition(top .25s ease, opacity .25s ease)
+            background: $b-color-white
+            color: lighten($b-color-violet-slate, 3.5%)
+            height: ($b-space + $b-space-s)
+            left: 0
+            line-height: $b-line-height-input-label
+            min-width: $b-text-input-min-width
+            opacity: 0
+            padding-left: $b-space
+            pointer-events: none
+            top: ($b-space-s + $b-space-s)
+
+          &:focus + label,
+          &.is-dirty + label
+            opacity: 1
+            top: rem(2)
+
+          &:focus + label
+            color: $b-color-turquoise
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | As for the js-based state class toggling functionality:
+
+  .g-row
+    = code('coffeescript') do
+      |
+        _.input.on 'blur', (e) ->
+          if $.trim($(this).val()).length > 0
+            $(this).addClass('is-dirty')
+          else
+            $(this).removeClass('is-dirty')
+
+  .g-row
+    .g-col-7
+      p.mtm.mbxs
+        | Markup-wise, both <code>input</code> and <code>label</code> elements should be wrapped in a <code>.b-input.is-text</code> container for simplified targetting with javascript. Note that the order of elements is important here:
+
+  .g-row
+    = code('slim') do
+      |
+        .b-input.is-text.por
+          input id="email" type="text" placeholder="Email Address"
+          label.poa for="email"
+            small
+              | Email Address
+
+  .g-row
+    .g-col-7
+      p.mtm.mbl
+        | Note: Generally, <code>.b-input</code> wrappers' <code>overflow</code> should be set to <code>hidden</code>.
+
+section.mtl
+  .g-row
     .g-col-5
-      h2.mtl.mbm  Text Areas
+      h2.mbm  Text Area
+
+      h4.mbm Overridden Styles (Web)
 
       .b-input.is-text.por
         textarea id="description" placeholder="Add your description"
         label.poa for="description"
           small
             | Description
+
+  .g-row
+    .g-col-7
+      p.mts.mbxs
+        | Text area elements inherit from the same global styles and UI/UX dynamics affecting text inputs, with a couple of overrides:
+
+  .g-row
+    = code('sass') do
+      |
+        textarea
+          line-height: $b-line-height-text-area
+          min-height: $b-text-area-min-height

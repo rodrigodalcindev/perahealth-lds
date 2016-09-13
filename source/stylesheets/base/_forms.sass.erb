@@ -9,6 +9,7 @@
   margin-top: rem(2)
   min-width: $b-text-input-min-width
   padding: $b-space
+  width: 100%
 
   @include placeholder
     @include transition(opacity .25s ease)
@@ -16,29 +17,28 @@
 
   &:focus,
   &.is-dirty
-    padding-bottom: ($b-space - $b-space-xs)
-    padding-top: ($b-space + $b-space-xs)
+    padding-bottom: ($b-space - $b-space-s)
+    padding-top: ($b-space + $b-space-s)
 
     @include placeholder
       opacity: 0
 
   &:focus
-    color: $b-color-blue
     outline: none
 
   // Input label (adjacent)
   + label
     @include transition(top .25s ease, opacity .25s ease)
     background: $b-color-white
-    color: lighten($b-color-black, 90%)
-    height: ($b-space + $b-space-xs)
+    color: lighten($b-color-violet-slate, 3.5%)
+    height: ($b-space + $b-space-s)
     left: 0
     line-height: $b-line-height-input-label
     min-width: $b-text-input-min-width
     opacity: 0
     padding-left: $b-space
     pointer-events: none
-    top: ($b-space-s + $b-space-xs)
+    top: ($b-space-s + $b-space-s)
 
   &:focus + label,
   &.is-dirty + label
@@ -46,7 +46,7 @@
     top: rem(2)
 
   &:focus + label
-    color: $b-color-blue
+    color: $b-color-turquoise
 
   // Input validation
   &:focus ~ .b-input-error
@@ -57,7 +57,6 @@
 textarea
   line-height: $b-line-height-text-area
   min-height: $b-text-area-min-height
-  width: 100%
 
 // Submit (as button)
 input[type="submit"]

@@ -132,7 +132,7 @@
       category: "line-height"
     line_height_input_label:
       name:     "line-height-input-label"
-      value:    2.75
+      value:    1.55
       type:     "number"
       category: "line-height"
     line_height_text_input:

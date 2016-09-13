@@ -1,0 +1,23 @@
+#{$all-button-inputs}, .is-button
+  @include transition(background .25s ease)
+  border: none
+  cursor: pointer
+  font-weight: $b-font-weight-medium
+  font-size: $b-font-size-label
+  line-height: $b-line-height-default-button
+  min-width: $b-default-button-min-width
+  padding: ($b-space + $b-space-xs) $b-space
+  text-align: center
+  text-decoration: none
+
+  &:focus
+    outline: none
+
+  <% design_token("buttons", category: "button-style").each do |prop| %>
+  &.is-<%= prop.value %>
+    background: $b-<%= prop.value %>-button-background-color
+    color: $b-<%= prop.value %>-button-text-color
+
+    &:hover
+      background: darken($b-<%= prop.value %>-button-background-color, 5%)
+  <% end %>

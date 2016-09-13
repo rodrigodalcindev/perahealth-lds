@@ -1,0 +1,22 @@
+---
+  props:
+    default_button:
+      name:     "default-button-style"
+      value:    "default"
+      type:     "string"
+      category: "button-style"
+    default_button_text_color:
+      name:     "default-button-text-color"
+      value:    "white"
+      type:     "string"
+      category: "text-color"
+    default_button_background_color:
+      name:     "default-button-background-color"
+      value:    "canary-yellow"
+      type:     "string"
+      category: "background-color"
+    default_button_min_width:
+      name:     "default-button-min-width"
+      value:    200
+      type:     "number"
+      category: "width"

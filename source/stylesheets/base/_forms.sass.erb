@@ -1,14 +1,16 @@
-#{$all-text-inputs}
-  @include transition(padding .25s ease)
+#{$all-text-inputs}, .customSelect
   background: $b-color-white
-  border: none
   color: lighten($b-color-violet-slate, 3.5%)
-  font-weight: $b-font-weight-book
   font-size: $b-font-size-input
+  font-weight: $b-font-weight-book
   line-height: $b-line-height-text-input
   min-width: $b-text-input-min-width
   padding: $b-space
   width: 100%
+
+#{$all-text-inputs}
+  @include transition(padding .25s ease)
+  border: none
 
   @include placeholder
     @include transition(opacity .25s ease)
@@ -66,6 +68,13 @@ input[type="submit"]
 .b-input
   overflow: hidden
 
+  &.is-select
+    .fa
+      color: $b-color-canary-yellow
+      height: 100%
+      line-height: 3.75
+      right: $b-space
+
   &.has-errors
     &:after
       @include transition(transform .2s ease)
@@ -89,7 +98,6 @@ input[type="submit"]
       &:after
         @include transform(scaleY(1))
 
-
 // Input validation
 .b-input-error
   @include transition(transform .25s ease, opacity .15s ease)
@@ -107,3 +115,16 @@ input[type="submit"]
   .b-input.has-errors &
     @include transform(translateY(0))
     opacity: 1
+
+// customSelect Overrides
+select.hasCustomSelect
+  cursor: pointer
+  z-index: $stratum-high
+
+.customSelect
+  &.customSelectDisabledOption
+    .customSelectInner
+      opacity: .54
+
+.customSelectInner
+  width: 100% !important

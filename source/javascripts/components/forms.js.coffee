@@ -1,14 +1,15 @@
 class APP.Forms
   constructor: ->
     @textInput        = $('.b-input.is-text').find('input,textarea')
+    @select           = $('.b-input.is-select').find('select')
     @textInputControl = $('.b-input.is-text').find('.b-input-control')
 
   init: ->
-    if @textInput.length > 0
-      @watchTextInput()
+    @watchTextInput() if @textInput.length > 0
 
-    if @textInputControl.length > 0
-      @watchInputControl()
+    @watchInputControl() if @textInputControl.length > 0
+
+    @initCustomSelect() if @select.length > 0
 
   watchTextInput: ->
     _ = this
@@ -33,3 +34,7 @@ class APP.Forms
           $(this).siblings('input').attr('type','text')
         else if inputType == "text"
           $(this).siblings('input').attr('type','password')
+
+  initCustomSelect: ->
+    _ = this
+    _.select.customSelect()

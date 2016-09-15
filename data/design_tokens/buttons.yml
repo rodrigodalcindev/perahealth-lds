@@ -15,6 +15,11 @@
       value:    "canary-yellow"
       type:     "string"
       category: "background-color"
+    default_button_border_radius:
+      name:     "default-button-border-radius"
+      value:    50
+      type:     "number"
+      category: "border-radius"
     default_button_min_width:
       name:     "default-button-min-width"
       value:    200

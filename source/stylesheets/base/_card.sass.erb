@@ -3,7 +3,6 @@
   text-decoration: none
 
   &:before
-    @include transition(background-position .35s ease-out)
     background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
     content: ''
     display: block
@@ -32,6 +31,17 @@
       &:after
         @include transform(scaleX(1))
 
+  &.is-bio,
+  &.is-top-headed,
+  &.is-left-headed
+    .m-card-inner
+      @include transition(box-shadow .2s ease)
+      box-shadow: rem(0) rem(0) rem(5) 0 rgba($b-color-violet-slate, 0)
+
+    &:hover
+      .m-card-inner
+        box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
+
   &.is-feature,
   &.is-headless-rectangular,
     .m-card-inner
@@ -48,15 +58,16 @@
     &:before
       display: none
 
+  &.is-top-headed,
+  &.is-left-headed
+    &:after
+      display: none
+
   &.is-top-headed
     &:before
       background-position: left 50% bottom 30%
       height: $b-card-graphic-size
       width: 100%
-
-    &:hover
-      &:before
-        background-position: left 55% bottom 30%
 
     .m-card-inner
       min-height: $b-card-top-headed-height
@@ -78,13 +89,6 @@
       height: 100%
       right: 0
       width: 2px
-
-    &:hover
-      &:before
-        background-position: left 45% bottom 5%
-
-      &:after
-        @include transform(scaleY(1))
 
     .m-card-inner
       min-height: $b-card-left-headed-height

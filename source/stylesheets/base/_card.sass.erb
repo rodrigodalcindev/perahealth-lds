@@ -2,22 +2,22 @@
   background: $b-color-white
   text-decoration: none
 
-  &:before
-    background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
-    content: ''
-    display: block
-
   &:after
-    @include transition(transform .2s ease)
-    background: $b-color-canary-yellow
-    bottom: 0
     content: ''
-    display: inline-block
     position: absolute
 
   &.is-bio,
   &.is-feature,
-  &.is-top-headed,
+  &.is-headless-square,
+  &.is-headless-rectangular
+    &:after
+      @include transition(transform .2s ease)
+      background: $b-color-canary-yellow
+      bottom: 0
+      display: inline-block
+
+  &.is-bio,
+  &.is-feature,
   &.is-headless-square,
   &.is-headless-rectangular
     &:after
@@ -60,12 +60,29 @@
 
   &.is-top-headed,
   &.is-left-headed
+    &:before
+      background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
+      content: ''
+      display: block
+
     &:after
-      display: none
+      @include transition(background .2s ease)
+      background: rgba($b-color-turquoise, .25)
+      display: block
+      left: 0
+      top: 0
+
+    &:hover
+      &:after
+        background: rgba($b-color-canary-yellow, .75)
 
   &.is-top-headed
     &:before
-      background-position: left 50% bottom 30%
+      background-position: left 40% bottom 57%
+      height: $b-card-graphic-size
+      width: 100%
+
+    &:after
       height: $b-card-graphic-size
       width: 100%
 
@@ -76,7 +93,7 @@
     padding-left: $b-card-graphic-size
 
     &:before
-      background-position: left 40% bottom 5%
+      background-position: left 30% bottom 85%
       height: 100%
       left: 0
       position: absolute
@@ -84,11 +101,8 @@
       width: $b-card-graphic-size
 
     &:after
-      @include transform-origin(bottom)
-      @include transform(scaleY(0))
       height: 100%
-      right: 0
-      width: 2px
+      width: $b-card-graphic-size
 
     .m-card-inner
       min-height: $b-card-left-headed-height

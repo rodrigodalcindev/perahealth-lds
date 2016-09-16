@@ -62,7 +62,7 @@
       category: "card-columns"
     card_graphic_size:
       name: "card-graphic-size"
-      value: 85
+      value: 50
       type: "number"
       category: "card-graphic"
     card_horizontal_padding:

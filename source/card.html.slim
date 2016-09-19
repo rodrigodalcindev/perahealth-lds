@@ -34,7 +34,7 @@ section.mtl
                   | Discover the next wave of nursing innovations at the 2016 ANCC National Magnet Conference®. Join more than 9,000 nurses, nursing executives, and health care professionals from top hospitals around the world to share proven best practices and spark your passion for change.
             - unless prop.value == "bio"
               span.m-cta class="#{/headless/.match(prop.value) ? '' : 'mtm'}"
-                - if /headless/.match(prop.value)
+                - if /headless|\Afeature\z/.match(prop.value)
                   i.ellipsis.h4.fr
                     | ...
                 - elsif /conference/.match(prop.value)

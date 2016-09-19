@@ -7,9 +7,7 @@
     position: absolute
 
   &.is-bio,
-  &.is-feature,
-  &.is-headless-square,
-  &.is-headless-rectangular
+  &.is-feature
     &:after
       @include transition(transform .2s ease)
       background: $b-color-canary-yellow
@@ -17,9 +15,7 @@
       display: inline-block
 
   &.is-bio,
-  &.is-feature,
-  &.is-headless-square,
-  &.is-headless-rectangular
+  &.is-feature
     &:after
       @include transform-origin(left)
       @include transform(scaleX(0))

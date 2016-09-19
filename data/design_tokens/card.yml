@@ -30,6 +30,16 @@
       value: "feature"
       type: "string"
       category: "card-type"
+    card_conference:
+      name: "card-conference"
+      value: "conference"
+      type: "string"
+      category: "card-type"
+    card_conference_feature:
+      name: "card-conference-feature"
+      value: "conference-feature"
+      type: "string"
+      category: "card-type"
     card_top_headed_columns:
       name: "card-top-headed-columns"
       value: 4
@@ -58,6 +68,16 @@
     card_feature_columns:
       name: "card-feature-columns"
       value: 8
+      type: "number"
+      category: "card-columns"
+    card_conference_columns:
+      name: "card-conference-columns"
+      value: 6
+      type: "number"
+      category: "card-columns"
+    card_conference_feature_columns:
+      name: "card-conference-feature-columns"
+      value: 12
       type: "number"
       category: "card-columns"
     card_graphic_size:
@@ -118,5 +138,15 @@
     card_headless_rectangular_height:
       name: "card-headless-rectangular-height"
       value: 265
+      type: "number"
+      category: "card-height"
+    card_conference_height:
+      name: "card-conference-height"
+      value: 420
+      type: "number"
+      category: "card-height"
+    card_conference_feature_height:
+      name: "card-conference-feature-height"
+      value: 420
       type: "number"
       category: "card-height"

@@ -11,17 +11,17 @@ section.mtl
     | There are three different types of CTAs. FontAwesome instance used and its positioning will vary according to type:
 
   ul
-    - design_token("cta", category: "cta-type").each_with_index do |prop, idx|
+    - design_token("call-to-action", category: "cta-type").each_with_index do |prop, idx|
       li.dib.mrm.mbm.tac.vam
         .l-well
           span.m-cta.mbm class="is-#{prop.value}"
             - if prop.value != "more"
               - if prop.value == "outbound" || prop.value == "download"
-                i.fa.mrxs class="fa-#{design_token('cta', category: 'cta-fa-instance')[idx].value}"
+                i.fa.mrxs class="fa-#{design_token('call-to-action', category: 'cta-fa-instance')[idx].value}"
                 | Call to action
               - else
                 | Call to action
-                i.fa.mlxs class="fa-#{design_token('cta', category: 'cta-fa-instance')[idx].value}"
+                i.fa.mlxs class="fa-#{design_token('call-to-action', category: 'cta-fa-instance')[idx].value}"
             - else
               i.ellipsis.h4
                 | ...

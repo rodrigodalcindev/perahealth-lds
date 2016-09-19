@@ -143,9 +143,12 @@
     .m-card-inner
       min-height: $b-card-feature-height
 
+  .m-card-badge,
   .m-card-inner
     @include display(flex)
     @include flex-direction(column)
+
+  .m-card-inner
     @include justify-content(space-between)
     padding: $b-card-vertical-padding $b-card-horizontal-padding
 
@@ -167,12 +170,6 @@
         /* To be refactored into spacing design token updates */
         margin-bottom: rem(30)
 
-    span
-      small
-        color: $b-color-turquoise
-        font-size: $b-font-size-navigation-description
-        font-weight: $b-font-weight-medium
-
     .m-card-category
       font-family: $b-font-family-sans-small-caps
       font-size: $b-font-size-label
@@ -182,3 +179,18 @@
       font-family: $b-font-family-sans
       font-size: $b-font-size-body-small
       font-weight: $b-font-weight-book
+
+  .m-card-badge
+    @include align-items(center)
+    @include justify-content(center)
+    border: rem(1) solid
+    border-radius: 50%
+    color: $b-color-blue
+    font-family: $b-font-family-sans-small-caps
+    font-size: $b-font-size-navigation-description
+    font-weight: $b-font-weight-medium
+    height: rem(45)
+    letter-spacing: $b-letter-spacing-cta-anchor
+    right: $b-space-l
+    top: $b-space-l
+    width: rem(45)

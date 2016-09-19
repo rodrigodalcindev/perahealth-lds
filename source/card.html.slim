@@ -29,9 +29,13 @@ section.mtl
               h3
                 = partial "layouts/card-inner-heading", locals: {type: prop.value}
             - unless prop.value == "bio"
-              span.mtm
-                small.dib
-                  | Read more
+              span.m-cta.is-inbound.mtm
+                | Read more
+                i.fa.fa-angle-right.mlxs
+          - if prop.value == "left-headed"
+            .m-card-badge.poa
+              span.ttl
+                | New
 
       .clear
 

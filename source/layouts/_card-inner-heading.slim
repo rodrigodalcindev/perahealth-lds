@@ -1,6 +1,9 @@
 - unless /top-headed|bio/.match(type)
   span.m-card-category.ttl.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fl' : ''}"
-    | healthcare informatics
+    - if /conference/.match(type)
+      | orlando, fl - world center marriott
+    - else
+      | healthcare informatics
 - unless type == "top-headed" || type == "bio"
   time.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fr' : ''}"
     | May 9, 2016
@@ -9,6 +12,8 @@
 span.m-card-headline
   - if type == "bio"
     | Meredith Cage
+  - elsif /conference/.match(type)
+    | ANCC National Magnet Conference
   - else
     | One South Carolina hospital is leveraging a commercialized solution that brings the value of the Rothman Index directly to nurse managers
 - if type == "bio"

@@ -1,0 +1,22 @@
+---
+  props:
+    cta_outbound:
+      name: "cta-outbound"
+      value: "outbound"
+      type: "string"
+      category: "cta-type"
+    cta_inbound:
+      name: "cta-inbound"
+      value: "inbound"
+      type: "string"
+      category: "cta-type"
+    cta_download:
+      name: "cta-download"
+      value: "download"
+      type: "string"
+      category: "cta-type"
+    cta_more:
+      name: "cta-more"
+      value: "more"
+      type: "string"
+      category: "cta-type"

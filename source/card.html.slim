@@ -16,23 +16,23 @@ section.mtl
     .g-row.mbl
       div class="g-col-#{design_token('card', category: 'card-columns')[idx].value}"
         a.m-card.por.db class="is-#{prop.value}" href="#"
-          - if /feature/.match(prop.value) || prop.value == "bio"
+          - if /feature|bio|webinar/.match(prop.value)
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-          .m-card-inner class="#{prop.value == 'bio' ? 'tac' : ''}"
+          .m-card-inner class="#{/bio/.match(prop.value) ? 'tac' : ''}"
             .m-card-inner-content
-              - if prop.value == "top-headed" || prop.value == "left-headed" || prop.value == "headless-square" || prop.value == "bio" || /conference/.match(prop.value)
+              - if /headed|headless-square|bio|webinar|conference/.match(prop.value)
                 h4
                   = partial "layouts/card-inner-heading", locals: {type: prop.value}
-              - elsif prop.value == "headless-rectangular"
+              - elsif /headless-rectangular/.match(prop.value)
                 h5
                   = partial "layouts/card-inner-heading", locals: {type: prop.value}
-              - elsif prop.value == "feature"
+              - elsif /feature/.match(prop.value)
                 h3
                   = partial "layouts/card-inner-heading", locals: {type: prop.value}
               - if /conference/.match(prop.value)
                 p.mts
                   | Discover the next wave of nursing innovations at the 2016 ANCC National Magnet Conference®. Join more than 9,000 nurses, nursing executives, and health care professionals from top hospitals around the world to share proven best practices and spark your passion for change.
-            - unless prop.value == "bio"
+            - unless /bio/.match(prop.value)
               span.m-cta class="#{/headless/.match(prop.value) ? '' : 'mtm'}"
                 - if /headless|\Afeature\z/.match(prop.value)
                   i.ellipsis.h4.fr
@@ -40,10 +40,13 @@ section.mtl
                 - elsif /conference/.match(prop.value)
                   i.fa.fa-external-link.mrxs
                   | Learn more
+                - elsif /webinar/.match(prop.value)
+                  | Watch now
+                  i.fa.fa-angle-right.mlxs
                 - else
                   | Read more
                   i.fa.fa-angle-right.mlxs
-          - if prop.value == "left-headed"
+          - if /left-headed/.match(prop.value)
             .m-card-badge.poa
               span.ttl
                 | New

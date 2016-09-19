@@ -16,7 +16,7 @@ section.mtl
     .g-row.mbl
       div class="g-col-#{design_token('card', category: 'card-columns')[idx].value}"
         a.m-card.por.db class="is-#{prop.value}" href="#"
-          - if prop.value == "feature" || prop.value == "bio"
+          - if /feature/.match(prop.value) || prop.value == "bio"
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
           .m-card-inner class="#{prop.value == 'bio' ? 'tac' : ''}"
             .m-card-inner-content
@@ -54,6 +54,7 @@ section.mtl
               span.m-cta
                 i.fa.fa-external-link.mrxs
                 | Go to article
+          .clear
 
       .clear
 

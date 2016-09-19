@@ -120,6 +120,11 @@
       value: 465
       type: "number"
       category: "card-height"
+    card_conference_feature_image_height:
+      name: "card-conference-feature-image-height"
+      value: 420
+      type: "number"
+      category: "card-height"
     card_top_headed_height:
       name: "card-top-headed-height"
       value: 300

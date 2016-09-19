@@ -20,3 +20,18 @@
       value: "more"
       type: "string"
       category: "cta-type"
+    cta_outbound_fa_instance:
+      name: "cta-outbound-fa-instance"
+      value: "external-link"
+      type: "string"
+      category: "cta-fa-instance"
+    cta_inbound_fa_instance:
+      name: "cta-inbound-fa-instance"
+      value: "angle-right"
+      type: "string"
+      category: "cta-fa-instance"
+    cta_download_fa_instance:
+      name: "cta-download-fa-instance"
+      value: "file-o"
+      type: "string"
+      category: "cta-fa-instance"

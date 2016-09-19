@@ -7,15 +7,14 @@
     position: absolute
 
   &.is-bio,
-  &.is-feature
+  &[class*="conference"]
     &:after
       @include transition(transform .2s ease)
       background: $b-color-canary-yellow
       bottom: 0
       display: inline-block
 
-  &.is-bio,
-  &.is-feature
+  &.is-bio
     &:after
       @include transform-origin(left)
       @include transform(scaleX(0))
@@ -27,9 +26,21 @@
       &:after
         @include transform(scaleX(1))
 
+  &[class*="conference"]
+    &:after
+      @include transform-origin(bottom)
+      @include transform(scaleY(0))
+      height: 100%
+      right: 0
+      width: 2px
+
+    &:hover
+      &:after
+        @include transform(scaleY(1))
+
   &.is-bio,
-  &.is-top-headed,
-  &.is-left-headed
+  &[class*="-headed"],
+  &[class*="conference"]
     .m-card-inner
       @include transition(box-shadow .2s ease)
       box-shadow: rem(0) rem(0) rem(5) 0 rgba($b-color-violet-slate, 0)
@@ -37,12 +48,6 @@
     &:hover
       .m-card-inner
         box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
-
-  &.is-headless-square,
-  &.is-headless-rectangular
-    &:hover
-      .m-card-overlay
-        opacity: 1
 
   &.is-feature,
   &.is-headless-rectangular,
@@ -56,12 +61,22 @@
       background-repeat: no-repeat
       background-size: auto 140%
 
+  &.is-feature,
+  &[class*="is-headless"]
+    &:hover
+      .m-card-overlay
+        opacity: 1
+
   &[class*="is-headless"]
     &:before
       display: none
 
-  &.is-top-headed,
-  &.is-left-headed
+  &[class*="is-conference"]
+    .m-card-inner
+      min-height: $b-card-conference-height
+      padding: $b-card-vertical-padding
+
+  &[class*="-headed"]
     &:before
       background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
       content: ''
@@ -142,7 +157,8 @@
         top: 0
         width: 100%
 
-    .m-card-inner
+    .m-card-inner,
+    .m-card-overlay
       min-height: $b-card-feature-height
 
   .m-card-badge,
@@ -161,8 +177,10 @@
     h5
       font-weight: $b-font-weight-book
 
-    h3, h4, h5
+    h3, h4, h5, p
       color: $b-color-violet-slate
+
+    h3, h4, h5
       line-height: $b-line-height-multiline-heading
 
       time
@@ -172,6 +190,9 @@
         font-size: $b-font-size-note
         /* To be refactored into spacing design token updates */
         margin-bottom: rem(30)
+
+    p
+      font-size: $b-font-size-navigation-anchor
 
     .m-card-category
       font-family: $b-font-family-sans-small-caps
@@ -187,15 +208,15 @@
     @include transition(opacity .2s ease)
     @include justify-content(space-between)
     background: rgba($b-color-turquoise, .95)
+    bottom: 0
     color: $b-color-white
     font-size: $b-font-size-body-small
     font-weight: $b-font-weight-book
-    height: 100%
     left: 0
+    min-height: 100%
     opacity: 0
     overflow: hidden
     padding: $b-card-overlay-padding $b-card-horizontal-padding
-    top: 0
     width: 100%
 
     .m-cta

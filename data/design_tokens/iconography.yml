@@ -110,3 +110,18 @@
       value:    "fa-angle-down"
       type:     "icon"
       category: "font-awesome-icon"
+    external_link:
+      name:     "external-link"
+      value:    "fa-external-link"
+      type:     "icon"
+      category: "font-awesome-icon"
+    angle_right:
+      name:     "angle-right"
+      value:    "fa-angle-right"
+      type:     "icon"
+      category: "font-awesome-icon"
+    file_o:
+      name:     "file-o"
+      value:    "fa-file-o"
+      type:     "icon"
+      category: "font-awesome-icon"

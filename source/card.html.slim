@@ -29,13 +29,24 @@ section.mtl
               h3
                 = partial "layouts/card-inner-heading", locals: {type: prop.value}
             - unless prop.value == "bio"
-              span.m-cta.is-inbound.mtm
-                | Read more
-                i.fa.fa-angle-right.mlxs
+              span.m-cta class="#{/headless/.match(prop.value) ? '' : 'mtm'}"
+                - if /headless/.match(prop.value)
+                  i.ellipsis.h4.fr
+                    | ...
+                - else
+                  | Read more
+                  i.fa.fa-angle-right.mlxs
           - if prop.value == "left-headed"
             .m-card-badge.poa
               span.ttl
                 | New
+          - if /headless/.match(prop.value)
+            .m-card-overlay.poa
+              p
+                | Last week, I had the benefit of attending the first annual National Symposium on Value Innovation at Yale, hosted by Yale New Haven Health System (YNHHS) leadership.
+              span.m-cta
+                i.fa.fa-external-link.mrxs
+                | Go to article
 
       .clear
 

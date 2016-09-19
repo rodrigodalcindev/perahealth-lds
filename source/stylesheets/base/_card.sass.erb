@@ -38,6 +38,12 @@
       .m-card-inner
         box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
 
+  &.is-headless-square,
+  &.is-headless-rectangular
+    &:hover
+      .m-card-overlay
+        opacity: 1
+
   &.is-feature,
   &.is-headless-rectangular,
     .m-card-inner
@@ -140,13 +146,14 @@
       min-height: $b-card-feature-height
 
   .m-card-badge,
-  .m-card-inner
+  .m-card-inner,
+  .m-card-overlay
     @include display(flex)
     @include flex-direction(column)
 
   .m-card-inner
     @include justify-content(space-between)
-    padding: $b-card-vertical-padding $b-card-horizontal-padding
+    padding: $b-card-vertical-padding $b-card-horizontal-padding $b-card-horizontal-padding
 
     h3, h4
       font-weight: $b-font-weight-light
@@ -175,6 +182,24 @@
       font-family: $b-font-family-sans
       font-size: $b-font-size-body-small
       font-weight: $b-font-weight-book
+
+  .m-card-overlay
+    @include transition(opacity .2s ease)
+    @include justify-content(space-between)
+    background: rgba($b-color-turquoise, .95)
+    color: $b-color-white
+    font-size: $b-font-size-body-small
+    font-weight: $b-font-weight-book
+    height: 100%
+    left: 0
+    opacity: 0
+    overflow: hidden
+    padding: $b-card-overlay-padding $b-card-horizontal-padding
+    top: 0
+    width: 100%
+
+    .m-cta
+      color: $b-color-white
 
   .m-card-badge
     @include align-items(center)

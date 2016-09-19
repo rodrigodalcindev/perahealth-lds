@@ -75,6 +75,11 @@
       value: 50
       type: "number"
       category: "card-padding"
+    card_overlay_padding:
+      name: "card-overlay-padding"
+      value: 40
+      type: "number"
+      category: "card-padding"
     card_bio_height:
       name: "card-bio-height"
       value: 115

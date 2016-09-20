@@ -18,7 +18,15 @@ section.mtl
         a.m-card.por.db class="is-#{prop.value}" href="#"
           - if /feature|bio|webinar/.match(prop.value)
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-          .m-card-inner class="#{/bio|category/.match(prop.value) ? 'tac' : ''}"
+          .m-card-inner.por class="#{/bio|category/.match(prop.value) ? 'tac' : ''}"
+            - if /headless|\Afeature\z/.match(prop.value)
+              .m-card-overlay.poa
+                .m-card-overlay-content
+                  p
+                    | Last week, I had the benefit of attending the first annual National Symposium on Value Innovation at Yale, hosted by Yale New Haven Health System (YNHHS) leadership.
+                span.m-cta
+                  i.fa.fa-external-link.mrxs
+                  | Go to article
             .m-card-inner-content
               - if /headed|headless-square|bio|webinar|conference|category/.match(prop.value)
                 h4
@@ -48,16 +56,7 @@ section.mtl
                 - else
                   | Read more
                   i.fa.fa-angle-right.mlxs
-          - if /headless|\Afeature\z/.match(prop.value)
-            .m-card-overlay.poa
-              .m-card-overlay-content
-                p
-                  | Last week, I had the benefit of attending the first annual National Symposium on Value Innovation at Yale, hosted by Yale New Haven Health System (YNHHS) leadership.
-              span.m-cta
-                i.fa.fa-external-link.mrxs
-                | Go to article
           .clear
-
       .clear
 
       code.dib.mts

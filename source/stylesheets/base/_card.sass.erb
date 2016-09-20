@@ -163,8 +163,7 @@
         top: 0
         width: 100%
 
-    .m-card-inner,
-    .m-card-overlay
+    .m-card-inner
       min-height: $b-card-feature-height
 
   &.is-conference-feature
@@ -237,9 +236,6 @@
     @include justify-content(space-between)
     background: rgba($b-color-turquoise, .95)
     bottom: 0
-    color: $b-color-white
-    font-size: $b-font-size-body-small
-    font-weight: $b-font-weight-book
     left: 0
     min-height: 100%
     opacity: 0
@@ -247,5 +243,9 @@
     padding: $b-card-overlay-padding $b-card-horizontal-padding
     width: 100%
 
-    .m-cta
+    p, .m-cta
       color: $b-color-white
+
+    p
+      font-size: $b-font-size-body-small
+      font-weight: $b-font-weight-book

@@ -18,9 +18,9 @@ section.mtl
         a.m-card.por.db class="is-#{prop.value}" href="#"
           - if /feature|bio|webinar/.match(prop.value)
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-          .m-card-inner class="#{/bio/.match(prop.value) ? 'tac' : ''}"
+          .m-card-inner class="#{/bio|category/.match(prop.value) ? 'tac' : ''}"
             .m-card-inner-content
-              - if /headed|headless-square|bio|webinar|conference/.match(prop.value)
+              - if /headed|headless-square|bio|webinar|conference|category/.match(prop.value)
                 h4
                   = partial "layouts/card-inner-heading", locals: {type: prop.value}
               - elsif /headless-rectangular/.match(prop.value)
@@ -43,6 +43,8 @@ section.mtl
                 - elsif /webinar/.match(prop.value)
                   | Watch now
                   i.fa.fa-angle-right.mlxs
+                - elsif /category/.match(prop.value)
+                  | 5 articles
                 - else
                   | Read more
                   i.fa.fa-angle-right.mlxs

@@ -10,7 +10,7 @@ section.mtl
       h2.mbm Types
 
       p.mbxs
-        | There are five different types of content cards, with common / conditional elements displayed according to the type being rendered:
+        | There are ten different types of content cards, with common / conditional elements displayed according to the type being rendered:
 
   - design_token("card", category: "card-type").each_with_index do |prop, idx|
     .g-row.mbl
@@ -70,29 +70,29 @@ section.mtl
         |
           .g-col-#
             a.m-card.por.db.is-type-name href="#"
-              // If feature or bio
+              // If feature, bio or webinar
                 .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-              .m-card-inner
+              .m-card-inner.por
                 h3 # Feature
-                h4 # Headed and headless-square
+                h4 # Headed, headless-square, bio, webinar, conference and category
                 h5 # Headless-rectangular
-                  // If feature or headless
-                    span.m-card-category.ttl.db # Add .fl for feature and headless-rectangular
+                  // If feature, headless or conference
+                    span.m-card-category.ttl.db # Add .fl for *-feature and headless-rectangular
                       | healthcare informatics
-                  // If feature, headless or left-headed
-                    time.db # Add .fr for feature and headless-rectangular
+                  // If feature, headless, conference or left-headed
+                    time.db # Add .fr for *-feature and headless-rectangular
                       | May 9, 2016
-                  // If feature or headless-rectangular
+                  // If *-feature or headless-rectangular
                     .clear
                   span.m-card-headline
                     | One South Carolina hospital is leveraging a commercialized solution that
                     | brings the value of the Rothman Index directly to nurse managers
-                  // If bio
+                  // If bio OR CATEGORY
                     span.m-card-role.db.mtxs
                       | Vice President, Marketing and Product Strategy
-                span
-                  small.dib
-                    | Read more
+                span.m-cta # Format of CTA will vary according to type/content
+                  | Read more
+              .clear
 
   .g-row
     .g-col-5
@@ -104,25 +104,34 @@ section.mtl
             background: $color-white
             text-decoration: none
 
-            &:before
-              @include transition(background-position .35s ease-out)
-              background: $color-light-grey url('../images/graph-background.jpg') no-repeat
-              content: ''
-              display: block
-
             &:after
-              @include transition(transform .2s ease)
-              background: $color-canary-yellow
-              bottom: 0
               content: ''
-              display: inline-block
               position: absolute
 
             &.is-bio,
-            &.is-feature,
-            &.is-top-headed,
-            &.is-headless-square,
-            &.is-headless-rectangular
+            &.is-webinar,
+            &.is-category,
+            &[class*="-headed"],
+            &[class*="conference"]
+              .m-card-inner
+                @include transition(box-shadow .2s ease)
+                box-shadow: rem(0) rem(0) rem(5) 0 rgba($color-violet-slate, 0)
+
+              &:hover
+                .m-card-inner
+                  box-shadow: rem(2) rem(2) rem(10) 0 rgba($color-violet-slate, 0.1)
+
+            &.is-bio,
+            &.is-webinar,
+            &[class*="conference"]
+              &:after
+                @include transition(transform .2s ease)
+                background: $color-canary-yellow
+                bottom: 0
+                display: inline-block
+
+            &.is-bio,
+            &.is-webinar
               &:after
                 @include transform-origin(left)
                 @include transform(scaleX(0))
@@ -135,45 +144,61 @@ section.mtl
                   @include transform(scaleX(1))
 
             &.is-feature,
-            &.is-headless-rectangular
+            &.is-headless-rectangular,
               .m-card-inner
                 padding: $card-horizontal-padding
 
             &.is-bio,
-            &.is-feature
+            &.is-feature,
+            &.is-webinar
               .m-card-image
                 background-position: center
                 background-repeat: no-repeat
                 background-size: auto 140%
 
+            &.is-feature,
             &[class*="is-headless"]
-              &:before
-                display: none
+              &:hover
+                .m-card-overlay
+                  opacity: 1
 
-            &.is-top-headed
+            &.is-category,
+            &[class*="-headed"]
               &:before
-                background-position: left 50% bottom 30%
+                background: $color-light-grey url('../images/graph-background.jpg') no-repeat
+                content: ''
+                display: block
+
+              &:after
+                @include transition(background .2s ease)
+                background: rgba($color-turquoise, .25)
+                display: block
+                left: 0
+                top: 0
+
+              &:hover
+                &:after
+                  background: rgba($color-canary-yellow, .75)
+
+            &.is-top-headed,
+            &.is-category
+              &:before
+                background-position: left 40% bottom 57%
                 height: $card-graphic-size
                 width: 100%
 
-              &:hover
-                &:before
-                  background-position: left 55% bottom 30%
+              &:after
+                height: $card-graphic-size
+                width: 100%
 
               .m-card-inner
                 min-height: $card-top-headed-height
 
-            &.is-left-headed
-              padding-left: $card-graphic-size
-
+            &[class*="is-headless"]
               &:before
-                background-position: left 40% bottom 5%
-                height: 100%
-                left: 0
-                position: absolute
-                top: 0
-                width: $card-graphic-size
+                display: none
 
+            &[class*="is-conference"]
               &:after
                 @include transform-origin(bottom)
                 @include transform(scaleY(0))
@@ -182,11 +207,27 @@ section.mtl
                 width: 2px
 
               &:hover
-                &:before
-                  background-position: left 45% bottom 5%
-
                 &:after
                   @include transform(scaleY(1))
+
+              .m-card-inner
+                min-height: $card-conference-height
+                padding: $card-vertical-padding
+
+            &.is-left-headed
+              padding-left: $card-graphic-size
+
+              &:before
+                background-position: left 30% bottom 85%
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                width: $card-graphic-size
+
+              &:after
+                height: 100%
+                width: $card-graphic-size
 
               .m-card-inner
                 min-height: $card-left-headed-height
@@ -201,12 +242,12 @@ section.mtl
 
             &.is-bio
               .m-card-image
-                height: $b-card-bio-image-height
+                height: $card-bio-image-height
 
               .m-card-inner
                 @include justify-content(center)
-                min-height: $b-card-bio-height
-                padding: 0 $b-card-horizontal-padding
+                min-height: $card-bio-height
+                padding: 0 $card-horizontal-padding
 
             &.is-feature
               .m-card-image
@@ -227,11 +268,37 @@ section.mtl
               .m-card-inner
                 min-height: $card-feature-height
 
-            .m-card-inner
+            &.is-conference-feature
+              .m-card-image,
+              .m-card-inner
+                float: left
+
+              .m-card-image
+                height: $card-conference-feature-height
+                width: 33.33%
+
+              .m-card-inner
+                width: 66.66%
+
+            &.is-webinar
+              .m-card-image
+                height: $card-webinar-image-height
+
+              .m-card-inner
+                min-height: $card-webinar-height
+
+            &.is-category
+              .m-card-inner
+                min-height: $card-category-height
+
+            .m-card-inner,
+            .m-card-overlay
               @include display(flex)
               @include flex-direction(column)
+
+            .m-card-inner
               @include justify-content(space-between)
-              padding: $card-vertical-padding $card-horizontal-padding
+              padding: $card-vertical-padding $card-horizontal-padding $card-horizontal-padding
 
               h3, h4
                 font-weight: $font-weight-light
@@ -239,8 +306,10 @@ section.mtl
               h5
                 font-weight: $font-weight-book
 
-              h3, h4, h5
+              h3, h4, h5, p
                 color: $color-violet-slate
+
+              h3, h4, h5
                 line-height: $line-height-multiline-heading
 
                 time
@@ -248,23 +317,38 @@ section.mtl
                   font-weight: $font-weight-light
                   font-style: italic
                   font-size: $font-size-note
+                  /* To be refactored into spacing design token updates */
                   margin-bottom: rem(30)
 
-              span
-                small
-                  border-bottom: 1px solid
-                  color: $color-turquoise
-                  font-size: $font-size-cta-anchor
-                  font-weight: $font-weight-medium
-                  letter-spacing: $letter-spacing-cta-anchor
+              p
+                font-size: $font-size-navigation-anchor
 
-              .m-card-category
-                font-family: $font-family-sans-small-caps
-                font-size: $font-size-label
+            .m-card-category
+              font-family: $font-family-sans-small-caps
+              font-size: $font-size-label
+              font-weight: $font-weight-book
+
+            .m-card-role
+              font-family: $font-family-sans
+              font-size: $font-size-body-small
+              font-weight: $font-weight-book
+
+            .m-card-overlay
+              @include transition(opacity .2s ease)
+              @include justify-content(space-between)
+              background: rgba($color-turquoise, .95)
+              bottom: 0
+              left: 0
+              min-height: 100%
+              opacity: 0
+              overflow: hidden
+              padding: $card-overlay-padding $card-horizontal-padding
+              width: 100%
+
+              p, .m-cta
+                color: $color-white
+
+              p
+                font-size: $font-size-body-small
                 font-weight: $font-weight-book
-
-              .m-card-role
-                font-family: $b-font-family-sans
-                font-size: $b-font-size-body-small
-                font-weight: $b-font-weight-book
 

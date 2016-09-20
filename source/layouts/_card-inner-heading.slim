@@ -1,9 +1,10 @@
-- unless /top-headed|bio|webinar/.match(type)
+- unless /headed|bio|webinar/.match(type)
   span.m-card-category.ttl.db class="#{/headless-rectangular|feature/.match(type) ? 'fl' : ''}"
     - if /conference/.match(type)
       | orlando, fl - world center marriott
     - else
       | healthcare informatics
+- unless /top-headed|bio|webinar/.match(type)
   time.db class="#{/headless-rectangular|feature/.match(type) ? 'fr' : ''}"
     | May 9, 2016
 - if /headless-rectangular|feature/.match(type)

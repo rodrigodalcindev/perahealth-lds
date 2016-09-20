@@ -8,6 +8,19 @@
 
   &.is-bio,
   &.is-webinar,
+  &.is-category,
+  &[class*="-headed"],
+  &[class*="conference"]
+    .m-card-inner
+      @include transition(box-shadow .2s ease)
+      box-shadow: rem(0) rem(0) rem(5) 0 rgba($b-color-violet-slate, 0)
+
+    &:hover
+      .m-card-inner
+        box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
+
+  &.is-bio,
+  &.is-webinar,
   &[class*="conference"]
     &:after
       @include transition(transform .2s ease)
@@ -28,38 +41,14 @@
       &:after
         @include transform(scaleX(1))
 
-  &[class*="conference"]
-    &:after
-      @include transform-origin(bottom)
-      @include transform(scaleY(0))
-      height: 100%
-      right: 0
-      width: 2px
-
-    &:hover
-      &:after
-        @include transform(scaleY(1))
-
-  &.is-bio,
-  &.is-webinar,
-  &.is-category,
-  &[class*="-headed"],
-  &[class*="conference"]
-    .m-card-inner
-      @include transition(box-shadow .2s ease)
-      box-shadow: rem(0) rem(0) rem(5) 0 rgba($b-color-violet-slate, 0)
-
-    &:hover
-      .m-card-inner
-        box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
-
   &.is-feature,
   &.is-headless-rectangular,
     .m-card-inner
       padding: $b-card-horizontal-padding
 
   &.is-bio,
-  &.is-feature
+  &.is-feature,
+  &.is-webinar
     .m-card-image
       background-position: center
       background-repeat: no-repeat
@@ -70,15 +59,6 @@
     &:hover
       .m-card-overlay
         opacity: 1
-
-  &[class*="is-headless"]
-    &:before
-      display: none
-
-  &[class*="is-conference"]
-    .m-card-inner
-      min-height: $b-card-conference-height
-      padding: $b-card-vertical-padding
 
   &.is-category,
   &[class*="-headed"]
@@ -111,6 +91,26 @@
 
     .m-card-inner
       min-height: $b-card-top-headed-height
+
+  &[class*="is-headless"]
+    &:before
+      display: none
+
+  &[class*="is-conference"]
+    &:after
+      @include transform-origin(bottom)
+      @include transform(scaleY(0))
+      height: 100%
+      right: 0
+      width: 2px
+
+    &:hover
+      &:after
+        @include transform(scaleY(1))
+
+    .m-card-inner
+      min-height: $b-card-conference-height
+      padding: $b-card-vertical-padding
 
   &.is-left-headed
     padding-left: $b-card-graphic-size

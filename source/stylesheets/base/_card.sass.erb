@@ -2,25 +2,34 @@
   background: $b-color-white
   text-decoration: none
 
-  &:before
-    @include transition(background-position .35s ease-out)
-    background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
-    content: ''
-    display: block
-
   &:after
-    @include transition(transform .2s ease)
-    background: $b-color-canary-yellow
-    bottom: 0
     content: ''
-    display: inline-block
     position: absolute
 
   &.is-bio,
-  &.is-feature,
-  &.is-top-headed,
-  &.is-headless-square,
-  &.is-headless-rectangular
+  &.is-webinar,
+  &.is-category,
+  &[class*="-headed"],
+  &[class*="conference"]
+    .m-card-inner
+      @include transition(box-shadow .2s ease)
+      box-shadow: rem(0) rem(0) rem(5) 0 rgba($b-color-violet-slate, 0)
+
+    &:hover
+      .m-card-inner
+        box-shadow: rem(2) rem(2) rem(10) 0 rgba($b-color-violet-slate, 0.1)
+
+  &.is-bio,
+  &.is-webinar,
+  &[class*="conference"]
+    &:after
+      @include transition(transform .2s ease)
+      background: $b-color-canary-yellow
+      bottom: 0
+      display: inline-block
+
+  &.is-bio,
+  &.is-webinar
     &:after
       @include transform-origin(left)
       @include transform(scaleX(0))
@@ -38,40 +47,56 @@
       padding: $b-card-horizontal-padding
 
   &.is-bio,
-  &.is-feature
+  &.is-feature,
+  &.is-webinar
     .m-card-image
       background-position: center
       background-repeat: no-repeat
       background-size: auto 140%
 
+  &.is-feature,
   &[class*="is-headless"]
-    &:before
-      display: none
+    &:hover
+      .m-card-overlay
+        opacity: 1
 
-  &.is-top-headed
+  &.is-category,
+  &[class*="-headed"]
     &:before
-      background-position: left 50% bottom 30%
+      background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
+      content: ''
+      display: block
+
+    &:after
+      @include transition(background .2s ease)
+      background: rgba($b-color-turquoise, .25)
+      display: block
+      left: 0
+      top: 0
+
+    &:hover
+      &:after
+        background: rgba($b-color-canary-yellow, .75)
+
+  &.is-top-headed,
+  &.is-category
+    &:before
+      background-position: left 40% bottom 57%
       height: $b-card-graphic-size
       width: 100%
 
-    &:hover
-      &:before
-        background-position: left 55% bottom 30%
+    &:after
+      height: $b-card-graphic-size
+      width: 100%
 
     .m-card-inner
       min-height: $b-card-top-headed-height
 
-  &.is-left-headed
-    padding-left: $b-card-graphic-size
-
+  &[class*="is-headless"]
     &:before
-      background-position: left 40% bottom 5%
-      height: 100%
-      left: 0
-      position: absolute
-      top: 0
-      width: $b-card-graphic-size
+      display: none
 
+  &[class*="is-conference"]
     &:after
       @include transform-origin(bottom)
       @include transform(scaleY(0))
@@ -80,11 +105,27 @@
       width: 2px
 
     &:hover
-      &:before
-        background-position: left 45% bottom 5%
-
       &:after
         @include transform(scaleY(1))
+
+    .m-card-inner
+      min-height: $b-card-conference-height
+      padding: $b-card-vertical-padding
+
+  &.is-left-headed
+    padding-left: $b-card-graphic-size
+
+    &:before
+      background-position: left 30% bottom 85%
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: $b-card-graphic-size
+
+    &:after
+      height: 100%
+      width: $b-card-graphic-size
 
     .m-card-inner
       min-height: $b-card-left-headed-height
@@ -125,11 +166,37 @@
     .m-card-inner
       min-height: $b-card-feature-height
 
-  .m-card-inner
+  &.is-conference-feature
+    .m-card-image,
+    .m-card-inner
+      float: left
+
+    .m-card-image
+      height: $b-card-conference-feature-height
+      width: 33.33%
+
+    .m-card-inner
+      width: 66.66%
+
+  &.is-webinar
+    .m-card-image
+      height: $b-card-webinar-image-height
+
+    .m-card-inner
+      min-height: $b-card-webinar-height
+
+  &.is-category
+    .m-card-inner
+      min-height: $b-card-category-height
+
+  .m-card-inner,
+  .m-card-overlay
     @include display(flex)
     @include flex-direction(column)
+
+  .m-card-inner
     @include justify-content(space-between)
-    padding: $b-card-vertical-padding $b-card-horizontal-padding
+    padding: $b-card-vertical-padding $b-card-horizontal-padding $b-card-horizontal-padding
 
     h3, h4
       font-weight: $b-font-weight-light
@@ -137,8 +204,10 @@
     h5
       font-weight: $b-font-weight-book
 
-    h3, h4, h5
+    h3, h4, h5, p
       color: $b-color-violet-slate
+
+    h3, h4, h5
       line-height: $b-line-height-multiline-heading
 
       time
@@ -149,20 +218,34 @@
         /* To be refactored into spacing design token updates */
         margin-bottom: rem(30)
 
-    span
-      small
-        border-bottom: 1px solid
-        color: $b-color-turquoise
-        font-size: $b-font-size-cta-anchor
-        font-weight: $b-font-weight-medium
-        letter-spacing: $b-letter-spacing-cta-anchor
+    p
+      font-size: $b-font-size-navigation-anchor
 
-    .m-card-category
-      font-family: $b-font-family-sans-small-caps
-      font-size: $b-font-size-label
-      font-weight: $b-font-weight-book
+  .m-card-category
+    font-family: $b-font-family-sans-small-caps
+    font-size: $b-font-size-label
+    font-weight: $b-font-weight-book
 
-    .m-card-role
-      font-family: $b-font-family-sans
+  .m-card-role
+    font-family: $b-font-family-sans
+    font-size: $b-font-size-body-small
+    font-weight: $b-font-weight-book
+
+  .m-card-overlay
+    @include transition(opacity .2s ease)
+    @include justify-content(space-between)
+    background: rgba($b-color-turquoise, .95)
+    bottom: 0
+    left: 0
+    min-height: 100%
+    opacity: 0
+    overflow: hidden
+    padding: $b-card-overlay-padding $b-card-horizontal-padding
+    width: 100%
+
+    p, .m-cta
+      color: $b-color-white
+
+    p
       font-size: $b-font-size-body-small
       font-weight: $b-font-weight-book

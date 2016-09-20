@@ -1,16 +1,23 @@
-- unless /headed|bio/.match(type)
-  span.m-card-category.ttl.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fl' : ''}"
-    | healthcare informatics
-- unless type == "top-headed" || type == "bio"
-  time.db class="#{type == 'headless-rectangular' || type == 'feature' ? 'fr' : ''}"
+- unless /headed|bio|webinar|category/.match(type)
+  span.m-card-category.ttl.db class="#{/headless-rectangular|feature/.match(type) ? 'fl' : ''}"
+    - if /conference/.match(type)
+      | orlando, fl - world center marriott
+    - else
+      | healthcare informatics
+- unless /top-headed|bio|webinar|category/.match(type)
+  time.db class="#{/headless-rectangular|feature/.match(type) ? 'fr' : ''}"
     | May 9, 2016
-- if type == "headless-rectangular" || type == "feature"
+- if /headless-rectangular|feature/.match(type)
   .clear
 span.m-card-headline
-  - if type == "bio"
+  - if /bio|category/.match(type)
     | Meredith Cage
+  - elsif /conference/.match(type)
+    | ANCC National Magnet Conference
+  - elsif /webinar/.match(type)
+    | Communication and Technology in Palliative Care
   - else
     | One South Carolina hospital is leveraging a commercialized solution that brings the value of the Rothman Index directly to nurse managers
-- if type == "bio"
+- if /bio|category/.match(type)
   span.m-card-role.db.mtxs
     | Vice President, Marketing and Product Strategy

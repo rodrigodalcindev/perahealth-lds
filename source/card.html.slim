@@ -16,23 +16,47 @@ section.mtl
     .g-row.mbl
       div class="g-col-#{design_token('card', category: 'card-columns')[idx].value}"
         a.m-card.por.db class="is-#{prop.value}" href="#"
-          - if prop.value == "feature" || prop.value == "bio"
+          - if /feature|bio|webinar/.match(prop.value)
             .m-card-image.por style="background-image: url('images/graph-fallback.jpg');"
-          .m-card-inner class="#{prop.value == 'bio' ? 'tac' : ''}"
-            - if prop.value == "top-headed" || prop.value == "left-headed" || prop.value == "headless-square" || prop.value == "bio"
-              h4
-                = partial "layouts/card-inner-heading", locals: {type: prop.value}
-            - elsif prop.value == "headless-rectangular"
-              h5
-                = partial "layouts/card-inner-heading", locals: {type: prop.value}
-            - elsif prop.value == "feature"
-              h3
-                = partial "layouts/card-inner-heading", locals: {type: prop.value}
-            - unless prop.value == "bio"
-              span
-                small.dib
+          .m-card-inner.por class="#{/bio|category/.match(prop.value) ? 'tac' : ''}"
+            - if /headless|\Afeature\z/.match(prop.value)
+              .m-card-overlay.poa
+                .m-card-overlay-content
+                  p
+                    | Last week, I had the benefit of attending the first annual National Symposium on Value Innovation at Yale, hosted by Yale New Haven Health System (YNHHS) leadership.
+                span.m-cta
+                  i.fa.fa-external-link.mrxs
+                  | Go to article
+            .m-card-inner-content
+              - if /headed|headless-square|bio|webinar|conference|category/.match(prop.value)
+                h4
+                  = partial "layouts/card-inner-heading", locals: {type: prop.value}
+              - elsif /headless-rectangular/.match(prop.value)
+                h5
+                  = partial "layouts/card-inner-heading", locals: {type: prop.value}
+              - elsif /feature/.match(prop.value)
+                h3
+                  = partial "layouts/card-inner-heading", locals: {type: prop.value}
+              - if /conference/.match(prop.value)
+                p.mts
+                  | Discover the next wave of nursing innovations at the 2016 ANCC National Magnet Conference®. Join more than 9,000 nurses, nursing executives, and health care professionals from top hospitals around the world to share proven best practices and spark your passion for change.
+            - unless /bio/.match(prop.value)
+              span.m-cta class="#{/headless/.match(prop.value) ? '' : 'mtm'}"
+                - if /headless|\Afeature\z/.match(prop.value)
+                  i.ellipsis.h4.fr
+                    | ...
+                - elsif /conference/.match(prop.value)
+                  i.fa.fa-external-link.mrxs
+                  | Learn more
+                - elsif /webinar/.match(prop.value)
+                  | Watch now
+                  i.fa.fa-angle-right.mlxs
+                - elsif /category/.match(prop.value)
+                  | 5 articles
+                - else
                   | Read more
-
+                  i.fa.fa-angle-right.mlxs
+          .clear
       .clear
 
       code.dib.mts

@@ -42,6 +42,7 @@
 
   &.is-bio,
   &.is-webinar,
+  &.is-category,
   &[class*="-headed"],
   &[class*="conference"]
     .m-card-inner
@@ -79,6 +80,7 @@
       min-height: $b-card-conference-height
       padding: $b-card-vertical-padding
 
+  &.is-category,
   &[class*="-headed"]
     &:before
       background: $b-color-light-grey url('../images/graph-background.jpg') no-repeat
@@ -96,7 +98,8 @@
       &:after
         background: rgba($b-color-canary-yellow, .75)
 
-  &.is-top-headed
+  &.is-top-headed,
+  &.is-category
     &:before
       background-position: left 40% bottom 57%
       height: $b-card-graphic-size
@@ -182,6 +185,10 @@
 
     .m-card-inner
       min-height: $b-card-webinar-height
+
+  &.is-category
+    .m-card-inner
+      min-height: $b-card-category-height
 
   .m-card-inner,
   .m-card-overlay

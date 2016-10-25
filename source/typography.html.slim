@@ -11,12 +11,19 @@ section.mtl
     | Copy blocks inherit directly from default typographic style rules applied to <code>body</code>. Please ensure that all copy is nested under <code>p</code> tags.
 
   .g-row
-    = code('sass') do
-      |
-        body
-          font-family: $b-font-family-sans
-          font-size: $b-font-size-body-default
-          line-height: $b-line-height-default
+    .b-code-wrapper
+      = code('sass') do
+        |
+          body
+            font-family: $b-font-family-sans
+            font-size: $b-font-size-body-default
+            line-height: $b-line-height-default
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
 section.mtl
   h2.mbm Font Families
@@ -124,20 +131,26 @@ section.mtl
             | Short description of news page goes here
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Markup
+    h5.mtm.mbxs
+      | Markup
+    .b-code-wrapper
       = code('slim') do
         |
           h1.has-tagline
             | Featured News
             span.h5.db
               | Short description of news page goes here
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Styles
+    h5.mtm.mbxs
+      | Styles
+    .b-code-wrapper
       = code('sass') do
         |
           h1
@@ -155,6 +168,12 @@ section.mtl
                 height: rem(2)
                 margin-top: rem(50)
                 width: rem(62)
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
     .g-col-7
@@ -170,9 +189,9 @@ section.mtl
             | University Health Care System Partners with PeraHealth to Enhance Physician-Nurse Communication, Patient Safety
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Markup
+    h5.mtm.mbxs
+      | Markup
+    .b-code-wrapper
       = code('slim') do
         |
           h2.has-label.has-timestamp
@@ -183,11 +202,17 @@ section.mtl
             span.db.mts
               | University Health Care System Partners with PeraHealth to Enhance
               | Physician-Nurse Communication, Patient Safety
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Styles
+    h5.mtm.mbxs
+      | Styles
+    .b-code-wrapper
       = code('sass') do
         |
           h2
@@ -213,6 +238,12 @@ section.mtl
                 height: rem(2)
                 margin-top: rem(50)
                 width: rem(62)
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
     .g-col-5
@@ -228,9 +259,9 @@ section.mtl
             | M.D. Palliative Care and Hospice Specialist
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Markup
+    h5.mtm.mbxs
+      | Markup
+    .b-code-wrapper
       = code('slim') do
         |
           blockquote.maf
@@ -241,11 +272,17 @@ section.mtl
               | Daniel Smith
             span.b-quote-role.db
               | M.D. Palliative Care and Hospice Specialist
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Styles
+    h5.mtm.mbxs
+      | Styles
+    .b-code-wrapper
       = code('sass') do
         |
           blockquote
@@ -279,4 +316,10 @@ section.mtl
               font-size: $font-size-note
               font-style: italic
               font-weight: $font-weight-light
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 

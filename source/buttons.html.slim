@@ -12,19 +12,26 @@ h1 Buttons
       | Foundation styles consist of a pre-defined set of global rules affecting all buttons, including submit inputs and anchor tags sporting the <code>.is-button</code> class:
 
 .g-row
-  = code('sass') do
-    |
-      \#{$all-button-inputs}, .is-button
-        @include transition(background .25s ease)
-        border: none
-        cursor: pointer
-        font-weight: $b-font-weight-medium
-        font-size: $b-font-size-label
-        line-height: $b-line-height-default-button
-        min-width: $b-default-button-min-width
-        padding: $b-space
-        text-align: center
-        text-decoration: none
+  .b-code-wrapper
+    = code('sass') do
+      |
+        \#{$all-button-inputs}, .is-button
+          @include transition(background .25s ease)
+          border: none
+          cursor: pointer
+          font-weight: $b-font-weight-medium
+          font-size: $b-font-size-label
+          line-height: $b-line-height-default-button
+          min-width: $b-default-button-min-width
+          padding: $b-space
+          text-align: center
+          text-decoration: none
+  .b-code-toggle.dib
+    i.fa.fa-code.mrxs
+    span.b-code-toggle--view
+      | View source code
+    span.b-code-toggle--hide
+      | Hide source code
 
 .g-row
   .g-col-7
@@ -32,23 +39,28 @@ h1 Buttons
       | With basic markup being structured as follows, depending on the element of choice:
 
 .g-row
-  = code('slim') do
-    |
-      button.por
-        span
-          | Send
+  .b-code-wrapper
+    = code('slim') do
+      |
+        button.por
+          span
+            | Send
 
-.g-row
-  = code('slim') do
-    |
-      input type="submit" value="Send"
+    = code('slim') do
+      |
+        input type="submit" value="Send"
 
-.g-row
-  = code('slim') do
-    |
-      = link_to "#", class: "dib por is-button" do
-        span
-          | Send
+    = code('slim') do
+      |
+        = link_to "#", class: "dib por is-button" do
+          span
+            | Send
+  .b-code-toggle.dib
+    i.fa.fa-code.mrxs
+    span.b-code-toggle--view
+      | View source code
+    span.b-code-toggle--hide
+      | Hide source code
 
 .g-row
   .g-col-7
@@ -63,16 +75,24 @@ h1 Buttons
       code.dib.vam.mls
         = ".is-" + prop.value
 
-    button.por class="is-#{prop.value}"
+    button.por.mbs class="is-#{prop.value}"
       span
         = "Send"
 
     .g-row
-      = code('sass', css_class: 'highlight mtm') do
-        |
-          &.is-#{prop.value}
-            background: $#{prop.value}-button-background-color
-            color: $#{prop.value}-button-text-color
+      .b-code-wrapper
+        = code('sass', css_class: 'highlight mtm') do
+          |
+            &.is-#{prop.value}
+              background: $#{prop.value}-button-background-color
+              color: $#{prop.value}-button-text-color
 
-            &:hover
-              background: darken($#{prop.value}-button-background-color, 5%)
+              &:hover
+                background: darken($#{prop.value}-button-background-color, 5%)
+
+      .b-code-toggle.dib
+        i.fa.fa-code.mrxs
+        span.b-code-toggle--view
+          | View source code
+        span.b-code-toggle--hide
+          | Hide source code

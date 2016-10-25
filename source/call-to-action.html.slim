@@ -30,9 +30,9 @@ section.mtl
             = prop.value
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Markup
+    h5.mtm.mbxs
+      | Markup
+    .b-code-wrapper
       = code('slim') do
         |
           span.m-cta.mbm.is-type
@@ -47,11 +47,17 @@ section.mtl
             // If download
             i.ellipsis.h4
               | ...
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Styles
+    h5.mtm.mbxs
+      | Styles
+    .b-code-wrapper
       = code('sass') do
         |
           .m-cta
@@ -63,3 +69,9 @@ section.mtl
               font-weight: normal
               font-style: normal
               line-height: initial
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code

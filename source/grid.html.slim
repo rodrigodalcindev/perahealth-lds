@@ -20,9 +20,17 @@ section.mtl
   h2.mbm Specifications
 
   .g-row
-    = code('sass') do
-      - design_token("grid").each do |prop|
-        = "$#{prop.name}: #{prop.name == 'grid-columns' ? prop.value : 'rem(' + prop.value.to_s + ')'} \n"
+    .b-code-wrapper
+      = code('sass') do
+        - design_token("grid").each do |prop|
+          = "$#{prop.name}: #{prop.name == 'grid-columns' ? prop.value : 'rem(' + prop.value.to_s + ')'} \n"
+
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 
 section.mtl
   h2.mbm Usage
@@ -40,11 +48,19 @@ section.mtl
         | The grid is fluid by default, with a basic <code>$mobile</code> breakpoint set to determine the stacking of columns.
 
   .g-row
-    = code('sass') do
-      |
-        @for $i from 1 through $grid-columns
-          .g-col-\#{$i}
-            @include span-columns($i)
+    .b-code-wrapper
+      = code('sass') do
+        |
+          @for $i from 1 through $grid-columns
+            .g-col-\#{$i}
+              @include span-columns($i)
 
-            @include media($mobile)
-              @include span-columns($grid-columns)
+              @include media($mobile)
+                @include span-columns($grid-columns)
+
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code

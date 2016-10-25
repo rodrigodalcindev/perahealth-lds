@@ -46,16 +46,23 @@ section.mtl
             i.fa.fa-angle-right.mrs
             | Style changes should be applied directly to the <code>use</code> element.
         li.mtm
-          = code('sass') do
-            |
-              figure
-                svg use
-                  fill: transparent
-                  stroke: $b-color
-
-                &:hover
+          .b-code-wrapper
+            = code('sass') do
+              |
+                figure
                   svg use
+                    fill: transparent
                     stroke: $b-color
+
+                  &:hover
+                    svg use
+                      stroke: $b-color
+          .b-code-toggle.dib
+            i.fa.fa-code.mrxs
+            span.b-code-toggle--view
+              | View source code
+            span.b-code-toggle--hide
+              | Hide source code
 
 section.mtl
   h2.mbm FontAwesome Icons

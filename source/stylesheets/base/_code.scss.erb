@@ -1,6 +1,41 @@
 <%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
 
 .highlight {
-  display: inline-block;
+  margin-bottom: $b-space-s;
   padding-right: $b-space;
+}
+
+.b-code-wrapper {
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+.b-code-toggle {
+  background: rgba($b-color-white, 0.75);
+  border: 1px solid rgba($b-color-violet-slate, 0.25);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  color: $b-color-turquoise;
+  cursor: pointer;
+
+  span {
+    font-weight: $b-font-weight-medium;
+  }
+
+  .b-code-toggle--hide {
+    display: none;
+  }
+
+  &.is-active {
+    .b-code-toggle--hide {
+      display: inline;
+    }
+
+    .b-code-toggle--view {
+      display: none;
+    }
+  }
 }

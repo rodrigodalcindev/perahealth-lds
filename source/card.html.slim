@@ -63,9 +63,10 @@ section.mtl
         = prop.value
 
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Markup
+    h5.mtm.mbxs
+      | Markup
+
+    .b-code-wrapper
       = code('slim') do
         |
           .g-col-#
@@ -94,10 +95,18 @@ section.mtl
                   | Read more
               .clear
 
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
+
   .g-row
-    .g-col-5
-      h5.mtm.mbxs
-        | Styles
+    h5.mtm.mbxs
+      | Styles
+
+    .b-code-wrapper
       = code('sass') do
         |
           .m-card
@@ -351,4 +360,11 @@ section.mtl
               p
                 font-size: $font-size-body-small
                 font-weight: $font-weight-book
+
+    .b-code-toggle.dib
+      i.fa.fa-code.mrxs
+      span.b-code-toggle--view
+        | View source code
+      span.b-code-toggle--hide
+        | Hide source code
 

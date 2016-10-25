@@ -1,9 +1,12 @@
 <%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
 
 .highlight {
+  padding-right: $b-space;
+}
+
+.b-code-wrapper {
   display: none;
   margin-bottom: $b-space-s;
-  padding-right: $b-space;
 
   &.is-visible {
     display: block;

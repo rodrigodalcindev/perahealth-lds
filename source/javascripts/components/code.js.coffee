@@ -9,4 +9,4 @@ class APP.Code
     _ = this
     _.codeToggle.on 'click', (e) ->
       $(this).toggleClass 'is-active'
-      $(this).prev('.highlight').toggleClass 'is-visible'
+      $(this).prev('.b-code-wrapper').toggleClass 'is-visible'

@@ -1,3 +1,4 @@
+require 'kramdown'
 require 'middleman-syntax'
 
 activate :syntax, :line_numbers => true
@@ -39,6 +40,7 @@ end
 # end
 
 set :markdown_engine, :kramdown
+set :markdown, :layout_engine => :slim
 set :fonts_dir, "fonts"
 
 # Build-specific configuration
